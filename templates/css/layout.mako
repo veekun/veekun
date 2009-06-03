@@ -41,7 +41,20 @@ h1:first-child, h2:first-child { margin-top: 0; }
 
 /*** USEFUL CLASSES ***/
 
+/* Tag defaults; careful what goes here! */
 img { vertical-align: middle; }
+
+/* Forms */
+form {}
+input[type='text'].error { background-color: #f2c6d8; }
+
+/* Tables */
+table th, table td { padding: 0.25em; }
+table th { font-weight: normal; color: #2457a0; }
+table tr.header-row th { border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('spline.instance', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
+
+tr.altrow { background: #f0f0f0; }
+
 
 /* Definition lists via floats */
 dl { overflow: hidden /* new float context */; }
