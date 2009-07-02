@@ -50,6 +50,7 @@ a:hover { color: #ce3131; }
 
 /* Tag defaults; careful what goes here! */
 img { vertical-align: middle; }
+abbr { border-bottom: 1px dotted black; }
 
 /* Forms */
 form {}
@@ -59,10 +60,14 @@ input[type='text'].error { background-color: #f2c6d8; }
 table th, table td { padding: 0.25em; }
 table th { font-weight: normal; color: #2457a0; }
 table tr.header-row th { border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
+
 table tr.color1 { ; }
 table tr.color2 { background: #f0f0f0; }
 table tr.color1:hover { outline: 1px solid #bfd3f1; outline-offset: -1px; background: #e6eefa; }
 table tr.color2:hover { outline: 1px solid #bfd3f1; outline-offset: -1px; background: #e1e9f5; }
+
+table tr.horizontal-line td { height: 0; padding: 0; border-bottom: 1px solid #b4c7e6; }
+table td.vertical-line { width: 0; padding: 0; border-right: 1px solid #b4c7e6; }
 
 
 /* Inline lists */
