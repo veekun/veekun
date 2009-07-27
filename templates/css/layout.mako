@@ -31,6 +31,8 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header #links { position: absolute; bottom: 0; left: 140px; /* avoid eevee logo */ }
 #header #links li { display: inline-block; padding: 0.5em; background: rgba(100%, 100%, 100%, 0.5); }
 
+#footer { padding: 1em; background: #e8e8e8; }
+
 #body { padding: 1em; }
 
 h1 { margin-top: 1em; margin-bottom: 0.5em; padding-left: 36px; border: 1px solid #b58a4b; border-left: none; font-size: 1.6em; line-height: 1.5em; font-weight: bold; color: black; background: #cbab81 url(${h.static_uri('local', 'images/layout/h1-background.png')}) left center no-repeat; -webkit-border-top-right-radius: 1em; -webkit-border-bottom-right-radius: 1em; -moz-border-radius-topright: 1em; -moz-border-radius-bottomright: 1em; }
@@ -70,7 +72,10 @@ table tr.horizontal-line td { height: 0; padding: 0; border-bottom: 1px solid #b
 table td.vertical-line { width: 0; padding: 0; border-right: 1px solid #b4c7e6; }
 
 
-/* Inline lists */
+/* Lists */
+ul.classic-list { margin: 0.5em 0; margin-left: 1.5em; list-style-type: disc; }
+ul.classic-list li { line-height: 1.5; }
+
 ul.inline { overflow: hidden /* new float context */; }
 ul.inline li { float: left; }
 
