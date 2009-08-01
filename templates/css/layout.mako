@@ -61,8 +61,13 @@ input[type='text'].error { background-color: #f2c6d8; }
 /* Tables */
 table th, table td { padding: 0.25em; }
 table th { font-weight: normal; color: #2457a0; }
+table tr.subheader-row th { border-bottom: 1px solid #b4c7e6; background: #c5d3eb; color: black; }
 table tr.header-row th { border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
 
+table.striped-rows tr:nth-child(2n) { background: #f0f0f0; }
+table.striped-rows tr:nth-child(2n):hover { outline: 1px solid #bfd3f1; outline-offset: -1px; background: #e1e9f5; }
+table.striped-rows tr:nth-child(2n+1):hover { outline: 1px solid #bfd3f1; outline-offset: -1px; background: #e6eefa; }
+table.striped-rows tr.header-row:hover, table.striped-rows tr.subheader-row:hover { outline: none; }
 table tr.color1 { ; }
 table tr.color2 { background: #f0f0f0; }
 table tr.color1:hover { outline: 1px solid #bfd3f1; outline-offset: -1px; background: #e6eefa; }
