@@ -43,7 +43,7 @@ h1:first-child, h2:first-child { margin-top: 0; }
 
 /*** USEFUL CLASSES ***/
 
-.faded { opacity: 0.33; }
+.faded { opacity: 0.25; }
 
 /* Links durp */
 a:link { font-weight: bold; text-decoration: none; color: #3173ce; }
