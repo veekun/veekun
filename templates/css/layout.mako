@@ -74,7 +74,7 @@ table tr.color2 { background: #f0f0f0; }
 table tr.color1:hover { outline: 1px solid #bfd3f1; outline-offset: -1px; background: #e6eefa; }
 table tr.color2:hover { outline: 1px solid #bfd3f1; outline-offset: -1px; background: #e1e9f5; }
 
-table tr.horizontal-line td { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4c7e6; }
+table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4c7e6; }
 table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4c7e6; }
 
 
