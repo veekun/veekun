@@ -44,6 +44,7 @@ h1:first-child, h2:first-child { margin-top: 0; }
 /*** USEFUL CLASSES ***/
 
 .faded { opacity: 0.25; }
+.disabled { color: #c0c0c0; text-decoration: line-through; }
 
 /* Links durp */
 a:link { font-weight: bold; text-decoration: none; color: #3173ce; }
@@ -92,3 +93,6 @@ dt:after { content: ':'; }
 dd { padding-left: 12em /* float width, so hover highlight includes dt but lines wrap correctly */; }
 dd:after { content: 'float clear'; display: block; clear: both; height: 0; visibility: hidden; }
 dt, dd { line-height: 1.5; }
+
+ul.classic { padding-left: 2em; }
+ul.classic > li { line-height: 1.5; list-style-type: disc; }
