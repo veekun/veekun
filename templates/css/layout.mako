@@ -26,6 +26,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header #page-name { font-size: 2em; margin: 1em; margin-left: 200px /* beside the logo */; }
 
 #header #pokedex-lookup { position: absolute; right: 1em; bottom: 1em; padding-top: 160px; min-width: 194px; /* make sure pokedex image fits */ padding-right: 1em; padding-bottom: 1em; background: url(${h.static_uri('local', 'images/layout/pokedex.png')}) right bottom no-repeat; }
+#header #pokedex-lookup p { margin: 0; line-height: 1; }
 #header #pokedex-lookup label { font-size: 1.5em; }
 
 #header #links { position: absolute; bottom: 0; left: 140px; /* avoid eevee logo */ }
@@ -53,6 +54,7 @@ a:visited { font-weight: bold; text-decoration: none; color: #435b7d; }
 a:hover { color: #ce3131; }
 
 /* Tag defaults; careful what goes here! */
+p { margin-bottom: 0.75em; line-height: 1.5; }
 img { vertical-align: middle; }
 abbr { border-bottom: 1px dotted black; }
 
