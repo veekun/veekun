@@ -20,7 +20,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header, #body { margin-bottom: 0; border-bottom: none; }
 #body, #footer { margin-top: 0; border-top: none; }
 
-#header { position: relative; height: 8em; color: white; background: #6998df url(${h.static_uri('local', 'images/layout/header-background.png')}) center no-repeat; }
+#header { position: relative; height: 8em; color: white; background: #6998df url(${h.static_uri('local', 'images/layout/header-background.png')}) center bottom repeat-x; }
 #header #logo { position: absolute; top: -80px; left: -40px; /* arbitrary */ }
 #header #title { position: absolute; top: -0.87em /* very approximately puts baseline on the top border */; right: 2em; right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
 #header #page-name { font-size: 2em; margin: 1em; margin-left: 200px /* beside the logo */; }
@@ -29,8 +29,24 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header #pokedex-lookup p { margin: 0; line-height: 1; }
 #header #pokedex-lookup label { font-size: 1.5em; }
 
-#header #links { position: absolute; bottom: 0; left: 140px; /* avoid eevee logo */ }
-#header #links li { display: inline-block; padding: 0.5em; background: rgba(100%, 100%, 100%, 0.5); }
+#menu { position: absolute; margin-top: -2em; margin-left: 4em; left: 140px; /* avoid eevee logo */ }
+#menu > ul > li { display: inline-block; margin-top: -1px; padding: 1px 1px 0 1px /* for the border on hover */; }
+#menu > ul > li > a { background: rgba(100%, 100%, 100%, 0.5); }
+#menu li a { display: block; padding: 0.5em; }
+/* Positioning of submenu */
+#menu li { position: relative; }
+#menu > ul > li > ul { position: absolute; width: 10em; left: -1px; border: 1px solid #3173ce; border-top: none; background: white; }
+/* Show submenus on hover */
+#menu > ul > li > ul { display: none; }
+#menu > ul > li:hover { padding: 0; border: 1px solid #3173ce; border-bottom: none; }
+#menu > ul > li:hover > ul { display: block; }
+/* Submenu headers, then everything below that */
+#menu > ul > li > ul > li > a { padding: 0.33em; }
+#menu > ul > li > ul > li > a:link,
+#menu > ul > li > ul > li > a:visited { color: black; }
+#menu > ul > li > ul > li + li { margin-top: 0.5em; }
+#menu > ul > li > ul > li li a { padding: 0.33em; padding-left: 1em; font-weight: normal; }
+#menu > ul > li > ul > li li a:hover { background: #e6eefa; }
 
 #footer { padding: 1em; background: #e8e8e8; }
 
