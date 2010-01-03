@@ -1,0 +1,238 @@
+<h1>A Brief History of (Wasted) Time</h1>
+
+<p>I've been at this Pokédex thing for a long, long time.  I recently stumbled across fragments of old code scattered about my hard drive, in copies of backups of backups of copies from several computers' lifetimes ago.  Much has been lost, in part because I didn't know what <a href="http://en.wikipedia.org/wiki/Revision_control">source control</a> was, but I've managed to recreate a rough timeline of veekun's history.</p>
+
+<p>Most of the version numbers below are assigned retroactively, as I only actually gave versions 3 or 4 their numbers at the time.  (So, yes, there was nothing I <em>called</em> version 2.)  Also, because the production code was updated more or less regularly, the notion of a "version" is a bit arbitrary—where I've had to invent version numbers, I've tried to put the split around major style and infrastructure changes.</p>
+
+<p>The date ranges are extemely approximate and cover initial development through abandonment, so they overlap when I had some sort of beta or dev code in progress.</p>
+
+<h2>Untitled v1: November 19, 1999 – unknown</h2>
+<p><strong>Covered</strong>: Pokémon from Red and Blue only.  No move pages; no move descriptions, even.</p>
+
+<p><strong>Code</strong>: A single Perl CGI script.  A baaad one.</p>
+
+<p>This very first attempt didn't have a version number, was never made public, and never even touched the Web.  The only remaining copies of it, if there are any at all, are on a 486 packed away in storage somewhere.  I only even know the starting date for sure because it appears in the footer on a later copy.</p>
+
+<p><strong>Source control</strong>: Ha!  I'd never heard of such a thing.  At the time my options would have been about limited to CVS, so maybe that's for the best.</p>
+
+<p><strong>Data</strong>: A single text file, as may be expected from a 12-year-old beginning programmer.  It looked something like the following:
+
+<pre>1
+Bulbasaur
+grass
+poison
+2'4"
+15.2
+...
+2
+Ivysaur
+...</pre>
+
+<p>I have trouble imagining something more difficult to work with.  I regularly had bugs because a line was missing, which meant that all following Pokémon would have their fields shifted by one.  I had to read the entire file to get all of this information on every page load.  And, of course, asking something like "which Pokémon learn move X?" was an utter nightmare.</p>
+
+<p>TMs were stored as a string of fifty-five ones and zeroes, with each digit indicating that the corresponding TM could or could not be learned by that Pokémon.  That is, Bulbasaur had something like '<code>00100101110000...</code>' because it could learn TM03, TM06, etc.</p>
+
+<p>Moves were stored as '<code>01-033 01-045 07-073 ...</code>'.  That's level, hyphen, move number, all padded to be the same width (for some reason).</p>
+
+<p><strong>Design</strong>: Unfortunately, I don't have a copy of what the output actually looked like, but I remember bits and pieces.  Each page was colored to match the Pokémon's "primary" type, where "primary" was a notion I completely made up; basically, grass was "more" of a type than poison, and water was "more" of a type than ice, etc.  The sections you know and love today were all tables with obvious borders, all colored with the "primary" type color.  The page background was dirt sprite from the games, but with the dirt specks colored to match the type color.  Possibly the height of 90s Web design.</p>
+
+
+<h2>UltraDex v2: late 2000 – July 2001</h2>
+<p>By now I had come across a glorious bounty, in the form of hosting from a buddy at my high school.  I was now on <strong>The Internet</strong>, for real.  And I frittered away this opportunity on convoluted JavaScript page navigation that has kept the actual Pokédex itself from being cached by anyone, anywhere.  At least I gave it a cool name: "UltraDex".  The ultra in dexes.</p>
+
+<p>I <em>do</em> know that this brought about the first attempt at spin-offs, including a tool for finding the clock reset code for Gold/Silver and a little JavaScript memory game.  I also started writing a walkthrough for Red and Blue (a bit late, I know) that was packed ridiculously full of links and cross-references and illustrations.  I still think it was a good effort, even now; it's too bad I only got two badges in before moving on to something else.</p>
+
+<p><strong>Covered</strong>: Pokémon from Red, Blue, and (I think) Yellow.  This iteration also had the first move pages and type pages.  It even had dual-type pages, an idea I've never really resurrected: the page for water/psychic, for example, would show how much damage that type combination took from other types and which Pokémon were that type combination.  This all required a much more sophisticated lookup mechanism, which I dutifully wrote—in JavaScript.</p>
+
+<p><strong>Code</strong>: Perl CGI, of some sort.</p>
+
+<p><strong>Source control</strong>: pokedex2.pl.bak.20000501</p>
+
+<p><strong>Data</strong>: Now I had wisened up!  I no longer had a single massive data file.  Instead, I had split every record into its own file and loaded them each into separate arrays.  While this was still a horrible approach in hindsight, it was a <em>vast</em> improvement over what I'd had before.</p>
+
+<p>Sadly, TMs and moves were still stored the same way.  With the introduction of Yellow, I even had a separate 'y' value in the TM strings that indicated a TM could only be learned in Yellow.</p>
+
+<p><strong>Design</strong>: Good question.  I have no idea.  Pretty sure I'd reverted to simple black text on a white background, and I still have the frameset I used, but I don't know what the actual pages looked like.</p>
+
+<p>At some point I also created what I called the "MiniDex": a tiny pop-up window crammed full of everything that the first incarnation had, with the sections becoming JavaScript-powered tabs.  (In my defense, this was almost usable for the amount of information that was around in the R/B/Y days.)  The tabs and backgrounds were, of course, colored by the type of the Pokémon.</p>
+
+
+<h2>UltraDex III: 2001 – 2002</h2>
+<p>Between my source control style of "make a copy and call it 'oldwhatever.pl.bak'" and lost modification dates on everything, it's difficult to pin down exactly when I decided to call it version 3.  I even have documents that refer to it simultaneously as versions 3 and 4.</p>
+
+<p><strong>Covered</strong>: Pokémon, moves, and types from RBY and GSC.</p>
+
+<p><strong>Code</strong>: Perl scripts, spitting out static pages.  (See below.)  Navigation and pretty much anything dynamic became done by JavaScript that only had to work on IE5 and definitely looked like it.</p>
+
+<p><strong>Source control</strong>: Nope.</p>
+
+<p><strong>Data</strong>: The big technical landmark is that I migrated from flat text files to this shiny new thing called XML.  I had this <em>unbelievably massive</em> 650KB XML file containing everything I knew about Pokémon, including the new shiny Gold/Silver/Crystal data that I'd painstakingly hand-copied from half a dozen other sites.  An exerpt:</p>
+
+<pre>
+  &lt;poke pokeid="131"&gt;
+   &lt;name&gt;Ditto&lt;/name&gt;
+   &lt;jap_name&gt;Metamon&lt;/jap_name&gt;
+   &lt;evolve&gt;65&lt;/evolve&gt;
+   &lt;height&gt;12&lt;/height&gt;
+   &lt;weight&gt;9&lt;/weight&gt;
+   &lt;type1&gt;normal&lt;/type1&gt;
+   &lt;type2&gt;none&lt;/type2&gt;
+   &lt;kind&gt;transform&lt;/kind&gt;
+   &lt;old_gameshark&gt;4C&lt;/old_gameshark&gt;
+   &lt;cap_diff&gt;23&lt;/cap_diff&gt;
+   &lt;breeding&gt;DD&lt;/breeding&gt;
+   &lt;genders&gt;255&lt;/genders&gt;
+   &lt;data&gt;
+    &lt;redblue&gt;Capable of copying an enemy's genetic code to instantly transform itself into a duplicate of the enemy.&lt;/redblue&gt;
+    &lt;yellow&gt;When it spots an enemy, its body transfigures into an almost perfect copy of its opponent.&lt;/yellow&gt;
+    &lt;gold&gt;It can transform into anything. When it sleeps, it changes into a stone to avoid being attacked.&lt;/gold&gt;
+    &lt;silver&gt;Its transformation ability is perfect. However, if made to laugh, it can't maintain its disguise.&lt;/silver&gt;
+    &lt;crystal&gt;When it encounters another Ditto, it will move faster than normal to duplicate that opponent exactly.&lt;/crystal&gt;
+   &lt;/data&gt;
+   &lt;area&gt;
+    &lt;red&gt;Routes 13, 14, 15, and 23; Unknown Dungeon&lt;/red&gt;
+    &lt;blue&gt;Routes 13, 14, 15, and 23; Unknown Dungeon&lt;/blue&gt;
+    &lt;yellow&gt;Pokemon Lab; Unknown Dungeon&lt;/yellow&gt;
+    &lt;gold&gt;Routes 34 and 35&lt;/gold&gt;
+    &lt;silver&gt;Routes 34 and 35&lt;/silver&gt;
+    &lt;crystal&gt;Currently unavailable&lt;/crystal&gt;
+   &lt;/area&gt;
+   &lt;moves&gt;
+    &lt;move c=" 1" gs=" 1" y=" 1" rb=" 1"&gt;Transform&lt;/move&gt;
+   &lt;/moves&gt;
+   &lt;stats&gt;
+    &lt;attack&gt;48&lt;/attack&gt;
+    &lt;defense&gt;48&lt;/defense&gt;
+    &lt;special_attack&gt;48&lt;/special_attack&gt;
+    &lt;special_defense&gt;48&lt;/special_defense&gt;
+    &lt;speed&gt;48&lt;/speed&gt;
+    &lt;hp&gt;48&lt;/hp&gt;
+   &lt;/stats&gt;
+   &lt;rby_tms&gt;&lt;/rby_tms&gt;
+   &lt;gs_tms&gt;&lt;/gs_tms&gt;
+  &lt;/poke&gt;
+</pre>
+
+<p>TMs were now stored as tags like <code>&lt;tm_01/&gt;</code> within the appropriate parent tag.</p>
+
+<p>As it turned out, parsing this whole thing and then picking out the bits I wanted on every request took some ridiculous amount of time like 26 seconds.  (Running that same code now takes almost no time.  Hm.)  In the end, I adapted the CGI scripts to instead spit out static copies of all possible pages, which I then uploaded.  This was the first caching mechanism on veekun, I suppose.</p>
+
+<p><strong><a href="/static/local/dex-history/v4.0-0207.html">Design</a></strong>: The first I've managed to recover!  It's actually from a copy of 4.0, but the design was the same in 3.  Mmm, check out all that JavaScript I had to fix so it would actually run in current browsers.</p>
+
+<p>The main color scheme for the next few versions was white-on-black, because that's more edgy and cool.  The type colors were still center-stage.  I believe this was the first layout that was anything resembling 'clean', eschewing borders everywhere for simple headers.</p>
+
+<p>You can also see that I was using an icon collection I'd cobbled together from several sets floating around the Web.  Remember, the in-game icons didn't come around until Ruby and Sapphire.</p>
+
+
+<h2>UltraDex IV: 2002</h2>
+<p><strong>Covered</strong>: Pokémon, moves, and types from RBY and GSC.</p>
+
+<p><strong>Code</strong>: Perl CGI.  Pretty much the same beast as before.</p>
+
+<p><strong>Source control</strong>: Don't hold your breath.  Subversion was barely off the ground.</p>
+
+<p><strong>Data</strong>: The whole XML thing wasn't really working out, so I abandoned it entirely.  (It seems I was years ahead of the industry—zing!)  Now, before, I'd had some two dozen text files, each representing a field and containing one record per line, all loaded into top-level arrays.  This was a pain to manage, so I had a better idea: I created a handful of files with many fields apiece, separated by tabs.  It was effectively My First SQL, sans the SQL.  Naturally, I managed to cock this up anyway, and created a bunch of global arrays named <code>poke_$fieldname</code> instead of using hashes.  But it was progress, I guess.</p>
+
+<p><strong><a href="/static/local/dex-history/v4.0-0207.html">Design</a></strong>: Unchanged.</p>
+
+
+<h2>Eevee's Pokédex 4.x: late 2002 – late 2003</h2>
+<p>I eventually dropped the silly name and kept gradually fiddling with the Pokédex, bumping the version number arbitrarily as I went: 4.1b, 4.2, 4.5.
+
+<p>Alas, it all came crashing down sometime in late 2003 (or early 2004?), when my host's hard drive bombed a second time, and then his server went down entirely.  My free hosting was no more, and I was busy off at college tinkering anyway.  My creations didn't see the light of day for a good year or so.</p>
+
+<p><strong><a href="/static/local/dex-history/v4.5-0212.html">Design</a></strong>: Mostly the same throughout, although it did change slightly towards the end.  I'm still not sure whether this was an improvement.  Ripped out a lot of that JavaScript cruft, though, and what was left actually worked in non-IE (which, at the time, was pretty much Mozilla 1).</p>
+
+
+<h2>Eevee's Den Pokédex "5.0": August 2004 – October 2005</h2>
+<p>Finally, I'd found a new buddy-with-a-server (<a href="http://www.racso.com/">Racso</a>) and set about putting the relationship to good use.  I even had a (sub)domain now: http://eevee.racso.com/.  I was almost like a real Web site!</p>
+
+<p><strong>Covered</strong>: Pokémon, moves, and types from RBY, GSC, and RSFL.  Abilities linked to a search, which is almost as good as a real page.</p>
+
+<p><strong>Code</strong>: Perl CGI.  By now, though, the code was being arranged gradually into modules, although it still did silly things like have dex.pl which required dex.pokemon.pl if you looked up a Pokémon.</p>
+
+<p><strong>Source control</strong>: Nada.</p>
+
+<p><strong>Data</strong>: MySQL!  I had spent the timeskip well; I was now faintly familiar with databases, and set about porting all my data into one.</p>
+
+<p>Being only <em>faintly</em> familiar with databases, most of the ad-hoc tables I'd had in plaintext files were moved wholesale into MySQL tables.  That is to say: I now had a <code>tbl_pokemon.movesrb</code> column that contained exactly the same '<code>01-033 01-045 07-073 ...</code>' gunk as I'd started with all those years ago.  But now I could <em>query</em> it, and query it I did, with brilliant and convoluted <code>CONCAT()</code> constructs to find all the Pokémon that could learn some given move.</p>
+
+<p><strong><a href="/static/local/dex-history/v5.0-0510.html">Design</a></strong>:  Went from black to a starkly different light blue I called "disjoint", in an arrangement I still quite like.  (The main problem with it, looking back, is that it's entirely monochromatic and no other colors will fit.)  This heralded the second major arrangement of the pages themselves, introducing the three-column arrangement that still persists today.  I also first introduced the long-since-gone type textures in this layout, to compensate for no longer color-coding entire pages by type.  Unfortunately, my icon set was now dramatically short on icons, and you can see I had to pad it with shrunken sprites until I could find the icons introduced in the new games.</p>
+
+<p>This really didn't last too long before I got my own domain name, of which you may have heard.</p>
+
+
+<h2>Eevee's Stockpile Pokédex "5.5": October 2005 – January 2006</h2>
+<p><strong>Covered</strong>: Pokémon, moves, and types from RBY, GSC, and RSFL.</p>
+
+<p><strong>Code</strong>: In March 2005, I bolted my existing mass of CGI scripts onto mod_perl, creating a mass of mod_perl registry scripts.  I didn't really understand what mod_perl was <em>for</em> besides making Perl "fast", so I never knew leaving it in that state might have been a bad idea (and later paid the price in administration time).  I certainly needed the speed boost, though, as I was starting to get <em>users</em>, quite the new phenomenon for me.</p>
+
+<p>At this point, I still had a healthy dose of <a href="http://en.wikipedia.org/wiki/Not_Invented_Here">NIH syndrome</a>.  I wrote my own CGI query handling.  I wrote my own form generation and handling.  I wrote—and it pains me even now to say this—<em>my own ORM</em>.  It was glorious.</p>
+
+<p>This was the first incarnation to, eventually, use actual templates (via <a href="http://template-toolkit.org/">Template Toolkit</a>) instead of masses of <code>print</code> statements—a gigantic leap forward.</p>
+
+<p><strong>Source control</strong>: Getting there.</p>
+
+<p><strong>Data</strong>: MySQL.</p>
+
+<p><strong><a href="/static/local/dex-history/v5.5-0510.html">Design</a></strong>: Fairly similar to what I'd had before, except that I had opted to go with a horrendous sea-green-and-blue scheme.  I'm pretty sure my monitor was woefully miscalibrated when I whipped this up.  I did finally drop the ancient fanart icons for the official R/S icons.</p>
+
+
+<h2>veekun.com Pokédex "6.x": February 2006 – present</h2>
+<p><strong>Covered</strong>: Pokémon, moves, types, abilities, and (sorta) locations from RBY, GSC, RSEFL, and DPP.</p>
+
+<p><strong>Code</strong>: Now we're talking.  I started very busily moving <em>all</em> the code, file by file, into Catalyst controllers.  Now I had a real Web application that was far less awful to hack on.  I continued hammering on it, gradually adding features as time went on; there haven't actually been any huge breaks or overhauls in all that time.</p>
+
+<p>Originally, this ran on mod_perl, but I got sick of that crap pretty fast and switched to FastCGI.</p>
+
+<p><strong>Source control</strong>: This is where recorded history finally begins: the first commit was a Catalyst skeleton in my old private Subversion repository.  Revision 234 on July 15, 2006.  And then it was all lost, because I realized I couldn't release the source code, because I'd committed a password very early on.  So I started over with a new repository.  But that <a href="svn://veekun.com/">subversion server is still running</a> and cheerfully reports that the very first <em>public</em> commit was made on Feb 10, 2007, ringing in a new era in open-source Pokédex technology.</p>
+
+<p><strong>Data</strong>: MySQL, although I gradually untangled my old text-file clutter into something faintly relational.  It's still not quite there.</p>
+
+<p><strong><a href="/static/local/dex-history/v6.0-0703.html">First design</a></strong>: Still blue and still the same basic shape, but much darker this time around and without a sidebar.  I called it "midnight".  (It was actually created before I moved to Catalyst, but I'm pretty sure the two changes were very close together, so I consider them to be one migration.)  I still like this design, too, but it had the same problem: too much blue, and impossible to introduce much of any other color.  You can see I actually tried to avoid this problem with the menus and yellow header text, but in the end the extra colors just didn't balance the blue enough.</p>
+
+<p>The dark-blue design saw the rise of names in URLs rather than numbers, and the rise and fall of my custom-made type icons.  I spent so long on those.  :(</p>
+
+<p><strong><a href="http://veekun.com/dex/pokemon/eevee">Second design</a></strong>: On April 22, 2007, I merged in the current brown layout ("fluff") with which we're all familiar.  You can, of course, see it live.  This was the first major revision of the actual page layout since I'd resurrected the Pokédex in 2005.  I suppose it could be called version 6.5.</p>
+
+<p>I'd about exhausted my blue ideas by this point, and went for an Eevee-themed brown as (a) it's easier to make light brown than light blue, and (b) I could think of more colors that fit in with brown.  I did manage to fit in some greens and reds, but I was honestly never too happy that it still came out monochromatic.</p>
+
+
+<h2>veekun Pokédex 7: November 2008 – present</h2>
+<p>And here we are now.  It actually shames me to see that I've been working on the "new" Pokédex for over a year, as of this writing; I can certainly see why everyone says never to start over from scratch.  It's been worth it, at least.</p>
+
+<p><strong>Covers</strong>: Pokémon, moves, types, abilities, locations, ...? from RBY, GSC, RSEFL, DPPHS, ...?</p>
+
+<p><strong>Code</strong>: Sadly, the new shiny Catalyst application was really just the old crappy code broken into chunks.  The templates were a mass of logic.  Tons of data was embedded in various places in the Perl code itself.  The database <em>still</em> had columns containing lists of move ids.  And, worst of all, I had failed at one of my original goals from back in 2005: to make it possible for others to reuse my code.  Nobody could use the Pokédex parts without lugging the site along, and nobody could use the site without running the Pokédex.</p>
+
+<p>I had some five years' more experience than when I'd written the bulk of this code, and it just wasn't any fun to work on any more.  Perl was also gradually grating on my nerves; I had a job working with it now, and having had some Python experience, its rough edges were just tedious to constantly work around.  I needed to start over for <em>real</em>, and I needed to do it in Python this time.</p>
+
+<p>Having been briefly exposed to Pylons (along with SQLAlchemy and Mako), I set about rebuilding the past nine years with my shiny new toolbox.</p>
+
+<p><strong>Source control</strong>: Subversion was, similarly, not at all a joy to work with.  Spurred by a similar migration at my workplace, I finally saw the light; the code is now split across my spline, spline-pokedex, and pokedex <a href="http://git.veekun.com/">git repositories</a>.</p>
+
+<p><strong>Data</strong>: Currently just SQLite on the server, but ultimately PostgreSQL.  Three out of three; it's much more a joy to work with than MySQL has ever been.  Data has all been loaded from scratch, too, and is causing far fewer headaches.</p>
+
+<p><strong><a href="/dex/pokemon/eevee">Design</a></strong>: I actively decided from the start that I needed to be able to use multiple colors—and that meant not having any single one color in the spotlight.  I decided to make the content area black-on-white once more, and tried to strike a balance between blue (my favorite) and brown (the Eevee color) elsewhere.  I think the result is the best I've ever done: headers are a soft brown, and subheaders/highlights are a cool blue.  Special color-coded things like the stat table don't look out of place for the first time in years.</p>
+
+
+<h1>Code</h1>
+<p>For the curious: I do, in fact, still have code to run the black XML Pokédex, the queasy-sea-green Pokédex, and the dark blue pre-Catalyst Pokédex.  It's all pretty bad.  I might grab some choice chunks if anyone shows interest, but I can't post it all wholesale for various reasons and I can't be buggered sanitizing it.</p>
+
+
+<h1>Design</h1>
+<p>Here's every design I still have a copy of, side-by-side, so you can see the evolution of this monstrosity.</p>
+
+<p style="white-space: nowrap; max-height: 320px; overflow: auto;">
+    <img src="/static/local/dex-history/v4.0.png" style="vertical-align: top;" alt="v4.0" title="version 4.0: Jul 2002">
+    <img src="/static/local/dex-history/v4.5.png" style="vertical-align: top;" alt="v4.5" title="version 4.5: Dec 2002">
+    <img src="/static/local/dex-history/v5.0.png" style="vertical-align: top;" alt="v5.0" title="version 5.0: Oct 2005">
+    <img src="/static/local/dex-history/v5.5.png" style="vertical-align: top;" alt="v5.5" title="version 5.5: Oct 2005">
+    <img src="/static/local/dex-history/v6.0.png" style="vertical-align: top;" alt="v6.0" title="version 6.0: Mar 2007">
+    <img src="/static/local/dex-history/v6.5.png" style="vertical-align: top;" alt="v6.5" title="version 6.5: Jan 2010">
+    <img src="/static/local/dex-history/v7.0.png" style="vertical-align: top;" alt="v7.0" title="version 7.0: Jan 2010">
+</p>
+
+<hr>
+
+<p>Originally written on January 1, 2010.</p>

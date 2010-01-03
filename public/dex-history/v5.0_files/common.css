@@ -1,0 +1,33 @@
+@import url("dex.types.css");
+
+.big { width: 100%; }
+.plain td { padding: 0px; }
+
+body, table tr td, table tr th, input, option, select { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; }
+table tr td { border: 0px; }
+img { vertical-align: middle; border: 0; }
+input[type='submit'], input[type='button'], input[type='reset'], input[type='radio'], input[type='checkbox'], select, label { cursor: pointer; vertical-align: middle; }
+input[type='text'] { vertical-align: middle; }
+label { white-space: nowrap; }
+select { vertical-align: middle; }
+p { margin: 2px 0px; }
+h1, form { margin: 0px; }
+hr { clear: both; margin: 4px 0px; }
+.b { font-weight: bold; }
+.i { font-style: italic; }
+.b, .i { color: #132E74; font-size: 12px; }
+.spaced { margin: 3px; }
+.strike { text-decoration: line-through; }
+div.total { clear: both; font-style: italic; }
+
+td.center, .center td, .center { text-align: center !important; }
+.left { text-align: left !important; }
+td.top, .top td { vertical-align: top !important; }
+.right { text-align: right !important; }
+.middle, .middle tr td { vertical-align: middle !important; }
+.bottom { vertical-align: bottom !important; }
+
+.nopad { padding: 0px !important; }
+* html .iebig { width: 100%; }
+ul, ol { margin-top: 0px; margin-bottom: 0px; }
+li { margin-left: -24px; }

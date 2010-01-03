@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title> #25: Pikachu - The UltraDex IV </title>
+<style type="text/css">
+  body { background: black; color: white; }
+  body, table tr td { font-size: 12px; font-family: Arial; text-align: center; }
+  table.normal { width: 100%; }
+  table.normal, table.normal tr td { border: 0; padding: 0px; }
+  table { border-collapse: collapse; width: 500px; }
+  table, table tr td { border: 2 solid #FFFF80; }
+  table tr td { padding: 3px; margin: 3px; vertical-align: middle; }
+  table tr td.header { background: #FFFF80; color: black; font-weight: bold; border: 0; }
+  table tr.list td { height: 32px; text-align: left; }
+  table tr.list td img { text-align: center; }
+  a, a:visited { color: #FFFF80; text-decoration: none; }
+  a:hover { color: white; text-decoration: underline; }
+  a img { border: 0; }
+  td#imgattk img, td#imgdfns img, td#imgspat img, td#imgspdf img, td#imgsped img, td#imghitp img { vertical-align: auto; }
+  td#imgattk, td#imgdfns, td#imgspat, td#imgspdf, td#imgsped, td#imghitp { text-align: left; padding: 0px; width: 350px; height: 40px; }
+  td#valattk, td#valdfns, td#valspat, td#valspdf, td#valsped, td#valhitp { width: 60px; }
+  span.header { color: #FFFF80; font-size: 36px; font-weight: bold; display: block; }
+  .x { color: #606060; }
+  form#dexform { display: inline; vertical-align: top; }
+  form#dexform input { border: 3 solid #FFFF80; color: #FFFF80; background: black; font-family: Arial; vertical-align: middle; text-align: center; }
+  .left { text-align: left; }
+  .hand { cursor: hand; }
+  table tr.fifth td { width: 20%; }
+  table tr.fifth td { width: 10%; }
+
+  /* nb: added on 1/2/10 to make centering work correctly outside IE */
+  body > table { margin: 0 auto; }
+</style>
+<script type="text/javascript" language="JavaScript1.2">
+// <![CDATA[
+// nb: these were added on jan 2, 2010 to make the script run at all
+var usebase = false;
+
+function on(obj) {
+  // nb: changed on jan 2, 2010 to make this run at all
+  //if (obj.getAttribute('oldtmname') != null) { rbytmdesc.innerHTML = obj.getAttribute('oldtmname'); } else { rbytmdesc.innerHTML = ""; }
+  //if (obj.getAttribute('newtmname') != null) { gsctmdesc.innerHTML = obj.getAttribute('newtmname'); } else { gsctmdesc.innerHTML = ""; }
+  if (obj.getAttribute('oldtmname') != null) { document.getElementById('rbytmdesc').innerHTML = obj.getAttribute('oldtmname'); } else { document.getElementById('rbytmdesc').innerHTML = ""; }
+  if (obj.getAttribute('newtmname') != null) { document.getElementById('gsctmdesc').innerHTML = obj.getAttribute('newtmname'); } else { document.getElementById('gsctmdesc').innerHTML = ""; }
+  while (true) {
+    if (obj.getAttribute('color') != null && obj.getAttribute('color') != "") { break; }
+    if (obj == document.body) { return; }
+    // nb: changed on jan 2, 2010; used to be parentElement
+    obj = obj.parentNode;
+  }
+  obj.style.color = "black";
+  obj.style.backgroundColor = obj.getAttribute('color');
+  obj.style.cursor = "hand";
+}
+function off(obj) {
+  while (true) {
+    if (obj.getAttribute('color') != null && obj.getAttribute('color') != "") { break; }
+    if (obj == document.body) { return; }
+    // nb: changed on jan 2, 2010; used to be parentElement
+    obj = obj.parentNode;
+  }
+  obj.style.color = "";
+  obj.style.backgroundColor = "black";
+}
+function go(obj) {
+  while (true) {
+    if (obj.getAttribute('goto') != null) { goto(obj.getAttribute('goto')); }
+    if (obj == document.body) { return; }
+    obj = obj.parentElement;
+  }
+}
+function goto(where) { location.href = where + ".html"; }
+function togglestats() { usebase = !usebase; if(usebase) { statlev.innerHTML = ""; } else { statlev.innerHTML = " for level " + curlev; } update(); }
+function getnewlevel() {
+  if (usebase) { if(confirm("You are in base stat mode; you can't change the level.  Switch?")) { usebase = !usebase; } else { return; } }
+  updatestats(prompt('Level?', curlev));
+}
+function updatestats(level) {
+  if (isNaN(level) || level != Math.floor(level) || level < 2 || level > 100) { alert("Invalid level"); return; }
+  curlev = level;
+  statlev.innerHTML = " for level " + curlev;
+  update();
+}
+function update() {
+  if (usebase) {
+    for (i = 0; i < 6; i++) {
+      // nb: changed on jan 2, 2010 to make this run at all
+      //img = eval("img" + names[i]);
+      //val = eval("val" + names[i]);
+      var img = document.getElementById('img' + names[i]);
+      var val = document.getElementById('val' + names[i]);
+
+      o1 = val.innerHTML = bases[i];
+      l1 = Math.floor(bases[i] / 255 * 350);
+      l2 = 350 - l1;
+      img.innerHTML = "<img src=\"v4.0_files/bar-electric.png\" width=\"" + l1 + "\" height=\"16\" alt=\"Base stat: " + o1 + "\"/>";
+      val.innerHTML = bases[i];
+    }
+  } else {
+    for (i = 0; i < 6; i++) {
+      if (i < 5) {
+        o1a = Math.floor((curlev * (bases[i]) / 50) + 5);
+        o2a = Math.floor((curlev * (bases[i] + 15) / 50) + 5) - o1a;
+        o1b = Math.floor((curlev * (bases[i] + 31.99999) / 50) + 5);
+        o2b = Math.floor((curlev * (bases[i] + 46.99999) / 50) + 5) - o1b;
+        l1a = Math.round(o1a / 608 * 350); l2a = Math.round(o2a / 608 * 350);
+        l1b = Math.round(o1b / 608 * 350); l2b = Math.round(o2b / 608 * 350);
+      } else {
+        o1a = Math.floor((curlev * (bases[i] + 50) / 50) + 10);
+        o2a = Math.floor((curlev * (bases[i] + 65) / 50) + 10) - o1a;
+        o1b = Math.floor((curlev * (bases[i] + 50 + 31.99999) / 50) + 10);
+        o2b = Math.floor((curlev * (bases[i] + 50 + 46.99999) / 50) + 10) - o1b;
+        l1a = Math.round(o1a / 713 * 350); l2a = Math.round(o2a / 713 * 350);
+        l1b = Math.round(o1b / 713 * 350); l2b = Math.round(o2b / 713 * 350);
+      }
+      img = eval("img" + names[i]);
+      val = eval("val" + names[i]);
+      img.innerHTML = "<img src=\"images/bar/electrict.png\" width=\"" + l1a + "\" height=\"8\" alt=\"Min wild: " + o1a + "\"/><img src=\"images/bar/electrictx.png\" width=\"" + l2a + "\" height=\"8\" alt=\"Max wild: " + (o1a + o2a) + "\"/><br/><img src=\"images/bar/electricb.png\" width=\"" + l1b + "\" height=\"8\" alt=\"Min trained: " + o1b + "\"/><img src=\"images/bar/electricbx.png\" width=\"" + l2b + "\" height=\"8\" alt=\"Max trained: " + (o1b + o2b) + "\"/>";
+      val.innerHTML = o1a + " - " + (o1a + o2a) + "<br/>" + o1b + " - " + (o1b + o2b)
+    }
+  }
+}
+function setevents() {
+  // nb: fixed on jan 2 2010 to be not retarded.  original is preserved for posterity.
+  //document.onmouseover = new Function("on(event.srcElement);");
+  //document.onmouseout = new Function("off(event.srcElement);");
+  //document.onclick = new Function("go(event.srcElement);");
+  document.body.onmouseover = function (e) { on(e.target) };
+  document.body.onmouseout = function (e) { off(e.target) };
+  document.body.onclick = function (e) { go(e.target) };
+}
+names = new Array('attk', 'dfns', 'spat', 'spdf', 'sped', 'hitp');
+bases = new Array(55, 30, 50, 40, 90, 35);
+usebase = true;
+var curlev = 10;
+// ]]>
+</script>
+<script src="v4.0_files/go.js"></script>
+<base href="xxx">
+</head><body onload="update(); setevents();">
+<span class="header">Pikachu</span>
+<hr>
+
+<form action="" id="dexform" onsubmit="event.returnValue = false; gobox(dexform.elements.entry.value);">
+<input name="entry" size="15" value="Pikachu" color="#FFFF80" type="text">
+<a href="javascript:gobox(dexform.elements.entry.value);"><img src="v4.0_files/go.png" onmouseover="this.src='images/gohover.png';" onmouseout="this.src='images/go.png';" onmousedown="this.src='images/goclick.png';" onmouseup="this.src='images/gohover.png';" align="middle"></a>
+</form>
+
+<hr>
+<table>
+<tbody><tr><td colspan="5" class="header">Basic Data</td></tr>
+<tr><td rowspan="2" height="40" width="40"><img src="v4.0_files/025.gif" alt="Icon"></td>
+  <td colspan="4"><table class="normal"><tbody><tr>
+    <td style="text-align: left; width: 33%;"><a href="javascript:goto('024')"><img src="v4.0_files/prev.png" alt="Previous: Arbok" align="top">#24: Arbok</a></td>
+    <td style="text-align: center; width: 33%;" colspan="2">#25: Pikachu</td>
+    <td style="text-align: right; width: 33%;"><a href="javascript:goto('026')">#26: Raichu<img src="v4.0_files/next.png" alt="Next: Raichu" align="top"></a></td>
+  </tr></tbody></table>
+</td></tr>
+<tr><td>Height: 1'4"</td><td>Weight: 13 lbs.</td><td>Type: <a href="javascript:goto('electric')">electric</a></td><td>Kind: MOUSE</td></tr>
+<tr><td height="40"><img src="v4.0_files/gd4.png" alt="127/254 chance of being female"></td><td colspan="4"><a href="javascript:goto('172');">Pichu</a> - <a href="javascript:goto('025');">Pikachu (Happiness + level up)</a> - <a href="javascript:goto('026');">Raichu (Thunderstone)</a></td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr><td colspan="2" class="header">Pokédex Data</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_redblue.png" alt="R/B Data"></td><td class="left">When several of these Pokémon gather, their electricity could build and cause lightning storms.</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_yellow.png" alt="Yellow Data"></td><td class="left">It keeps its tail raised to monitor its surroundings.  If you yank its tail, it will try to bite you.</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_gold.png" alt="Gold Data"></td><td class="left">This intelligent Pokémon roasts hard Berries with electricity to make them tender enough to eat.</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_silver.png" alt="Silver Data"></td><td class="left">It raises its tail to check its surroundings. The tail is sometimes struck by lightning in this pose.</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_crystal.png" alt="Crystal Data"></td><td class="left">When it is angered, it immediately discharges the energy stored in the pouches in its cheeks.</td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr><td colspan="2" class="header">Locations</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_red.png" alt="Red Area"></td><td>Viridian Forest; Power Plant</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_blue.png" alt="Blue Area"></td><td>Viridian Forest; Power Plant</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_yellow.png" alt="Yellow Area"></td><td>Prof. Oak's Lab</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_gold.png" alt="Gold Area"></td><td>Route 2</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_silver.png" alt="Silver Area"></td><td>Route 2</td></tr>
+<tr><td height="32" width="32"><img src="v4.0_files/ball_crystal.png" alt="Crystal Area"></td><td>Currently unavailable</td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr><td colspan="4" class="header">Images</td></tr>
+<tr><td rowspan="3" colspan="2"><img src="v4.0_files/sugimori-classic-25.png" alt="Nintendo's pic"><br>Nintendo</td><td><img src="v4.0_files/jp-blue-25.png" alt="Green pic"><br>Green</td><td><img src="v4.0_files/red-blue-25.png" alt="Red/Blue pic"><br>Red/Blue</td></tr>
+<tr><td><img src="v4.0_files/yellow-25.png" alt="Yellow pic"><br>Yellow</td><td><img src="v4.0_files/nopicsmall.png" alt="Old back pic"><br>Old back</td></tr>
+<tr><td><img src="v4.0_files/crystal-25.gif" alt="Crystal pic"><br>Crystal</td><td><img src="v4.0_files/crystal-shiny-25.gif" alt="Shiny Crystal pic"><br>Shiny Crystal</td></tr>
+<tr><td><img src="v4.0_files/silver-25.png" alt="Silver pic"><br>Silver</td><td><img src="v4.0_files/silver-shiny-25.png" alt="Shiny Silver pic"><br>Shiny Silver</td><td><img src="v4.0_files/gold-25.png" alt="Gold pic"><br>Gold</td><td><img src="v4.0_files/gold-shiny-25.png" alt="Shiny Gold pic"><br>Shiny Gold</td></tr>
+<tr><td><img src="v4.0_files/gold-back-25.png" alt="New back pic"><br>New back</td><td><img src="v4.0_files/gold-back-shiny-25.png" alt="Shiny new back pic"><br>Shiny new back</td><td><img src="v4.0_files/025.gif" alt="Icon"><br>Icon</td><td><img src="v4.0_files/tcg-25.png" alt="TCG pic"><br>TCG</td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr><td colspan="9" class="header">Move List</td></tr>
+<tr><td><img src="v4.0_files/ball_crystal.png" alt="Crystal level"></td><td><img src="v4.0_files/ball_goldsilver.png" alt="Gold/Silver level"></td><td><img src="v4.0_files/ball_yellow.png" alt="Yellow level"></td><td><img src="v4.0_files/ball_redblue.png" alt="Red/Blue level"></td><td><b>Move</b></td><td><b>Type</b></td><td><b>PP</b></td><td><b>Pwr</b></td><td><b>Acc</b></td></tr>
+<tr color="#FFFF80" goto="a084"><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td>--</td><td>Thundershock</td><td>Electric</td><td>30</td><td>40</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a045"><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td>--</td><td>Growl</td><td>Normal</td><td>40</td><td>0</td><td title="255/256">99.6%</td></tr>
+<tr color="#FFFF80" goto="a086"><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td> 9</td><td>Thunder Wave</td><td>Electric</td><td>20</td><td>0</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a098"><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td>16</td><td>Quick Attack</td><td>Normal</td><td>30</td><td>40</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a129"><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td bgcolor="#ffff80">  </td><td>26</td><td>Swift</td><td>Normal</td><td>20</td><td>60</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a045"><td colspan="3">--</td><td bgcolor="#ffff80">  </td><td>Growl</td><td>Normal</td><td>40</td><td>0</td><td title="255/256">99.6%</td></tr>
+<tr color="#FFFF80" goto="a084"><td colspan="3">--</td><td bgcolor="#ffff80">  </td><td>Thundershock</td><td>Electric</td><td>30</td><td>40</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a039"><td colspan="3"> 6</td><td bgcolor="#ffff80">  </td><td>Tail Whip</td><td>Normal</td><td>30</td><td>0</td><td title="255/256">99.6%</td></tr>
+<tr color="#FFFF80" goto="a086"><td colspan="3"> 8</td><td bgcolor="#ffff80">  </td><td>Thunder Wave</td><td>Electric</td><td>20</td><td>0</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a098"><td colspan="3">11</td><td bgcolor="#ffff80">  </td><td>Quick Attack</td><td>Normal</td><td>30</td><td>40</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a104"><td colspan="3">15</td><td bgcolor="#ffff80">  </td><td>Double Team</td><td>Normal</td><td>15</td><td>0</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a029"><td colspan="3">20</td><td bgcolor="#ffff80">  </td><td>Slam</td><td>Normal</td><td>20</td><td>80</td><td title="191/256">74.6%</td></tr>
+<tr color="#FFFF80" goto="a085"><td colspan="3">26</td><td bgcolor="#ffff80">  </td><td>Thunderbolt</td><td>Electric</td><td>15</td><td>95</td><td title="255/256">99.6%</td></tr>
+<tr color="#D69EFF" goto="a097"><td colspan="4">33</td><td>Agility</td><td>Psychic</td><td>30</td><td>0</td><td title="255/256">99.6%</td></tr>
+<tr color="#FFFF80" goto="a087"><td colspan="2">41</td><td colspan="2">43</td><td>Thunder</td><td>Electric</td><td>10</td><td>120</td><td title="178/256">69.5%</td></tr>
+<tr color="#D69EFF" goto="a113"><td colspan="3">50</td><td bgcolor="#ffff80">  </td><td>Light Screen</td><td>Psychic</td><td>30</td><td>0</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a117"><td colspan="4">Inheritable</td><td>Bide</td><td>Normal</td><td>10</td><td>N/A</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a003"><td colspan="4">Inheritable</td><td>Doubleslap</td><td>Normal</td><td>10</td><td>15</td><td title="216/256">84.4%</td></tr>
+<tr color="#90A0B0" goto="a227"><td colspan="4">Inheritable</td><td>Encore</td><td>Normal</td><td>5</td><td>0</td><td title="255/256">99.6%</td></tr>
+<tr color="#90A0B0" goto="a217"><td colspan="4">Inheritable</td><td>Present</td><td>Normal</td><td>15</td><td>N/A</td><td title="255/256">99.6%</td></tr>
+<tr color="#D2691E" goto="a179"><td colspan="4">Inheritable</td><td>Reversal</td><td>Fighting</td><td>15</td><td>N/A</td><td title="255/256">99.6%</td></tr>
+<tr><td colspan="9">N.B. Pokémon can also inherit any TMs they can learn.</td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr><td colspan="5" class="header">Breeding Compatibility (59 total)</td></tr>
+<tr class="fifth"><td color="#90A0B0" goto="190">Aipom</td><td color="#D8BFD8" goto="024">Arbok</td><td color="#FF4B27" goto="059">Arcanine</td><td color="#0090FF" goto="184">Azumarill</td><td color="#90A0B0" goto="242">Blissey</td></tr>
+<tr class="fifth"><td color="#90A0B0" goto="113">Chansey</td><td color="#90A0B0" goto="036">Clefable</td><td color="#90A0B0" goto="035">Clefairy</td><td color="#FF4B27" goto="155">Cyndaquil</td><td color="#DEB887" goto="050">Diglett</td></tr>
+<tr class="fifth"><td color="#90A0B0" goto="132">Ditto</td><td color="#DEB887" goto="232">Donphan</td><td color="#DEB887" goto="051">Dugtrio</td><td color="#90A0B0" goto="206">Dunsparce</td><td color="#90A0B0" goto="133">Eevee</td></tr>
+<tr class="fifth"><td color="#D8BFD8" goto="023">Ekans</td><td color="#D69EFF" goto="196">Espeon</td><td color="#FF4B27" goto="136">Flareon</td><td color="#90A0B0" goto="162">Furret</td><td color="#D69EFF" goto="203">Girafarig</td></tr>
+<tr class="fifth"><td color="#90A0B0" goto="210">Granbull</td><td color="#FF4B27" goto="058">Growlithe</td><td color="#FF4B27" goto="229">Houndoom</td><td color="#FF4B27" goto="228">Houndour</td><td color="#90A0B0" goto="039">Jigglypuff</td></tr>
+<tr class="fifth"><td color="#FFFF80" goto="135">Jolteon</td><td color="#D2691E" goto="056">Mankey</td><td color="#0090FF" goto="183">Marill</td><td color="#90A0B0" goto="052">Meowth</td><td color="#90A0B0" goto="241">Miltank</td></tr>
+<tr class="fifth"><td color="#FF4B27" goto="038">Ninetales</td><td color="#90A0B0" goto="053">Persian</td><td color="#DEB887" goto="231">Phanpy</td><td color="#FFFF80" goto="025">Pikachu</td><td color="#C0F0FF" goto="221">Piloswine</td></tr>
+<tr class="fifth"><td color="#FF4B27" goto="077">Ponyta</td><td color="#D2691E" goto="057">Primeape</td><td color="#FF4B27" goto="156">Quilava</td><td color="#FFFF80" goto="026">Raichu</td><td color="#FF4B27" goto="078">Rapidash</td></tr>
+<tr class="fifth"><td color="#90A0B0" goto="020">Raticate</td><td color="#90A0B0" goto="019">Rattata</td><td color="#DEB887" goto="027">Sandshrew</td><td color="#DEB887" goto="028">Sandslash</td><td color="#90A0B0" goto="161">Sentret</td></tr>
+<tr class="fifth"><td color="#90A0B0" goto="235">Smeargle</td><td color="#C0F0FF" goto="215">Sneasel</td><td color="#90A0B0" goto="209">Snubbull</td><td color="#90A0B0" goto="234">Stantler</td><td color="#C0F0FF" goto="220">Swinub</td></tr>
+<tr class="fifth"><td color="#90A0B0" goto="128">Tauros</td><td color="#90A0B0" goto="216">Teddiursa</td><td color="#87CEFA" goto="176">Togetic</td><td color="#FF4B27" goto="157">Typhlosion</td><td color="#600000" goto="197">Umbreon</td></tr>
+<tr class="fifth"><td color="#90A0B0" goto="217">Ursaring</td><td color="#0090FF" goto="134">Vaporeon</td><td color="#FF4B27" goto="037">Vulpix</td><td color="#90A0B0" goto="040">Wigglytuff</td><td colspan="1">&nbsp;</td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr><td colspan="3" class="header">Stats <span id="statlev"></span></td></tr>
+<tr><td colspan="3"><a href="javascript:getnewlevel();">Change level</a> | <a href="javascript:togglestats();">Toggle base/calculated stats</a></td></tr>
+<tr><td>Attack              </td><td id="valattk"></td><td id="imgattk"></td></tr>
+<tr><td>Defense             </td><td id="valdfns"></td><td id="imgdfns"></td></tr>
+<tr><td>Special<br>Attack  </td><td id="valspat"></td><td id="imgspat"></td></tr>
+<tr><td>Special<br>Defense </td><td id="valspdf"></td><td id="imgspdf"></td></tr>
+<tr><td>Speed               </td><td id="valsped"></td><td id="imgsped"></td></tr>
+<tr><td>Hit Points          </td><td id="valhitp"></td><td id="imghitp"></td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr><td colspan="10" class="header">Red/Blue/Yellow TM Compatibility</td></tr>
+<tr class="tenth"><td goto="a005" color="#90A0B0" title="Mega Punch (normal): 20PP, 80 power, 84.4%" oldtmname="Mega Punch">TM01</td><td class="x">TM02</td><td class="x">TM03</td><td class="x">TM04</td><td goto="a025" color="#90A0B0" title="Mega Kick (normal): 5PP, 120 power, 84.4%" oldtmname="Mega Kick">TM05</td><td goto="a092" color="#D8BFD8" title="Toxic (poison): 10PP, 0 power, 84.4%" oldtmname="Toxic">TM06</td><td class="x">TM07</td><td goto="a034" color="#90A0B0" title="Body Slam (normal): 15PP, 85 power, 99.6%" oldtmname="Body Slam">TM08</td><td goto="a036" color="#90A0B0" title="Take Down (normal): 20PP, 90 power, 84.4%" oldtmname="Take Down">TM09</td><td goto="a038" color="#90A0B0" title="Double-Edge (normal): 15PP, 120 power, 99.6%" oldtmname="Double-Edge">TM10</td></tr>
+<tr class="tenth"><td class="x">TM11</td><td class="x">TM12</td><td class="x">TM13</td><td class="x">TM14</td><td class="x">TM15</td><td goto="a006" color="#90A0B0" title="Pay Day (normal): 20PP, 40 power, 99.6%" oldtmname="Pay Day">TM16</td><td goto="a066" color="#D2691E" title="Submission (fighting): 25PP, 80 power, 79.7%" oldtmname="Submission">TM17</td><td class="x">TM18</td><td goto="a069" color="#D2691E" title="Seismic Toss (fighting): 20PP, N/A power, 99.6%" oldtmname="Seismic Toss">TM19</td><td goto="a099" color="#90A0B0" title="Rage (normal): 20PP, 20 power, 99.6%" oldtmname="Rage">TM20</td></tr>
+<tr class="tenth"><td class="x">TM21</td><td class="x">TM22</td><td class="x">TM23</td><td goto="a085" color="#FFFF80" title="Thunderbolt (electric): 15PP, 95 power, 99.6%" oldtmname="Thunderbolt">TM24</td><td goto="a087" color="#FFFF80" title="Thunder (electric): 10PP, 120 power, 69.5%" oldtmname="Thunder">TM25</td><td class="x">TM26</td><td class="x">TM27</td><td class="x">TM28</td><td class="x">TM29</td><td class="x">TM30</td></tr>
+<tr class="tenth"><td goto="a102" color="#90A0B0" title="Mimic (normal): 10PP, 0 power, 99.6%" oldtmname="Mimic">TM31</td><td goto="a104" color="#90A0B0" title="Double Team (normal): 15PP, 0 power, 99.6%" oldtmname="Double Team">TM32</td><td goto="a115" color="#D69EFF" title="Reflect (psychic): 20PP, 0 power, 99.6%" oldtmname="Reflect">TM33</td><td goto="a117" color="#90A0B0" title="Bide (normal): 10PP, N/A power, 99.6%" oldtmname="Bide">TM34</td><td class="x">TM35</td><td class="x">TM36</td><td class="x">TM37</td><td class="x">TM38</td><td goto="a129" color="#90A0B0" title="Swift (normal): 20PP, 60 power, 99.6%" oldtmname="Swift">TM39</td><td goto="a130" color="#90A0B0" title="Skull Bash (normal): 15PP, 100 power, 99.6%" oldtmname="Skull Bash">TM40</td></tr>
+<tr class="tenth"><td class="x">TM41</td><td class="x">TM42</td><td class="x">TM43</td><td goto="a156" color="#D69EFF" title="Rest (psychic): 10PP, 0 power, 99.6%" oldtmname="Rest">TM44</td><td goto="a086" color="#FFFF80" title="Thunder Wave (electric): 20PP, 0 power, 99.6%" oldtmname="Thunder Wave">TM45</td><td class="x">TM46</td><td class="x">TM47</td><td class="x">TM48</td><td class="x">TM49</td><td goto="a164" color="#90A0B0" title="Substitute (normal): 10PP, 0 power, 99.6%" oldtmname="Substitute">TM50</td></tr>
+<tr class="tenth"><td class="x">HM01</td><td class="x">HM02</td><td class="x">HM03</td><td class="x">HM04</td><td goto="a148" color="#90A0B0" title="Flash (normal): 20PP, 0 power, 69.5%" oldtmname="Flash">HM05</td><td colspan="5" id="rbytmdesc"></td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr><td colspan="10" class="header">Gold/Silver/Crystal TM Compatibility</td></tr>
+<tr class="tenth"><td goto="a223" color="#D2691E" title="Dynamicpunch (fighting): 5PP, 100 power, 49.6%" newtmname="Dynamicpunch">TM01</td><td goto="a021" color="#90A0B0" title="Headbutt (normal): 15PP, 70 power, 99.6%" newtmname="Headbutt">TM02</td><td goto="a174" color="#FFFFFF" title="Curse (?????): 10PP, N/A power, 99.6%" newtmname="Curse">TM03</td><td goto="a205" color="#2F4F4F" title="Rollout (rock): 20PP, 30 power, 89.5%" newtmname="Rollout">TM04</td><td class="x">TM05</td><td goto="a092" color="#D8BFD8" title="Toxic (poison): 10PP, 0 power, 84.4%" newtmname="Toxic">TM06</td><td goto="a192" color="#FFFF80" title="Zap Cannon (electric): 5PP, 100 power, 49.6%" newtmname="Zap Cannon">TM07</td><td class="x">TM08</td><td class="x">TM09</td><td goto="a237" color="#90A0B0" title="Hidden Power (normal): 15PP, N/A power, 99.6%" newtmname="Hidden Power">TM10</td></tr>
+<tr class="tenth"><td class="x">TM11</td><td class="x">TM12</td><td goto="a173" color="#90A0B0" title="Snore (normal): 15PP, 40 power, 99.6%" newtmname="Snore">TM13</td><td class="x">TM14</td><td class="x">TM15</td><td class="x">TM16</td><td goto="a182" color="#90A0B0" title="Protect (normal): 10PP, 0 power, 89.5%" newtmname="Protect">TM17</td><td goto="a240" color="#0090FF" title="Rain Dance (water): 5PP, 0 power, 89.5%" newtmname="Rain Dance">TM18</td><td class="x">TM19</td><td goto="a203" color="#90A0B0" title="Endure (normal): 10PP, 0 power, 99.6%" newtmname="Endure">TM20</td></tr>
+<tr class="tenth"><td goto="a218" color="#90A0B0" title="Frustration (normal): 20PP, N/A power, 99.6%" newtmname="Frustration">TM21</td><td class="x">TM22</td><td goto="a231" color="#6692BC" title="Iron Tail (steel): 15PP, 100 power, 74.6%" newtmname="Iron Tail">TM23</td><td class="x">TM24</td><td goto="a087" color="#FFFF80" title="Thunder (electric): 10PP, 120 power, 69.5%" newtmname="Thunder">TM25</td><td class="x">TM26</td><td goto="a216" color="#90A0B0" title="Return (normal): 20PP, N/A power, 99.6%" newtmname="Return">TM27</td><td class="x">TM28</td><td class="x">TM29</td><td class="x">TM30</td></tr>
+<tr class="tenth"><td goto="a189" color="#DEB887" title="Mud-Slap (ground): 10PP, 20 power, 99.6%" newtmname="Mud-Slap">TM31</td><td goto="a104" color="#90A0B0" title="Double Team (normal): 15PP, 0 power, 99.6%" newtmname="Double Team">TM32</td><td class="x">TM33</td><td goto="a207" color="#90A0B0" title="Swagger (normal): 15PP, 0 power, 89.5%" newtmname="Swagger">TM34</td><td goto="a214" color="#90A0B0" title="Sleep Talk (normal): 10PP, N/A power, 99.6%" newtmname="Sleep Talk">TM35</td><td class="x">TM36</td><td class="x">TM37</td><td class="x">TM38</td><td goto="a129" color="#90A0B0" title="Swift (normal): 20PP, 60 power, 99.6%" newtmname="Swift">TM39</td><td goto="a111" color="#90A0B0" title="Defense Curl (normal): 40PP, 0 power, 99.6%" newtmname="Defense Curl">TM40</td></tr>
+<tr class="tenth"><td goto="a009" color="#FFFF80" title="Thunderpunch (electric): 15PP, 75 power, 99.6%" newtmname="Thunderpunch">TM41</td><td class="x">TM42</td><td goto="a197" color="#D2691E" title="Detect (fighting): 5PP, 0 power, 99.6%" newtmname="Detect">TM43</td><td goto="a156" color="#D69EFF" title="Rest (psychic): 10PP, 0 power, 99.6%" newtmname="Rest">TM44</td><td goto="a213" color="#90A0B0" title="Attract (normal): 15PP, 0 power, 99.6%" newtmname="Attract">TM45</td><td class="x">TM46</td><td class="x">TM47</td><td class="x">TM48</td><td class="x">TM49</td><td class="x">TM50</td></tr>
+<tr class="tenth"><td class="x">HM01</td><td class="x">HM02</td><td class="x">HM03</td><td goto="a070" color="#90A0B0" title="Strength (normal): 15PP, 80 power, 99.6%" newtmname="Strength">HM04</td><td goto="a148" color="#90A0B0" title="Flash (normal): 20PP, 0 power, 69.5%" newtmname="Flash">HM05</td><td class="x">HM06</td><td class="x">HM07</td><td colspan="3" id="gsctmdesc"></td></tr>
+</tbody></table>
+
+<script type="text/javascript" language="Javascript1.2" src="v4.0_files/footer.js"></script>
+</body></html>

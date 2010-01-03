@@ -1,0 +1,193 @@
+body { background-color: #d0d8ff; color: #002040; margin: 12px; padding: 0; }
+body, table tr td, table tr th, input, option, select { font-family: Verdana, Arial, sans-serif; font-size: 11px; }
+p { padding: 0; margin: 8px 0; text-align: justify; }
+a { color: #2050A0; text-decoration: none; }
+a:hover { color: black; #604040; }
+a img { border: none; opacity: .8; }
+a:hover img { opacity: .99; }
+img { vertical-align: middle; border: 0; }
+input, label { vertical-align: middle; }
+label { white-space: nowrap; }
+input[type='submit'], input[type='button'], input[type='reset'], input[type='radio'], input[type='checkbox'], select, label { cursor: pointer; vertical-align: middle; }
+input[type='radio'], input[type='checkbox'] { margin: 3px; }
+input[type='submit'], input[type='reset'], input[type='button'], button { padding: 2px; letter-spacing: 2px; }
+input[type='text'] { vertical-align: middle; }
+label { cursor: pointer; }
+hr { margin: 4px 2px; }
+h1, h2, h3, h4 { margin: 4px 0; }
+h1 { color: #4067bf; border: 3px double #c0d0ff; padding: 3px 6px; -moz-border-radius: 12px; background-color: #a1c3e6; }
+h2 { color: #4067bf; border: 1px solid #4067bf; border-width: 1px 3px; padding: 3px 6px; -moz-border-radius: 12px; background-color: #a1c3e6; }
+h3 { color: #4067bf; font-size: 16px; font-weight: bold; border-bottom: 1px solid #4067bf; }
+h3 { color: #4067bf; font-size: 16px; font-weight: bold; border-bottom: 1px solid #4067bf; }
+h4 { color: #4067bf; font-size: 14px; font-weight: bold; }
+form { margin: 0; padding: 0; }
+ul, ol { margin-top: 0px; margin-bottom: 0px; padding-left: 16px; }
+
+table.big { width: 100%; }
+div.total { clear: both; font-style: italic; }
+
+.left, .left td { text-align: left !important; }
+.center, .center td { text-align: center !important; }
+.right, .right td { text-align: right !important; }
+.top, .top td { vertical-align: top !important; }
+.middle, .middle td { vertical-align: middle !important; }
+.bottom, .bottom td { vertical-align: bottom !important; }
+
+table tr td.hr { border-bottom: 1px dotted black; height: 0; padding: 0 !important; margin: 0 !important; _height: 1px; _background-color: black; }
+table tr td { padding: 3px; }
+table.rowhighlight tr:hover td { background-color: #9DA7FF; background-image: none; }
+
+/* global header */
+
+#header { background: #79a9e1; color: #325196; padding: 4px; -moz-border-radius: 12px; border: 1px solid #001433; position: relative; margin: 8px 0; }
+#header #title { text-align: left; font-weight: bold; font-size: 32px; letter-spacing: 1px; vertical-align: middle; overflow: hidden; white-space: nowrap; }
+#header #vee { position: absolute; bottom: -4px; right: 12px; z-index: 2; _display: none; }
+#header #dexform { padding: 4px; vertical-align: bottom; }
+#main { float: left; width: 80%; margin-bottom: 8px; }
+#sidebar { float: right; width: 20%; margin-bottom: 8px; }
+
+#userbiz { position: absolute; top: 56px; vertical-align: bottom !important; left: 4px; padding: 0 8px; opacity: .75; }
+#userbiz * { margin: 0; padding: 0; }
+#userbiz form { margin-top: -4px; }
+#userbiz input, #userbiz label { letter-spacing: normal; font-size: 9px; padding: 0; }
+form#loginform div.login-text { text-align: right; }
+form#loginform div.login-text label { float: left; }
+form#loginform div#login-stuff { text-align: center; }
+#footer { clear: both; border-top: 3px double #001433; padding-top: 8px; }
+
+/* globalish page listing */
+
+.pagelist { margin: 4px; text-align: center; white-space: nowrap; }
+.pagelist > * { xborder: 1px black solid; padding: 3px; -moz-border-radius: 4px; }
+.pagelist a { background-color: inherit; }
+.pagelist a:hover { background-color: #79a9e1; }
+.pagelist .disabled { color: #808080; }
+
+/* pretty form table */
+
+table.frm { width: 100%; }
+table.frm tr:hover td.frm-name, table.frm tr:hover td.frm-control { ; }
+table.frm tr td { padding: 3px; }
+table.frm tr td.frm-name { width: 20%; vertical-align: top; }
+table.frm tr td.frm-control { vertical-align: middle; }
+
+.form-header { float: left; clear: left; width: 20%; margin-top: 0; }
+.form-label { float: left; clear: left; width: 20%; margin-top: 0; text-align: right; margin-right: 3px; }
+div.form-controls { margin-left: 20%; }
+div.form-controls:after { content: ''; clear: left; display: block; height: 1px; }
+
+/* main page */
+
+.box { margin: 8px 8px 16px 8px; border: 1px solid #325196; background-color: #a1c3e6; _height: 1%; }
+.box hr { margin: 2px 0; }
+.box:after { content: ''; display: block; height: 0; clear: both; }
+.box-header { background-color: #4067bf; font-size: 16px; color: #ffffff; padding: 4px; text-align: center; }
+.box-header .newspost-subject { float: left; font-variant: small-caps; letter-spacing: 1px; }
+.box-header .newspost-date { text-transform: lowercase; font-size: 16px; text-align: right; }
+.box-content { padding: 4px; text-align: justify; line-height: 150%; }
+.newspost-icon { float: right; clear: right; margin: 6px; }
+.newspost-blurb { padding: 2px 4px; background-color: #79a9e1; font-style: italic; }
+.newspost-content { margin: 6px; text-align: justify; line-height: 150%; }
+.newspost-comments { margin: 6px; font-style: italic; }
+
+#sidebar .box { -moz-border-radius: 6px; xbackground-color: #79a9e1; }
+#sidebar .box-header { font-size: 11px; font-weight: bold; letter-spacing: 1px; xbackground-color: #325196; }
+
+.shout { padding: 2px; overflow: hidden; border-top: 1px dotted #325196; }
+/* .shout:hover { background-color: #79a9e1; } */
+.shout .sbox-name { font-weight: bold; display: block; }
+.shout .sbox-message { display: block; padding-left: 4px; clear: right; line-height: 133%; }
+.shout .sbox-buttons { float: right; }
+form.sbox-reply { padding-top: 4px; width: 100%; text-align: center; border-top: 1px solid #325196; }
+form.sbox-reply textarea { position: relative; left: 2px; width: 90%; }
+form.sbox-reply input { width: 40%; }
+form.sbox-reply input#sboxname { width: 60%; }
+form.sbox-reply input#sboxname, form.sbox-reply textarea { font-family: "Lucida Console" monospace; font-size: 10px; padding: 1px; color: #404040; }
+
+.linklist { padding: 4px; _padding: 0; }
+.linklist ul, .linklist li { padding: 0; margin: 0; list-style: none; }
+.linklist { margin: -4px; _margin: 0; }
+.linklist li a, .linklist li span { display: block; -moz-border-radius: 4px; line-height: normal; padding: 2px 4px; font-size: 11px; _display: inline; }
+.linklist ul a, .linklist ul span { padding-left: 16px; }
+.linklist li a:hover { background-color: #79a9e1; }
+
+.box.error { border-color: #521111; background-color: #e17979; }
+.error .box-header { background-color: #782323; }
+.warning { margin: 8px auto; text-align: center; font-size: 14px; padding: 4px; border: 1px dotted #521111; background-color: #e17979; width: 75%; }
+
+/* userlist */
+/* TODO: merge this with forum-style tables as they're fairly similar */
+
+table.userlist { width: 100%; }
+table.userlist tr:hover td { background-color: #a0c5ef; }
+table.userlist tr th.userlist-id { width: 6%; }
+table.userlist tr th.userlist-contact { width: 192px; }
+table.userlist tr th.userlist-date { width: 12%; }
+table.userlist tr th.userlist-postct { width: 6%; }
+table.userlist tr th.userlist-postbar { width: 12%; }
+table.userlist tr td { padding: 6px; background-color: #79a9e1; vertical-align: middle; margin: 0; }
+table.userlist tr td.userlist-name a { display: block; font-weight: bold; vertical-align: middle; margin: -6px; padding: 6px; }
+table.userlist tr td.userlist-name img { vertical-align: middle; }
+table.userlist tr td.userlist-date { text-align: center; }
+table.userlist tr td.userlist-postct { text-align: center; }
+
+/* forums */
+
+.cutout { float: right; vertical-align: middle; padding: 4px; border: 1px solid #325196; border-width: 0 0 1px 1px; margin: -1px -1px 0 4px; background-color: #d0d8ff; _position: relative; }
+.breadcrumbs { padding: 4px; font-size: 14px; }
+img.forumicon { vertical-align: bottom; }
+.forumblurb { padding: 0 4px; font-size: 12px; font-style: italic; }
+.postdistance { padding: 0; margin: 2px; font-size: 10px; text-align: center; }
+.contactbuttons { text-align: center; vertical-align: middle; }
+.contactbuttons img { vertical-align: middle; }
+.contactbuttons img.disabled { opacity: 0.2; }
+.postctbox { border: 1px solid black; position: relative; background-color: #808080; height: 8px; margin: 2px 0; _height: 10px; }
+.postctbar { position: absolute; top: 0; left: 0; bottom: 0; _height: 8px; _font-size: 1px; }
+
+table.forums { width: 100%; }
+table.forums tr:hover td { background-color: #a0c5ef; }
+table.forums tr th.forum-icon { width: 40px; }
+table.forums tr th.forum-postinfo { width: 15%; }
+table.forums tr th.forum-count { width: 6%; }
+table.forums tr td { padding: 6px; background-color: #79a9e1; vertical-align: middle; margin: 0; font-size: 10px; }
+table.forums tr td.forum-name img { vertical-align: bottom; }
+table.forums tr td.forum-icon { padding: 4px; width: 40px; text-align: center; }
+table.forums tr td.forum-icon img { vertical-align: middle; }
+table.forums tr td.forum-postinfo { width: 15%; text-align: center; }
+table.forums tr td.forum-count { width: 6%; text-align: center; }
+a.forum-link { font-size: 12px; font-weight: bold; }
+
+div.forum-post { margin: 4px 0; border: 1px solid #325196; background-color: #4067bf; _height: 1%; _background-color: #a1c3e6; }
+div.forum-post div.forum-post-sidebar { background-color: #4067bf; color: #ffffcc; float: left; width: 192px; }
+div.forum-post div.forum-post-sidebar a, div.forum-post div.forum-post-header a { color: #d0d8ff; }
+div.forum-post div.forum-post-sidebar a:hover, div.forum-post div.forum-post-header a:hover { color: #ffffff; }
+div.forum-post img.forum-post-newspic { display: block; float: right; padding: 6px; clear: right; }
+div.forum-post div.forum-post-header { background-color: #4067bf; vertical-align: middle; color: #ffffcc; font-size: 12px; margin-left: 192px; }
+div.forum-post div.forum-post-main { text-align: justify; background-color: #a1c3e6; margin-left: 192px; }
+div.forum-post div.forum-post-content { padding: 4px; }
+div.forum-post div.forum-post-main div.forum-post-content { line-height: 150%; }
+div.forum-post div.forum-post-sidebar div.forum-post-content { padding: 6px; }
+div.forum-post div.forum-post-main:after { content: ''; display: block; height: 1px; clear: both; background-color: #a1c3e6; }
+div.forum-post hr { padding: 0; margin: 2em 0 2px 0; border: none; border-top: 1px solid #325196; }
+
+div.forum-post-deleted { border-color: #202020; background-color: #707070; _background-color: #d0d0d0; opacity: .8; }
+div.forum-post-deleted div.forum-post-sidebar { background-color: #707070; }
+div.forum-post-deleted div.forum-post-sidebar a, div.forum-post-deleted div.forum-post-header a { color: #e0e0e0; }
+div.forum-post-deleted div.forum-post-header { background-color: #707070; }
+div.forum-post-deleted div.forum-post-main { background-color: #d0d0d0; }
+div.forum-post-deleted div.forum-post-main:after { background-color: #d0d0d0; }
+div.forum-post-deleted hr { border-color: #202020; background-color: #707070; }
+
+div.forum-post div.forum-post-username { font-size: 14px; font-weight: bold; vertical-align: bottom; }
+div.forum-post div.forum-post-title { font-size: 10px; }
+div.forum-post div.forum-post-title.forum-post-custom { color: white; }
+div.forum-post div.forum-post-avatar { width: 100px; height: 100px; border: 1px dotted black; vertical-align: middle; text-align: center; margin: 2px auto; overflow: hidden; line-height: 100px; background: center no-repeat; }
+form.forum-reply { width: 60%; margin: 0 auto; text-align: center; }
+form.forum-reply input[type="submit"], form.forum-reply input[type="reset"] { width: 25%; }
+form.forum-reply input#frmrepsub, form.forum-reply input#frmrepblr { width: 80%; }
+form.forum-reply label { width: 10%; }
+form.forum-reply textarea { width: 90%; }
+form.forum-reply input#frmrepsub, form.forum-reply input#frmrepblr, form.forum-reply textarea { font-family: "Lucida Console" monospace; font-size: 12px; padding: 2px; color: #404040; }
+
+a.thread-flags { position: relative; }
+img.thread-flags-x { opacity: .66; position: absolute; top: 0; left: 0; }

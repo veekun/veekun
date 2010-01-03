@@ -1,0 +1,28 @@
+span.big { font-size: 16px; font-weight: bold; vertical-align: middle; }
+div.footer { text-align: left; width: 500px; }
+div.footer p { margin: 2px; }
+table tr td.width32 { width: 32px; }
+table tr td.width48 { width: 48px; }
+table tr td.width25p { width: 25%; }
+table tr td.width33p { width: 33%; }
+table tr.widthpoke td { width: 17%; }
+table tr.widthmove td { width: 20%; }
+.hoverbutton { border-width: 0px; margin: 2px; border-style: outset; }
+.hoverbutton a, .hoverbutton td a { color: white; }
+.hoverbutton2 { color: black; border-width: 0px; border-style: inset; }
+.hoverbutton2 .dim { background-color: black; }
+.hoverbutton2 a { color: black; }
+.hoverbutton2 a:hover { color: #404040; }
+.hoverbutton td, .hoverbutton2 td { border-width: 1px; border-style: inset; border-color: #404040; }
+body { background-color: black; color: white; font-family: Arial, serif; font-size: 12px; }
+img { border: 0px; vertical-align: middle; }
+img.spaced { margin: 3px; }
+p { text-align: center; margin: 0px; }
+.left, table.base tr td.left { text-align: left; }
+.right, table.base tr td.right { text-align: right; }
+.bottom, table.base tr td.bottom { text-align: center; vertical-align: bottom; }
+.top, table.base tr td.top { text-align: center; vertical-align: top; }
+table tr td.selected { border: 2px yellow solid; }
+.dim { color: #808080; }
+form#dexform { width: 100%; text-align: center; margin: 0px; }
+form#dexform input { vertical-align: middle; }

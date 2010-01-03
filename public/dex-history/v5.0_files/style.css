@@ -1,0 +1,162 @@
+body { background: #E8E8FF; color: black; margin: 0px; }
+a { color: #0060C0; text-decoration: none; }
+a:hover { color: #404060; }
+
+h1 { font-size: 16px; font-weight: bold; color: #1C45AD; padding: 2px 4px; margin: 4px -4px; background: #90C0FF; font-variant: small-caps; clear: both; }
+h2 { font-size: 14px; font-weight: bold; color: #1C45AD; padding: 0px; margin: 0px; clear: both; white-space: nowrap; }
+
+div#header { padding: 4px; height: 56px; border-bottom: 1px solid #90C0FF; overflow: hidden; padding-left: 48px; background: url(133.gif) #F0F0FF no-repeat 8px; }
+body > div#header { height: 48px; }
+div#header div#title { font-size: 24px; font-weight: bold; color: #6080FF; }
+div#header div#note { font-size: 14px; font-style: italic; }
+div#dexform { position: absolute; top: 0px; right: 0px; }
+div#info { position: absolute; top: 16px; right: 0px; padding: 6px; }
+div#info span { border-bottom: 1px dotted black; }
+div#main { position: absolute; top: 72px; left: 16px; right: 226px; }
+div#body { padding: 4px; background: #F0F0FF; border: 1px solid #90C0FF; }
+div#disclaimer { text-align: right; font-style: italic; vertical-align: middle; margin-top: -1px; padding: 4px; padding-bottom: 16px; }
+div#sidebar { position: absolute; top: 72px; right: 16px; width: 196px; }
+div.submenu { padding: 4px; margin-bottom: 16px; background: #F0F0FF; border: 1px solid #90C0FF; width: auto; }
+
+/* LINKS */
+div#links { padding: 0px; }
+div#links a { display: block; background: transparent; margin: 0px; padding: 3px; padding-left: 15px; }
+div#links a.curpage { background: #FFFFA0; }
+div#links a.section { padding-left: 3px; font-weight: bold; }
+div#links a:hover { background: #90C0FF; }
+
+hr { padding: 0px; border: 0px; border-bottom: 1px solid black; }
+
+/* SHOUTBOX */
+div.sbox { font-size: 9px; padding: 4px; border-bottom: 1px dotted #90C0FF; }
+div.sbox:hover { background-color: #F8F8FF; }
+div.sbox span.sbox_name { float: left; font-weight: bold; }
+div.sbox span.sbox_date { display: block; font-style: italic; text-align: right; }
+div.sbox span.sbox_msg  { display: block; clear: both; text-align: justify; overflow: hidden; }
+
+/* FORUM */
+table.forum { width: 100%; background: #1C45AD; }
+table.forum tr th { font-size: smaller; font-weight: normal; font-style: italic; background: #E8E8FF; }
+table.forum tr td { background: #E8E8FF; padding: 3px; }
+table.forum tr td.forum_header { background: #1C45AD; color: #F8F8FF; font-weight: bold; text-align: center; }
+table.forum tr td.forum_name { }
+table.forum tr td.forum_count { width: 80px; }
+table.forum tr td.forum_lastpost { width: 128px; }
+
+/* POKEDEX */
+.color1 td { background-color: #F8F8FF; }
+tr.color1:hover td, tr.color2:hover td { background-color: #9DA7FF; }
+
+table.dex_basic { width: 100%; }
+table.dex_basic tr td { padding: 3px; }
+table.dex_basic tr td.dex_basic_name { background: #F8F8FF; width: 15%; text-align: right; }
+table.dex_basic tr td.dex_basic_value { width: 20%; }
+
+table.dex_evchain { width: 100%; }
+table.dex_evchain tr th { font-weight: bold; width: 25%; text-align: left; }
+table.dex_evchain tr td { background: #F8F8FF; text-align: left; vertical-align: middle; width: 25%; }
+table.dex_evchain tr td.dex_evchain_icon { width: 32px; text-align: right; xwidth: auto; }
+
+table.dex_types { width: 100%; padding: 3px; }
+table.dex_types tr td { padding: 4px; margin: 3px; }
+table.dex_types tr td span { display: block; }
+table.dex_types tr td span a { display: block; text-align: center; }
+table.dex_types tr th { color: black; }
+
+table.dex_locations tr td { border: none; vertical-align: top; margin: 20px; vertical-align: middle; padding: 3px; }
+table.dex_locations tr td.dex_locations_icon { width: 16px; text-align: left; }
+table.dex_locations tr td.dex_locations_mode { width: 96px; text-align: center; }
+table.dex_locations tr td.dex_locations_area { vertical-align: top; background-color: #F8F8FF; }
+table.dex_locations tr td.dex_locations_number { width: 64px; }
+table.dex_locations tr:hover td { background: transparent !important; }
+
+table.dex_stats tr td { padding: 3px; margin: 0px; }
+table.dex_stats tr:hover td { background: #E8E8E8; }
+table.dex_stats tr td.dex_stats_name { text-align: right; white-space: nowrap; width: 96px; }
+table.dex_stats tr td.dex_stats_bar div { padding: 3px 0px 3px 3px; color: black; }
+table.dex_stats tr td.dex_stats_data { width: 56px; text-align: center; }
+
+.dex_pokelist { float: left; text-align: center; vertical-align: middle; padding: 5px; margin: 2px; width: 32px; }
+.dex_pokelist:hover { background-color: #9DA7FF !important; background-image: none !important; border: 1px solid gray; padding: 4px; }
+* > .dex_pokelist { border: 1px solid transparent; padding: 4px; }
+
+.dex_pokelistbig { float: left; text-align: center; vertical-align: middle; padding: 5px; margin: 2px; width: 64px; }
+.dex_pokelistbig:hover { background-color: #9DA7FF !important; background-image: none !important; border: 1px solid gray; padding: 4px; }
+* > .dex_pokelistbig { border: 1px solid transparent; padding: 4px; }
+
+table.dex { width: 100%; margin: 2px 0px; }
+table.dex tr td { border: none; padding: 3px; text-align: center; vertical-align: middle; }
+table.dex tr th { text-align: center; padding: 3px; vertical-align: middle; border: 0px solid #1C45AD; border-bottom-width: 2px; }
+table.dex tr th.dextbl_divider { border-width: 1px; vertical-align: bottom; }
+table.dex tr th.dextbl_divider img { vertical-align: bottom; }
+table.dex tr th.dextbl_level { width: 32px; }
+table.dex tr th.dextbl_num   { width: 32px; }
+table.dex tr th.dextbl_name  { width: 104px; }
+table.dex tr th.dextbl_type  { width: 64px; }
+table.dex tr th.dextbl_type2 { width: 56px; }
+table.dex tr th.dextbl_pp    { width: 32px; }
+table.dex tr th.dextbl_power { width: 64px; }
+table.dex tr th.dextbl_acc   { width: 48px; }
+table.dex tr th.dextbl_dim   { width: 64px; }
+table.dex tr th.dextbl_blurb { text-align: left; }
+table.dex tr td.dextbl_blurb { text-align: left; }
+.dextbl_gennull { display: block; background-color: gray; width: 100%; }
+.dextbl_genmale { float: left; display: block; background-color: blue; }
+.dextbl_genfem  { float: left; display: block; background-color: magenta; }
+
+table.dex_mvpk tr th.dex_mvpk_lev, table.dex_mvpk tr th.dex_mvpk_poke { border-bottom: 2px solid #1C45AD; }
+table.dex_mvpk tr .dex_mvpk_div { width: 1px; background: #1C45AD; padding: 0px; }
+table.dex_mvpk tr td, table.dex_mvpk tr th { padding: 2px 8px; text-align: center; }
+table.dex_mvpk tr td.dex_mvpk_lev { text-align: center; }
+table.dex_mvpk tr td.dex_mvpk_poke { text-align: left; }
+table.dex_mvpk tr .dex_mvpk_poke { border-right: 1px solid #1C45AD; }
+
+table.search { width: 100%; }
+table.search tr td { vertical-align: top; }
+table.search tr td.hr { height: 1px; background-color: black; }  /* another cheap hack brought to you by internet explorer */
+* > table.search tr td.hr { border-bottom: 1px dotted black; background: transparent !important; height: auto; }
+table.search tr td.search_name { font-size: 14px; font-weight: bold; color: #1C45AD; white-space: nowrap; }
+table.dexsrch_moves tr th, table.dexsrch_moves tr td { padding: 2px 6px; }
+table.dexsrch_moves tr th.dexsrch_moves_vbar { width: 1px; padding: 0px; background-color: black; }
+table.dexsrch_summ { width: 100%; padding: 0px; margin-bottom: 4px; }
+table.dexsrch_summ tr td { padding: 2px; }
+table.dexsrch_summ tr td a { color: #303030; }
+table.dexsrch_summ tr td a:hover { color: white; }
+table.dexsrch_summ tr td.dsm_pic { width: 64px; background: white; border: 1px inset gray; }
+table.dexsrch_summ tr td.dsm_pic:hover { background: #9DA7FF; }
+table.dexsrch_summ tr td.dsm_stats { width: 56px; padding-left: 18px; }
+table.dexsrch_summ tr td.dsm_sexor { width: 30%; }
+
+table.dex_comp { width: 100%; }
+table.dex_comp tr td, table.dex_comp tr th { padding: 3px; }
+table.dex_comp tr td { width: 12%; text-align: center; }
+table.dex_comp > thead > tr > th { border-bottom: 2px solid #1C45AD; }
+table.dex_comp > tbody > tr > th { font-weight: normal; font-style: italic; width: 4%; }
+table.dex_comp > tbody > tr.dexcomp_hr > td { padding: 0px; }
+table.dex_comp > tbody > tr.dexcomp_lev:hover > * { background: #9DA7FF; }
+table.dex_comp > tbody > tr.dexcomp_move > td { width: 11.5%; }
+table.dex_comp > tbody > tr.dexcomp_move > th { width: 8%; }
+table.dex_comp > tbody > tr.dexcomp_move:hover > * { background: #9DA7FF; }
+
+/* YU-GI-OH! CARD LIST */
+table.ygo_trap tr td    { background: #FFC0FF; }
+table.ygo_spell tr td   { background: #80FFC0; }
+table.ygo_monster tr td { background: #FFFFC0; }
+table.ygo_ritual tr td  { background: #C0C0FF; }
+table.ygo_fusion tr td  { background: #D8C0FF; }
+table.ygo_effect tr td  { background: #FFD8C0; }
+
+table.ygo { margin: 2px 0px; border: 1px #404040 solid; padding: 0px; width: 100%; }
+table.ygo tr td { margin: 0px; padding: 3px; vertical-align: middle; color: black; }
+table.ygo tr td.ygo_id, table.ygo tr td.ygo_ids { text-align: center; font-family: Courier New, monospace; vertical-align: top; border-right: 1px #404040 dotted; }
+table.ygo tr td.ygo_id { width: 2%; }
+table.ygo tr td.ygo_ids { width: 5%; }
+table.ygo tr td.ygo_basic { width: 26%; vertical-align: top; }
+table.ygo tr td.ygo_type_l { width: 7%; text-align: right; }
+table.ygo tr td.ygo_type_r { width: 27%; }
+table.ygo tr td.ygo_stats_l { width: 3%; text-align: right; }
+table.ygo tr td.ygo_stats_r { width: 3%; text-align: right; }
+table.ygo tr td.ygo_etc { text-align: right; }
+table.ygo tr td.ygo_text { vertical-align: top; font-size: 10px; text-align: justify; border-top: 1px #404040 dotted; }
+
+table.ygo_types tr td { width: 25%; padding: 0px; }

@@ -1,0 +1,11 @@
+document.write("<hr/>");
+document.write("<span style=\"font-size: 12px; font-style: italic; font-family: Arial;\">");
+document.write("Thanks for using the UltraDex 4!  This is over two years in the making so far, so any comments more ");
+document.write("intelligent than \"U L1K3 P0K3YM4N U R G4Y\" would be greatly appreciated.  Also, if you find anything ");
+document.write("wrong, something that doesn't work, etc., *please* email me and tell me, I've found huge bugs myself after ");
+document.write("months because nobody told me about them.  Pok&eacute;mon and such are copyright by whoever; the design and colors ");
+document.write("and whatnot are all &copy; by me, 1999.  The pictures are just edited versions of ones I've collected, take ");
+document.write("them if you want, just give me some semblance of credit  o.o  I'm willing to affiliate or whatever with ");
+document.write("fairly good sites, and you can link to my 'dex as long as, again, you give me credit.  I might also give out ");
+document.write("the XML file that's the basis of all this.  Um, that's about it.  Have a nice day. ");
+document.write("</span>");

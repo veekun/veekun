@@ -1,0 +1,40 @@
+.type-none { background: url(/dex-images/type/none.png) #808080 !important; border-color: #808080; }
+.type-normal { background: url(/dex-images/type/normal.png) #717171 !important; border-color: #717171; }
+.type-fighting { background: url(/dex-images/type/fighting.png) #7e5329 !important; border-color: #7e5329; }
+.type-flying { background: url(/dex-images/type/flying.png) #aab4e1 !important; border-color: #aab4e1; }
+.type-poison { background: url(/dex-images/type/poison.png) #8a4875 !important; border-color: #8a4875; }
+.type-ground { background: url(/dex-images/type/ground.png) #cb854a !important; border-color: #cb854a; }
+.type-rock { background: url(/dex-images/type/rock.png) #7d8c95 !important; border-color: #7d8c95; }
+.type-bug { background: url(/dex-images/type/bug.png) #7f7c0b !important; border-color: #7f7c0b; }
+.type-ghost { background: url(/dex-images/type/ghost.png) #69428e !important; border-color: #69428e; }
+.type-steel { background: url(/dex-images/type/steel.png) #abafab !important; border-color: #abafab; }
+.type-fire { background: url(/dex-images/type/fire.png) #eb9210 !important; border-color: #eb9210; }
+.type-water { background: url(/dex-images/type/water.png) #4a7bae !important; border-color: #4a7bae; }
+.type-grass { background: url(/dex-images/type/grass.png) #6bb951 !important; border-color: #6bb951; }
+.type-electric { background: url(/dex-images/type/electric.png) #bcbe02 !important; border-color: #bcbe02; }
+.type-psychic { background: url(/dex-images/type/psychic.png) #aa71a8 !important; border-color: #aa71a8; }
+.type-ice { background: url(/dex-images/type/ice.png) #7ab4bd !important; border-color: #7ab4bd; }
+.type-dragon { background: url(/dex-images/type/dragon.png) #70a296 !important; border-color: #70a296; }
+.type-dark { background: url(/dex-images/type/dark.png) #8e4b4b !important; border-color: #8e4b4b; }
+.type-cool { background: #FF4040 !important; border-color: #FF4040; }
+.type-beauty { background: #4040FF !important; border-color: #4040FF; }
+.type-cute { background: #FFC0C0 !important; border-color: #FFC0C0; }
+.type-smart { background: #40FF40 !important; border-color: #40FF40; }
+.type-tough { background: #FFFF40 !important; border-color: #FFFF40; }
+
+.type-none,  .type-normal, .type-fighting, .type-flying, .type-poison,   .type-ground,  .type-rock, .type-bug,    .type-ghost,
+.type-steel, .type-fire,   .type-water,    .type-grass,  .type-electric, .type-psychic, .type-ice,  .type-dragon, .type-dark,
+.type-cool,  .type-beauty, .type-cute,     .type-smart,  .type-tough
+    { font-weight: bold; font-size: 9px; font-variant: small-caps; text-transform: uppercase; color: black; overflow: hidden; padding: 2px; border-style: outset; border-width: 1px; }
+.type-none a,  .type-normal a, .type-fighting a, .type-flying a, .type-poison a,   .type-ground a,  .type-rock a, .type-bug a,    .type-ghost a,
+.type-steel a, .type-fire a,   .type-water a,    .type-grass a,  .type-electric a, .type-psychic a, .type-ice a,  .type-dragon a, .type-dark a,
+.type-cool a,  .type-beauty a, .type-cute a,     .type-smart a,  .type-tough
+    { color: black; }
+td.type-none a,  td.type-normal a, td.type-fighting a, td.type-flying a, td.type-poison a,   td.type-ground a,  td.type-rock a, td.type-bug a,    td.type-ghost a,
+td.type-steel a, td.type-fire a,   td.type-water a,    td.type-grass a,  td.type-electric a, td.type-psychic a, td.type-ice a,  td.type-dragon a, td.type-dark a,
+td.type-cool a,  td.type-beauty a, td.type-cute a,     td.type-smart a,  td.type-tough
+    { display: block; }
+.type-none a:hover,  .type-normal a:hover, .type-fighting a:hover, .type-flying a:hover, .type-poison a:hover,   .type-ground a:hover,  .type-rock a:hover, .type-bug a:hover,    .type-ghost a:hover,
+.type-steel a:hover, .type-fire a:hover,   .type-water a:hover,    .type-grass a:hover,  .type-electric a:hover, .type-psychic a:hover, .type-ice a:hover,  .type-dragon a:hover, .type-dark a:hover,
+.type-cool a:hover,  .type-beauty a:hover, .type-cute a:hover,     .type-smart a:hover,  .type-tough a:hover
+    { color: #F0F0FF; }

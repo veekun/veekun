@@ -1,0 +1,142 @@
+@import url(dex.types.css);
+
+table tr .vbar { width: 1px; background: #07509b; padding: 0px !important; }
+table tr .hbar { height: 1px; background: #07509b; padding: 0px !important; }
+
+.color1 td { background: #436c95; }
+tr.color1:hover td, tr.color2:hover td { background-color: #385a7c; background-image: none; }
+
+.dex-ministatbar { margin: 0 0.2em; height: 0.8em; border: 1px solid black; background-color: #808080; }
+.dex-ministatbar .dex-ministatbar-bar { height: 100%; }
+
+table.dex-basic { width: 100%; }
+table.dex-basic tr td { padding: 3px; }
+table.dex-basic tr td.dex-basic-name { background: #436c95; width: 15%; text-align: right; }
+table.dex-basic tr td.dex-basic-value { width: 20%; }
+
+table.dex-evchain { width: 100%; }
+table.dex-evchain tr th { font-weight: bold; width: 25%; text-align: left; }
+table.dex-evchain tr td { background: #436c95; text-align: left; vertical-align: middle; padding: 4px; }
+table.dex-evchain tr td a { display: block; vertical-align: middle; }
+table.dex-evchain tr td a:hover { color: black; }
+table.dex-evchain tr td a:after { content: ''; display: block; height: 1px; margin-top: -1px; clear: both; }
+table.dex-evchain tr td .dex-evchain-icons { float: left; padding: 0 2px; }
+table.dex-evchain tr td .dex-evchain-text { display: inline; height: 100%; vertical-align: middle; }
+
+table.dex-types { width: 100%; padding: 3px; }
+table.dex-types tr td, table.dex-types tr th { padding: 4px; margin: 3px; text-align: center; }
+table.dex-types tr th { color: white; font-weight: normal; vertical-align: middle; width: 5%; }
+table.dex-types tr th img { vertical-align: middle; }
+
+table.dex-typelist tr:hover td { opacity: .75; }
+table.dex-typelist td { text-align: center; }
+table.dex-typelist th { padding: 4px; }
+
+.dex-flavor-image { position: relative; float: right; margin: 0 2px; }
+.dex-flavor-icon { position: absolute; top: 2px; left: 2px; opacity: .5; }
+.dex-flavor-extra { float: left; margin-right: 12px; }
+.dex-flavor-label { }
+.dex-flavor-text { margin: 0; padding: 2px; _height: 1%; }
+.dex-flavor-text img { margin-right: 2px; vertical-align: middle; float: left; }
+.dex-flavor-text:after { display: block; clear: left; content: ' '; height: 1px; }
+
+table.dex_locations tr td { border: none; vertical-align: top; margin: 20px; vertical-align: middle; padding: 3px; }
+table.dex_locations tr td.dex_locations_icon { width: 16px; text-align: left; }
+table.dex_locations tr td.dex_locations_mode { width: 96px; text-align: center; }
+table.dex_locations tr td.dex_locations_area { vertical-align: top; background: #436c95; }
+table.dex_locations tr td.dex_locations_number { width: 64px; }
+table.dex_locations tr:hover td { background: transparent !important; }
+
+table.dex-stats tr td { padding: 3px; margin: 0px; }
+table.dex-stats tr:hover td { background: #385a7c; }
+table.dex-stats tr td.dex-stats-name { text-align: right; white-space: nowrap; width: 96px; }
+table.dex-stats tr td.dex-stats-bar div { padding: 3px 0px 3px 3px; color: black; border: 1px solid #404040; background-image: url(/dex-images/statbar.png); }
+table.dex-stats tr td.dex-stats-data { width: 56px; text-align: center; }
+
+a.dex-pokelist:hover img { background-color: #385a7c !important; background-image: none !important; -moz-border-radius: 4px; }
+
+.dex-pokelistbig { float: left; text-align: center; vertical-align: middle; padding: 4px; margin: 2px; width: 80px; -moz-border-radius: 4px; }
+.dex-pokelistbig:hover { background-color: #385a7c !important; background-image: none !important; }
+
+table.dex { width: 100%; margin: 2px 0px; }
+table.dex tr td { border: none 0px; padding: 3px; text-align: center; vertical-align: middle; }
+table.dex tr th { text-align: center; padding: 3px; vertical-align: middle; background: #07509b; color: #ffe090; }
+table.dex tr th.dextbl-divider { vertical-align: bottom; }
+table.dex tr th.dextbl-divider img { vertical-align: bottom; }
+table.dex tr th.dextbl-icon { width: 32px; }
+table.dex tr th.dextbl-icon { width: 32px; }
+table.dex tr th.dextbl-level { width: 2em; }
+table.dex tr th.dextbl-num   { width: 2em; }
+table.dex tr th.dextbl-name  { width: 10em; }
+table.dex tr th.dextbl-class { width: 2em; }
+table.dex tr th.dextbl-type  { width: 6em; }
+table.dex tr th.dextbl-type2 { width: 6em; }
+table.dex tr th.dextbl-pp    { width: 3em; }
+table.dex tr th.dextbl-power { width: 6em; }
+table.dex tr th.dextbl-acc   { width: 3em; }
+table.dex tr th.dextbl-dim   { width: 64px; }
+table.dex tr th.dextbl-blurb { text-align: left; }
+table.dex tr td.dextbl-blurb { text-align: left; }
+table.dex tr th.dextbl-line { padding: 0; height: 1px; }
+table.dex tr th.dextbl-dualtype { width: 12em; }
+table.dex tr th.dextbl-gender { width: 1em; }
+table.dex tr th.dextbl-stat  { width: 3.5em; }
+table.dex tr th.dextbl-breeds { width: 8em; }
+table.dex tr th.dextbl-size { width: 5em; }
+table.dex tr th.dextbl-abilities { width: 6em; }
+table.dex tr.color1 td.dex-preferred-move { background-color: #439578; }
+table.dex tr.color2 td.dex-preferred-move { background-color: #4aa684; }
+
+.dextbl-gennull { display: block; background-color: gray; width: 100%; }
+.dextbl-genmale { float: left; display: block; background-color: blue; }
+.dextbl-genfem  { float: left; display: block; background-color: magenta; }
+
+table.dex-pokemon tr th { border-bottom: 2px solid #07509b; }
+table.dex-pokemon tr td, table.dex-pokemon tr th { padding: 3px 8px; text-align: center; }
+table.dex-pokemon tr td.dex-pokemon-name { text-align: left; }
+table.dex-pokemon tr td.dex-pokemon_lev { text-align: center; }
+table.dex-pokemon tr td.dex-pokemon_poke { text-align: left; }
+table.dex-pokemon tr .dex-pokemon_poke { border-right: 1px solid #07509b; }
+
+table.search { width: 100%; }
+table.search tr td { vertical-align: top; }
+table.search tr td.search_name { font-size: 14px; font-weight: bold; color: #07509b; white-space: nowrap; }
+table.dexsrch_moves tr th, table.dexsrch_moves tr td { padding: 2px 6px; }
+table.dexsrch_moves tr th.dexsrch_moves_vbar { width: 1px; padding: 0px; background-color: black; }
+table.dexsrch_summ { width: 100%; padding: 0px; margin-bottom: 4px; }
+table.dexsrch_summ tr td { padding: 2px; }
+table.dexsrch_summ tr td a { color: #303030; }
+table.dexsrch_summ tr td a:hover { color: white; }
+table.dexsrch_summ tr td.dsm_pic { width: 64px; background: white; border: 1px inset gray; }
+table.dexsrch_summ tr td.dsm_pic:hover { background: #9DA7FF; }
+table.dexsrch_summ tr td.dsm_stats { width: 56px; padding-left: 18px; }
+table.dexsrch_summ tr td.dsm_sexor { width: 30%; }
+
+table.dex-search-types tr td label { display: block; padding: 3px; }
+
+/* vee please clean all this up  :( */
+
+table.dex-comp { width: 100%; }
+table.dex-comp tr td, table.dex-comp tr th { padding: 3px; }
+table.dex-comp tr td { width: 12%; text-align: center; }
+table.dex-comp > thead > tr > th { xborder-bottom: 2px solid #07509b; vertical-align: bottom; }
+table.dex-comp > tbody > tr > th { font-weight: normal; font-style: italic; width: 4%; }
+table.dex-comp > tbody > tr.dex-comp-hr > td { padding: 0px; }
+table.dex-comp > tbody > tr.dex-comp-level:hover > * { background: #385a7c; }
+table.dex-comp > tbody > tr.dex-comp-move > td { width: 11.5%; }
+table.dex-comp > tbody > tr.dex-comp-move > th { width: 8%; }
+table.dex-comp > tbody > tr.dex-comp-move:hover > * { background: #385a7c; }
+table.dex-comp tr.dex-comp-images td { height: 96px; vertical-align: bottom; }
+
+table.dex-dvcalc tr td { padding: 3px; text-align: center;}
+table.dex-dvcalc tr th { padding: 3px 8px; }
+table.dex-dvcalc tr + tr th { text-align: left; font-weight: normal; }
+table.dex-dvcalc tr + tr:hover > * { background-color: #385a7c; }
+
+table.dex-byteformat tr th.dex-byteformat-blocksize { width: 6em; }
+table.dex-byteformat tr th.dex-byteformat-format { width: 16em; }
+table.dex-byteformat tr th.dex-byteformat-name { width: 10em; }
+table.dex-byteformat tr td { vertical-align: top; font-family: monospace; }
+table.dex-byteformat tr td + td { vertical-align: top; }
+table.dex-byteformat tr td + td + td { vertical-align: top; font-family: sans-serif; }
+table.dex-byteformat tr td + td + td + td { vertical-align: top; }
