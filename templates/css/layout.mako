@@ -68,6 +68,8 @@ h1:first-child, h2:first-child { margin-top: 0; }
 a:link { font-weight: bold; text-decoration: none; color: #3173ce; }
 a:visited { font-weight: bold; text-decoration: none; color: #435b7d; }
 a:hover { color: #ce3131; }
+a.subtle { color: black; }
+a.subtle:hover { text-decoration: underline; }
 
 /* Tag defaults; careful what goes here! */
 p { margin-bottom: 0.75em; line-height: 1.5; }
