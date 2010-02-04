@@ -85,7 +85,7 @@ table th, table td { padding: 0.25em; }
 table th { font-weight: normal; color: #2457a0; }
 table tr.subheader-row th { border-bottom: 1px solid #b4c7e6; background: #b4c7e6; color: black; }
 table tr.header-row th { vertical-align: bottom; border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
-table tr + tr.header-row th { border-top: 1px solid #b4c7e6; }
+table tr + tr.header-row th { border-top: 2px solid #668dcc; }
 
 table.striped-rows tr:nth-child(2n) { background: #f0f0f0; }
 table.striped-rows tr:nth-child(2n):hover { outline: 1px solid #bfd3f1; outline-offset: -1px; background: #e1e9f5; }
