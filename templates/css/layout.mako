@@ -79,6 +79,7 @@ abbr { border-bottom: 1px dotted black; }
 /* Forms */
 form {}
 input[type='text'].error { background-color: #f2c6d8; }
+dd.error { padding-left: 13em; background: url(${h.static_uri('spline', 'icons/exclamation-small-red.png')}) 12em center no-repeat; color: #a02424; }
 
 /* Tables */
 table th, table td { padding: 0.25em; }
