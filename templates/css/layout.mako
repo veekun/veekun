@@ -53,7 +53,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #body { padding: 1em; }
 
 h1 { margin-top: 1em; margin-bottom: 0.5em; padding-left: 36px; border: 1px solid #b58a4b; border-left: none; font-size: 1.6em; line-height: 1.5em; font-weight: bold; color: black; background: #cbab81 url(${h.static_uri('local', 'images/layout/h1-background.png')}) left center no-repeat; -webkit-border-top-right-radius: 1em; -webkit-border-bottom-right-radius: 1em; -moz-border-radius-topright: 1em; -moz-border-radius-bottomright: 1em; }
-h2 { margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.5em; font-weight: bold; color: #202020; border-bottom: 1px solid #808080; }
+h2 { margin-top: 1em; margin-bottom: 0.5em; font-size: 1.5em; font-weight: bold; color: #202020; border-bottom: 1px solid #808080; }
 h2:before, h2:after { content: '_'; visibility: hidden; /* extend underline */ }
 h3 { margin-top: 0.5em; margin-bottom: 0.25em; font-size: 1.2em; font-weight: bold; color: #202020; border-bottom: 1px dotted #808080; }
 h1, h2 { overflow: hidden /* clean up cruft and ensure bg/border don't encroach on floats */; }
@@ -75,6 +75,10 @@ a.subtle:hover { text-decoration: underline; }
 p { margin-bottom: 0.75em; line-height: 1.5; }
 img { vertical-align: middle; }
 abbr { border-bottom: 1px dotted black; }
+
+pre { margin: 0.5em 0; padding: 0.25em 0.5em; line-height: 1.5; background: #ece7df; }
+code { padding: 0 0.17em; background: #ece7df; }
+var { font-style: italic; font-family: monospace; }
 
 /* Forms */
 form {}
@@ -112,6 +116,9 @@ ul.inline-commas { display: inline; }
 ul.inline-commas > li { display: inline; }
 ul.inline-commas > li:after { content: ','; }
 ul.inline-commas > li:last-child:after { content: none; }
+
+ol { margin: 0.5em 0; margin-left: 1.5em; list-style: lower-roman; }
+ol li { line-height: 1.5; }
 
 /* Definition lists via floats */
 dl { overflow: hidden /* new float context */; }
