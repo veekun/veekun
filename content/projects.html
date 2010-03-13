@@ -16,6 +16,8 @@
 
 
 <h1>Veekun</h1>
+<p>Veekun is one of the few projects that uses my new <a href="http://bugs.veekun.com/projects">bug tracker</a>.  Feel free to peruse or <a href="http://bugs.veekun.com/projects/veekun-incoming/issues/new">file bugs</a>.</p>
+
 <p>Veekun is actually split across several projects.  To actually get the site running as-is, you'll need all of them.  If you just want to use the Pokédex data, see below.</p>
 
 <dl>
@@ -59,7 +61,7 @@
     <li>Check out all the projects listed above.</li>
     <li>Do <code>setup.py develop</code> for each project, as above.  (You may need to do this again after updating the code, if new library dependencies are added.)</li>
     <li>Load the Pokédex data, as above.</li>
-    <li>Edit <code>development.ini</code> and change <code>sqlalchemy.url</code> to point to your database.  The URL can be the same as the one you used to load the data.</li>
+    <li>Edit <code>development.ini</code> and change <code>pokedex_db_url</code> to point to your database.  The URL can be the same as the one you used to load the data.  (There's also a <code>sqlalchemy.url</code>, but it's currently unused.)</li>
     <li>
         From the <var>veekun</var> directory:
         <pre>paster serve --reload development.ini</pre>
@@ -67,9 +69,9 @@
     </li>
 </ol>
 
-<p>You can also run <code>paster</code> from the <var>spline</var> directory, which will skip all veekun-specific customizations.  I rarely try this, so some of the CSS may be incomplete.</p>
+<p>You can also run <code>paster</code> from the <var>spline</var> directory, which will skip all Veekun-specific customizations.  I rarely try this, so some of the CSS may be incomplete.</p>
 
-<p>If, for some perverse reason, you want to run this code in a production environment, you should check the <a href="http://pylonshq.com/docs/en/0.9.7/">Pylons documentation</a> for the best way to plug veekun into your web server.</p>
+<p>If, for some perverse reason, you want to run this code in a production environment, you should check the <a href="http://pylonshq.com/docs/en/0.9.7/">Pylons documentation</a> for the best way to plug Veekun into your web server.</p>
 
 
 <h1>Small Web apps</h1>
