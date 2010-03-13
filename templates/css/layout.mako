@@ -46,7 +46,8 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #menu > ul > li > ul > li a { padding: 0.33em; padding-left: 1em; font-weight: normal; }
 #menu > ul > li > ul > li a:hover { background: #e6eefa; }
 
-#footer { padding: 1em; background: #e8e8e8; }
+#footer { padding: 0.33em; background: #e8e8e8; color: #606060; }
+#footer p { margin: 0.33em; }
 
 #body { padding: 1em; }
 
