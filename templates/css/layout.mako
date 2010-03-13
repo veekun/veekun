@@ -35,18 +35,16 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #menu li a { display: block; padding: 0.5em; }
 /* Positioning of submenu */
 #menu li { position: relative; }
-#menu > ul > li > ul { position: absolute; width: 10em; left: -1px; border: 1px solid #3173ce; border-top: none; background: white; }
+#menu > ul > li > ul { position: absolute; width: 16em; left: -1px; border: 1px solid #3173ce; border-top: none; background: #f4f4f4; }
 /* Show submenus on hover */
 #menu > ul > li > ul { display: none; }
 #menu > ul > li:hover { padding: 0; border: 1px solid #3173ce; border-bottom: none; }
 #menu > ul > li:hover > ul { display: block; }
-/* Submenu headers, then everything below that */
-#menu > ul > li > ul > li > a { padding: 0.33em; }
+/* XXX This used to be for submenu headers, but there aren't enough links for that yet */
 #menu > ul > li > ul > li > a:link,
 #menu > ul > li > ul > li > a:visited { color: black; }
-#menu > ul > li > ul > li + li { margin-top: 0.5em; }
-#menu > ul > li > ul > li li a { padding: 0.33em; padding-left: 1em; font-weight: normal; }
-#menu > ul > li > ul > li li a:hover { background: #e6eefa; }
+#menu > ul > li > ul > li a { padding: 0.33em; padding-left: 1em; font-weight: normal; }
+#menu > ul > li > ul > li a:hover { background: #e6eefa; }
 
 #footer { padding: 1em; background: #e8e8e8; }
 
@@ -84,6 +82,7 @@ var { font-style: italic; font-family: monospace; }
 form {}
 input[type='text'].error { background-color: #f2c6d8; }
 dd.error { padding-left: 13em; background: url(${h.static_uri('spline', 'icons/exclamation-small-red.png')}) 12em center no-repeat; color: #a02424; }
+p.error { margin-top: -0.75em; padding-left: 16px; background: url(${h.static_uri('spline', 'icons/exclamation-small-red.png')}) left center no-repeat; color: #a02424; }
 
 /* Tables */
 table th, table td { padding: 0.25em; }
