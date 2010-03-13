@@ -11,6 +11,6 @@ class LocalPlugin(LocalPluginBase):
         return [
             PluginLink(u'veekun', url('/'), children=[
                 PluginLink(u'Pokédex history', url('/dex/history')),
-                PluginLink(u'Projects', url('/dex/projects')),
+                PluginLink(u'Projects', url('/projects')),
             ]),
         ]
