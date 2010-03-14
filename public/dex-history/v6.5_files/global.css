@@ -1,0 +1,180 @@
+/* force hasLayout in IE4+ -- marginal improvement at least */
+/* lolol I don't care about CSS compliance~ */
+* { _zoom: 1; }
+
+/* base font; I hate to do this, but the default in EVERY browser is awful */
+body, code, pre { font-size: 12px; }
+body { font-family: Helvetica, Verdana, Arial, sans-serif; }
+table, th, td { font-size: inherit; }
+
+a img { border: none; }
+img { vertical-align: middle; }
+.total { clear: both; }
+
+p, li, dd { line-height: 150%; }
+
+.color1 { background: url(bg-fade.png) #fff5e6 fixed left bottom no-repeat; }
+.color2 { background: url(bg-fade.png) #f6e9d6 fixed left bottom no-repeat; }
+  tr.color1:hover,
+  tr.color2:hover { background: url(bg-fade.png) #f2d3c9 fixed left bottom no-repeat; }
+.color1.dimmed { background-color: #f6f6f6; }
+.color2.dimmed { background-color: #eaeaea; }
+table tr.heading th { background: #e6d3b8; color: #806640; border: 1px solid #c0a680; border-left: none; border-right: none; }
+  table tr.heading th.corner { background: #e6d3b8; color: #806640; border: 1px solid #c0a680; border-bottom: none; border-right: none; }
+table tr th.heading-vert { background: #e6d3b8; color: #806640; border: 1px solid #c0a680; border-top: none; border-bottom: none; }
+
+/* lazy alignment */
+.left { text-align: left !important; }
+.center { text-align: center !important; }
+.right { text-align: right !important; }
+
+/* links */
+a { text-decoration: none; }
+a:link, a:active { color: #40a040; }
+a:visited { color: #208020; }
+a:hover { color: #995353; }
+
+a.blocklink { border: 1px solid transparent; }
+a.blocklink:hover { background: url(bg-fade.png) #e6b8b8 fixed left bottom no-repeat; border-color: #c08080; }
+
+/* regular ol' layout bits */
+p { margin: 0.5em 0; line-height: 133%; }
+#content h1, #content h2, #content h3 { background: url(h1.png) #e6d3b8 no-repeat left center; clear: both; margin: 0.5em 0 0.25em 0; padding-left: 24px; color: #806640; border: 1px solid #c0a680; border-left: none; border-right: none; }
+#content h1 { font-size: 2em; margin: 0.5em -0.25em; border-top: 2px solid #806640; }
+#content h2 { font-size: 1.5em; background-image: url(h2.png); }
+#content h3 { font-size: 1.2em; background-image: url(h3.png); }
+#content h1 img, #content h2 img, #content h3 img { vertical-align: 0; }
+#content > h1:first-child { margin-top: -0.25em; border-top: none; }
+#content > h2:first-child { margin-top: -0.333em; border-top: none; }
+#content > h3:first-child { margin-top: -0.417em; border-top: none; }
+#content hr { border: none; border-bottom: 1px dashed #c0a680; height: 0; margin: 2px 0.5em; }
+#content > hr { clear: both; }
+
+body { color: black; background: url(bg.png) #bf9960 fixed left bottom no-repeat; margin: 1.5em; }
+#header { position: relative; height: 6em; background: url(bg-fade.png) #e6d3b8 fixed left bottom no-repeat; border: 1px solid #806640; -moz-border-radius-topleft: 64px; padding: 0.5em; padding-left: 100px; }
+  #logo { position: absolute; bottom: -4px; left: -10px; height: 100px; width: 100px; margin-right: 8px; z-index: 1; }
+  #site-title { color: #807059; font-size: 30px; font-weight: bold; }
+  #page-title { font-size: 30px; }
+  #login { position: absolute; top: 0; right: 0; margin: 1em; }
+  #dex-lookup { position: absolute; bottom: 0; right: 0; margin: 1em; text-align: right; }
+    #dex-lookup input[type='text'] { width: 10em; background-image: url(pokedex-fade.png); background-repeat: no-repeat; background-position: right center; font-family: monospace; font-size: 1.75em; }
+    #dex-lookup input[type='submit'] { font-size: 1.75em; }
+#statusline { line-height: 2em; text-align: center; color: #fff5e6; }
+  #statusline a { color: #cfe6b8;  }
+    #statusline a:hover { color: #f2d3c9;  }
+
+#left { float: left; width: 12em; margin-right: -1px; }
+  #left h1 { margin: 0; padding: 0.33em; background: url(bg-fade.png) #e6d3b8 fixed left bottom no-repeat; border-bottom: 1px dotted #806640; color: #806640; font-size: 1em; text-align: center; }
+  #left .linkbox { margin-top: 2em; border: 1px solid #806640; background: url(bg-fade.png) #fff5e6 fixed left bottom no-repeat; }
+    #left .linkbox ul { margin: 0; padding: 0; }
+    #left .linkbox ul li { list-style: none; margin: 0; padding: 0; }
+    #left .linkbox ul li a { display: block; padding: 2px; text-align: center; font-size: 85%; }
+    #left .linkbox ul li a:hover { background: url(bg-fade.png) #e6b8b8 fixed left bottom no-repeat; }
+    #left .linkbox ul li a img { vertical-align: middle; }
+#linkbar { margin: 0; padding: 0; }
+  #linkbar > li { list-style: none; margin: 0; padding: 0; }
+  #linkbar > li > a,
+  #linkbar > li > span { display: block; background: url(bg-fade.png) #806640 fixed left bottom no-repeat; color: white; padding: 4px; font-size: 120%; }
+  #linkbar > li > a:hover { background-color: #995353; }
+  #linkbar #youarehere:before { content: ' '; background: url(youarehere.png) left center no-repeat; vertical-align: middle; margin-left: -16px; padding-right: 16px; }
+    #linkbar > li > ul { margin: 0; padding: 0; }
+    #linkbar > li > ul > li { display: block; }
+    #linkbar > li > ul > li > a { display: block; background: url(bg-fade.png) #e6d3b8 fixed left bottom no-repeat; padding: 3px 0 3px 5px; border-left: 3px double #806640; border-right: 1px solid #806640; color: black; }
+    #linkbar > li > ul > li > a:hover { background-color: #c08080; border-color: #995353; }
+
+#content,
+#debug,
+#footer { background: url(bg-fade.png) #fff5e6 fixed left bottom no-repeat; padding: 0.5em; border: 1px solid #806640; overflow: hidden; }
+#debug,
+#footer { background-color: #e6d3b8; }
+#content,
+#debug { margin-bottom: 1em; }
+#content { position: relative; }
+#footer { -moz-border-radius-bottomright: 64px; }
+  #footer #svn-revision { float: right; font-size: 85%; }
+
+#breadcrumbs { margin: -0.5em; margin-bottom: 0.5em; padding: 0.5em; background: url(bg-fade.png) #f6e9d6 fixed left bottom no-repeat; }
+  #breadcrumbs a { padding: 0.25em; margin: 0 -0.25em; border: 1px solid transparent; }
+    #breadcrumbs a:hover { background: url(bg-fade.png) #e6b8b8 fixed left bottom no-repeat; border-color: #c08080; }
+#breadcrumbs + h1 { margin-top: -0.25em; border-top: none; }
+#breadcrumbs + h2 { margin-top: -0.333em; border-top: none; }
+#breadcrumbs + h3 { margin-top: -0.417em; border-top: none; }
+
+/* errors, messages, whatevers */
+#error, #info, #success { overflow: hidden; margin: 0 0 1em 0em; }
+  #error p, #info p, #success p { padding: 0.5em; margin: 0; }
+  #error    { border: 1px solid #806640; background: url(bg-fade.png) #ffe6e6 fixed left bottom no-repeat; }
+  #info     { border: 1px solid #806640; background: url(bg-fade.png) #e6e6ff fixed left bottom no-repeat; }
+  #success  { border: 1px solid #806640; background: url(bg-fade.png) #e6ffe6 fixed left bottom no-repeat; }
+  #error   .heading,
+  #info    .heading,
+  #success .heading { font-size: 120%; font-weight: bold; padding: 0.25em 1em; }
+  #error   .heading { background: #c08080; color: #ffe6e6; }
+  #info    .heading { background: #8080c0; color: #e6e6ff; }
+  #success .heading { background: #80c080; color: #e6ffe6; }
+
+.warning { margin: 0.5em auto; width: 75%; padding: 0.5em; text-align: center; font-size: 120%; border: 1px dotted #904040; color: #904040; font-weight: bold; background: url(bg-fade.png) #ffe6e6 fixed left bottom no-repeat; }
+
+/* sql dump table */
+table#sqldump tr td, table#sqldump tr th { padding: 3px; vertical-align: top; }
+table#sqldump tr td + td + td + td + td + td { font-family: monospace; font-size: 80%; }
+
+/* forms */
+fieldset { border: 2px solid #806640; border-right: none; border-bottom: none; -moz-border-radius-topleft: 16px; padding: 0 0.5em; margin: 0.5em 0; }
+fieldset legend { font-weight: bold; margin-left: 1em; }
+
+input { font-family: sans-serif; vertical-align: middle; }
+input[type='text'], input[type='password'], textarea { padding: 3px; border: 1px solid #c0a680; -moz-border-radius: 4px; background-color: white; }
+input[type='text']:focus, input[type='password']:focus, textarea:focus { background-color: #fffde6; outline: 2px solid #c08080; border-color: #995353; -moz-outline-radius: 4px; -moz-border-radius: 0; }
+input[type='submit'], input[type='reset'], input[type='button'], button { border: 1px solid #a0c080; background: url(pawprint.png) #dbe6cf 2px center no-repeat; padding: 2px 2px 2px 18px; color: black; -moz-border-radius: 8px; }
+input[type='submit'] { background-color: #cfe6b8; }
+input[type='submit']:hover, input[type='reset']:hover, input[type='button']:hover, button:hover { border-style: solid; border-color: #c08080; background-color: #e6b8b8; }
+input[type='submit']:active, input[type='reset']:active, input[type='button']:active, button:active { border-style: inset; }
+input[type='submit']:hover, input[type='reset']:hover, input[type='button']:hover, button:hover, label:hover { cursor: pointer; }
+
+/* little inline-ish form */
+.tinyform, .tinyform p { margin: 0; padding: 0; }
+
+/* def. list with terms next to defs */
+dl.compact { margin: 0.25em 0.5em; }
+  dl.compact dt { float: left; width: 9.75em; padding: 0.25em 0 0 0.25em; line-height: 150%; font-style: italic; position: relative; z-index: 2; }
+  dl.compact dt img { vertical-align: middle; }
+  dl.compact dt:after { content: ':'; }
+  dl.compact:after,
+  dl.compact dd:after { display: block; clear: left; content: 'v'; height: 1px; visibility: hidden; margin-top: -1px; }
+  dl.compact dd { padding: 0.25em 0 0.25em 10em; margin: 0; position: relative; z-index: 1; }
+  dl.compact dd { ~padding-left: 0.25em; /* IE has a retarded float model; see http://www.howtocreate.co.uk/wrongWithIE/?chapter=Float+Model */ }
+  dl.compact dd.solo { margin-left: 2em; clear: left; }
+dl.compact.highlights { }
+  dl.compact.highlights dd:hover,
+  dl.compact.highlights dt:hover + dd { background: url(bg-fade.png) #f2d3c9 fixed left bottom no-repeat; }
+    dl.compact.highlights dl.compact.highlights dd:hover { background: none; }
+
+/* lists */
+dl, ul, ol { padding: 0; margin: 0.25em 0.25em 0.25em 2em; }
+  li.dimmed { color: gray; text-decoration: line-through; }
+
+/* pagelist */
+.pagelist { margin: 0.25em; margin-left: 1px; }
+  .pagelist:after { content: 'v'; visibility: hidden; height: 0px; display: block; clear: both; }
+  .pagelist .label { float: left; padding: 0.25em 0.5em; }
+  .pagelist span, .pagelist a { position: relative; display: block; float: left; padding: 0.25em 0.5em; margin-left: -1px; border: 1px dotted #c0a680; border-top-style: solid; border-bottom-style: solid; }
+  .pagelist span { font-weight: bold; }
+  .pagelist .endcap { background: #e6d3b8; font-weight: normal; }
+  .pagelist span:first-child, .pagelist a:first-child { border-left-style:  solid; }
+  .pagelist span:last-child,  .pagelist a:last-child  { border-right-style: solid; }
+  .pagelist a:hover { background: #e6b8b8; border-color: #c08080; z-index: 1; }
+
+/* hash dump, currently used for flagrant error */
+dl.hashdump { font-family: monospace; }
+  dl.hashdump:after { display: block; content: ' '; clear: left; }
+  dl.hashdump dt { margin: 0; padding: 0; clear: left; float: left; width: 8em; text-align: right; color: darkblue; }
+  dl.hashdump dd { margin: 0; padding: 0; float: left; padding-left: 1em; }
+
+
+/* javascript suggestion dropdown */
+ul#dexsuggest { position: absolute; z-index: 100; margin: 0; padding: 0; border: 1px solid #806640; background: #f6e9d6; color: black; max-height: 10em; /* x * (1 + 0.25 * 2) */ overflow: auto; text-align: left; }
+  ul#dexsuggest li { cursor: pointer; padding: 0.33em; margin: 0; height: 1.2em; line-height: 1.2em; overflow: hidden; list-style: none; background: transparent no-repeat 0.33em center; padding-left: 32px; }
+    ul#dexsuggest li span.typed { font-weight: bold; padding-left: 0.66em; }
+    ul#dexsuggest li:hover { background-color: #e6b8b8; }
+    ul#dexsuggest li.selected { background-color: #f2d3c9; }
