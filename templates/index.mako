@@ -37,6 +37,8 @@
 
 <p>Once these features are all complete, <strong>old veekun will cease to exist</strong>.</p>
 
+<p><cite>—Eevee</cite></p>
+
 
 <h1>Links of interest</h1>
 
