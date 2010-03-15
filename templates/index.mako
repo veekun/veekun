@@ -4,9 +4,11 @@
 
 <h1>Veekun makeover</h1>
 
-<div style="float: right;">
-    <img src="${h.static_uri('local', 'images/under-construction-lol.gif')}" alt="UNDER CONSTRUCTION LOL" title="haha man I bet you guys are too young to even remember these">
-</div>
+<%! import random %>
+<img style="float: right;"
+     src="${h.static_uri('local', 'images/engiveer{0}.png'.format('-manly' if random.random() < 0.1 else ''))}"
+     alt="UNDER CONSTRUCTION LOL"
+     title="I solve practical problems">
 
 <p>Hey!  Yeah, you.  This is what used to be known as <strong>beta Veekun</strong>.</p>
 
