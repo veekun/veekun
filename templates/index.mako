@@ -2,7 +2,7 @@
 
 <%def name="title()">Home, sans News</%def>
 
-<h1>Veekun makeover</h1>
+<h1>veekun makeover</h1>
 
 <%! import random %>
 <img style="float: right;"
@@ -10,13 +10,13 @@
      alt="UNDER CONSTRUCTION LOL"
      title="I solve practical problems">
 
-<p>Hey!  Yeah, you.  This is what used to be known as <strong>beta Veekun</strong>.</p>
+<p>Hey!  Yeah, you.  This is what used to be known as <strong>beta veekun</strong>.</p>
 
-<p>In case you missed the bright pink box that's been at the top of the site for months: I've been <a href="${url('/projects')}">rewriting Veekun</a>, and this is what I have so far.  It's not done, obviously, but what's here is far superior to the corresponding features on old Veekun.</p>
+<p>In case you missed the bright pink box that's been at the top of the site for months: I've been <a href="${url('/projects')}">rewriting veekun</a>, and this is what I have so far.  It's not done, obviously, but what's here is far superior to the corresponding features on old veekun.</p>
 
-<p>You are seeing this because this site has <strong>Heart Gold and Soul Silver data</strong>, including wild Pokémon encounters, and the old site does not.  So, now that HG/SS are released, I've switched them around.  This is now the "real" Veekun.</p>
+<p>You are seeing this because this site has <strong>Heart Gold and Soul Silver data</strong>, including wild Pokémon encounters, and the old site does not.  So, now that HG/SS are released, I've switched them around.  This is now the "real" veekun.</p>
 
-<p>If you need the <a href="http://old.veekun.com/">old site, it is still around</a>.  But the tools won't work for HG/SS stuff, because old Veekun doesn't know about HG/SS!</p>
+<p>If you need the <a href="http://old.veekun.com/">old site, it is still around</a>.  But the tools won't work for HG/SS stuff, because old veekun doesn't know about HG/SS!</p>
 
 <p>I'm working on finishing this as quickly as I can.  In the meantime, here are the <strong>things you need to use the old site for</strong>, in totally arbitrary order:</p>
 
@@ -32,15 +32,15 @@
     <li><a href="http://old.veekun.com/dex/resources">Sprite downloads</a></li>
     <li><a href="http://old.veekun.com/dex/calculators/iv">Stat calculator</a></li>
     <li><a href="http://old.veekun.com/dex/calculators/breeding_chains">Breeding chain calculator</a></li>
-    <li>Helpful mechanics articles—haha, just kidding, Veekun never had those.</li>
+    <li>Helpful mechanics articles—haha, just kidding, veekun never had those.</li>
 </ul>
 
-<p>Once these features are all complete, <strong>old Veekun will cease to exist</strong>.</p>
+<p>Once these features are all complete, <strong>old veekun will cease to exist</strong>.</p>
 
 
 <h1>Links of interest</h1>
 
-<p style="font-size: 3em;"><a href="http://old.veekun.com/">Return to old Veekun</a></p>
+<p style="font-size: 3em;"><a href="http://old.veekun.com/">Return to old veekun</a></p>
 
 <p>veekun is open source.  You can <a href="${url('/projects')}">read how to get the code and run it</a>.  If that's the sort of thing you're into.  You can also just get the Pokédex data+images.</p>
 
