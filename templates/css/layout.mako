@@ -75,7 +75,7 @@ p { margin-bottom: 0.75em; line-height: 1.5; }
 img { vertical-align: middle; }
 abbr { border-bottom: 1px dotted black; }
 
-pre { margin: 0.5em 0; padding: 0.25em 0.5em; line-height: 1.5; background: #ece7df; }
+pre { overflow: auto; margin: 0.5em 0; padding: 0.25em 0.5em; line-height: 1.5; background: #ece7df; }
 code { padding: 0 0.17em; background: #ece7df; }
 var { font-style: italic; font-family: monospace; }
 
