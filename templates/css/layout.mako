@@ -60,6 +60,8 @@ h3 { margin-top: 0.5em; margin-bottom: 0.25em; font-size: 1.2em; font-weight: bo
 h1, h2 { overflow: hidden /* clean up cruft and ensure bg/border don't encroach on floats */; }
 h1:first-child, h2:first-child { margin-top: 0; }
 
+#error-illustration { text-align: center; }
+
 /*** USEFUL CLASSES ***/
 
 .faded { opacity: 0.25; }
