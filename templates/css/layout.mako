@@ -5,7 +5,7 @@
 body { font-family: DejaVu Sans, Verdana, sans-serif; font-size: 12px; }
 
 /* General feel */
-body { color: black; background: #c5baab url(${h.static_uri('local', 'images/layout/background.png')}) repeat; }
+body { color: black; background: #acbc9e url(${h.static_uri('local', 'images/layout/background.png')}) repeat; }
 
 /* Core layout */
 
@@ -20,7 +20,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header, #flash, #body { margin-bottom: 0; border-bottom: none; }
 #flash, #body, #footer { margin-top: 0; border-top: none; }
 
-#header { position: relative; height: 8em; color: white; background: #6998df url(${h.static_uri('local', 'images/layout/header-background.png')}) center bottom repeat-x; }
+#header { position: relative; height: 8em; color: white; background: #e15f51 url(${h.static_uri('local', 'images/layout/header-background.png')}) center bottom repeat-x; }
 #header #logo { position: absolute; top: -80px; left: -40px; /* arbitrary */ }
 #header #title { position: absolute; top: -0.87em /* very approximately puts baseline on the top border */; right: 2em; right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
 #header #page-name { font-size: 2em; margin: 1em; margin-left: 200px /* beside the logo */; }
@@ -36,10 +36,10 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #menu li a { display: block; padding: 0.5em; }
 /* Positioning of submenu */
 #menu li { position: relative; }
-#menu > ul > li > ul { position: absolute; width: 16em; left: -1px; border: 1px solid #3173ce; border-top: none; background: #f4f4f4; }
+#menu > ul > li > ul { position: absolute; width: 16em; left: -1px; border: 1px solid #8231ce; border-top: none; background: #f4f4f4; }
 /* Show submenus on hover */
 #menu > ul > li > ul { display: none; }
-#menu > ul > li:hover { padding: 0; border: 1px solid #3173ce; border-bottom: none; }
+#menu > ul > li:hover { padding: 0; border: 1px solid #8231ce; border-bottom: none; }
 #menu > ul > li:hover > ul { display: block; }
 /* XXX This used to be for submenu headers, but there aren't enough links for that yet */
 #menu > ul > li > ul > li > a:link,
@@ -61,7 +61,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 
 #body { padding: 1em; }
 
-h1 { margin-top: 1em; margin-bottom: 0.5em; padding-left: 36px; border: 1px solid #b58a4b; border-left: none; font-size: 1.6em; line-height: 1.5em; font-weight: bold; color: black; background: #cbab81 url(${h.static_uri('local', 'images/layout/h1-background.png')}) left center no-repeat; -webkit-border-top-right-radius: 1em; -webkit-border-bottom-right-radius: 1em; -moz-border-radius-topright: 1em; -moz-border-radius-bottomright: 1em; }
+h1 { margin-top: 1em; margin-bottom: 0.5em; padding-left: 36px; border: 1px solid #9973b9; border-left: none; font-size: 1.6em; line-height: 1.5em; font-weight: bold; color: black; background: #ab80ca url(${h.static_uri('local', 'images/layout/h1-background.png')}) left center no-repeat; -webkit-border-top-right-radius: 1em; -webkit-border-bottom-right-radius: 1em; -moz-border-radius-topright: 1em; -moz-border-radius-bottomright: 1em; }
 h2 { margin-top: 1em; margin-bottom: 0.5em; font-size: 1.5em; font-weight: bold; color: #202020; border-bottom: 1px solid #808080; }
 h2:before, h2:after { content: '_'; visibility: hidden; /* extend underline */ }
 h3 { margin-top: 0.5em; margin-bottom: 0.25em; font-size: 1.2em; font-weight: bold; color: #202020; border-bottom: 1px dotted #808080; }
@@ -76,8 +76,8 @@ h1:first-child, h2:first-child { margin-top: 0; }
 .disabled { color: #c0c0c0; text-decoration: line-through; }
 
 /* Links durp */
-a:link { font-weight: bold; text-decoration: none; color: #3173ce; }
-a:visited { font-weight: bold; text-decoration: none; color: #435b7d; }
+a:link { font-weight: bold; text-decoration: none; color: #8231ce; }
+a:visited { font-weight: bold; text-decoration: none; color: #5f437d; }
 a:hover { color: #ce3131; }
 a.subtle { color: black; }
 a.subtle:hover { text-decoration: underline; }
@@ -88,8 +88,8 @@ img { vertical-align: middle; }
 abbr { border-bottom: 1px dotted black; }
 small { font-size: 0.8em; }
 
-pre { overflow: auto; margin: 0.5em 0; padding: 0.25em 0.5em; line-height: 1.5; background: #ece7df; }
-code { padding: 0 0.17em; background: #ece7df; }
+pre { overflow: auto; margin: 0.5em 0; padding: 0.25em 0.5em; line-height: 1.5; background: #e6dfec; }
+code { padding: 0 0.17em; background: #e6dfec; }
 var { font-style: italic; font-family: monospace; }
 
 /* Forms */
@@ -100,10 +100,10 @@ p.error { margin-top: -0.75em; padding-left: 16px; background: url(${h.static_ur
 
 /* Tables */
 table th, table td { padding: 0.25em; }
-table th { font-weight: normal; color: #2457a0; }
-table tr.subheader-row th { border-bottom: 1px solid #b4c7e6; background: #b4c7e6; color: black; }
-table tr.header-row th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
-table tr + tr.header-row th { border-top: 2px solid #668dcc; }
+table th { font-weight: normal; color: #a02424; }
+table tr.subheader-row th { border-bottom: 1px solid #e6b4b4; background: #e6b4b4; color: black; }
+table tr.header-row th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #e6b4b4; background: #f9e5ed url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
+table tr + tr.header-row th { border-top: 2px solid #cc6666; }
 
 table.striped-rows tr:nth-child(2n) { background: #f0f0f0; }
 table.striped-rows tr:nth-child(2n):hover { background: #e9dbc9; }
@@ -117,8 +117,8 @@ table tr.color2 { background: #f0f0f0; }
 table tr.color1:hover { background: #f8f3ee; }
 table tr.color2:hover { background: #f0e7db; }
 
-table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4c7e6; }
-table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4c7e6; }
+table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #e6b4b4; }
+table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #e6b4b4; }
 
 
 /* Lists */
@@ -138,7 +138,7 @@ ol li { line-height: 1.5; }
 
 /* Definition lists via floats */
 dl { overflow: hidden /* new float context */; }
-dt { float: left; clear: left; width: 11.5em; margin-right: 0.5em; text-align: right; color: #2457a0; }
+dt { float: left; clear: left; width: 11.5em; margin-right: 0.5em; text-align: right; color: #a02424; }
 dt:after { content: ':'; }
 dd { padding-left: 12em /* float width, so hover highlight includes dt but lines wrap correctly */; }
 dd:after { content: 'float clear'; display: block; clear: both; height: 0; visibility: hidden; }
