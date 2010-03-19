@@ -6,9 +6,9 @@
 
 <%! import random %>
 <img style="float: right;"
-     src="${h.static_uri('local', 'images/engiveer{0}.png'.format('-manly' if random.random() < 0.1 else ''))}"
+     src="${h.static_uri('local', 'images/medicleon.png')}"
      alt="UNDER CONSTRUCTION LOL"
-     title="I solve practical problems">
+     title="Oops!  Zat vas not medicine.">
 
 <p>Hey!  Yeah, you.  This is what used to be known as <strong>beta veekun</strong>.</p>
 
