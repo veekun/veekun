@@ -108,6 +108,9 @@ table.striped-rows tr:nth-child(2n) { background: #f0f0f0; }
 table.striped-rows tr:nth-child(2n):hover { background: #fbfbc8; }
 table.striped-rows tr:nth-child(2n+1):hover { background: #fcfcd5; }
 table.striped-rows tr.header-row:hover, table.striped-rows tr.subheader-row:hover { outline: none; }
+table.striped-row-groups tbody:nth-child(2n) { background: #f0f0f0; }
+table.striped-row-groups tbody:nth-child(2n):hover { background: #fbfbc8; }
+table.striped-row-groups tbody:nth-child(2n+1):hover { background: #fcfcd5; }
 table tr.color1 { ; }
 table tr.color2 { background: #f0f0f0; }
 table tr.color1:hover { background: #fcfcd5; }
