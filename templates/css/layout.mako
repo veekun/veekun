@@ -105,16 +105,16 @@ table tr.header-row th { padding: 0.33em; vertical-align: bottom; border-bottom:
 table tr + tr.header-row th { border-top: 2px solid #668dcc; }
 
 table.striped-rows tr:nth-child(2n) { background: #f0f0f0; }
-table.striped-rows tr:nth-child(2n):hover { background: #fbfbc8; }
-table.striped-rows tr:nth-child(2n+1):hover { background: #fcfcd5; }
+table.striped-rows tr:nth-child(2n):hover { background: #e9dbc9; }
+table.striped-rows tr:nth-child(2n+1):hover { background: #f0e7db; }
 table.striped-rows tr.header-row:hover, table.striped-rows tr.subheader-row:hover { outline: none; }
 table.striped-row-groups tbody:nth-child(2n) { background: #f0f0f0; }
-table.striped-row-groups tbody:nth-child(2n):hover { background: #fbfbc8; }
-table.striped-row-groups tbody:nth-child(2n+1):hover { background: #fcfcd5; }
+table.striped-row-groups tbody:nth-child(2n):hover { background: #e9dbc9; }
+table.striped-row-groups tbody:nth-child(2n+1):hover { background: #f0e7db; }
 table tr.color1 { ; }
 table tr.color2 { background: #f0f0f0; }
-table tr.color1:hover { background: #fcfcd5; }
-table tr.color2:hover { background: #fbfbc8; }
+table tr.color1:hover { background: #f8f3ee; }
+table tr.color2:hover { background: #f0e7db; }
 
 table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4c7e6; }
 table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4c7e6; }
