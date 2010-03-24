@@ -86,6 +86,7 @@ a.subtle:hover { text-decoration: underline; }
 p { margin-bottom: 0.75em; line-height: 1.5; }
 img { vertical-align: middle; }
 abbr { border-bottom: 1px dotted black; }
+small { font-size: 0.8em; }
 
 pre { overflow: auto; margin: 0.5em 0; padding: 0.25em 0.5em; line-height: 1.5; background: #ece7df; }
 code { padding: 0 0.17em; background: #ece7df; }
