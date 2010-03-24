@@ -105,6 +105,9 @@ table tr.subheader-row th { border-bottom: 1px solid #b4c7e6; background: #b4c7e
 table tr.header-row th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
 table tr + tr.header-row th { border-top: 2px solid #668dcc; }
 
+table.stretch { width: 100%; }
+table.compact td { padding: 0.17em; }
+
 table.striped-rows tr:nth-child(2n) { background: #f0f0f0; }
 table.striped-rows tr:nth-child(2n):hover { background: #e9dbc9; }
 table.striped-rows tr:nth-child(2n+1):hover { background: #f0e7db; }
