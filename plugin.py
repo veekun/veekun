@@ -17,8 +17,7 @@ def kecchan_flash(action, *args, **kwargs):
 
     h.flash(h.literal("""
         Hey, it's my girlfriend <a href="http://purplekecleon.deviantart.com/">PurpleKecleon</a>'s
-        birthday today!  You should go wish her well...  maybe commission some art...
-        <small>my cut is 10%...</small>
+        birthday today!  You should go wish her well.  And buy a bunch of art from her.
     """), icon='cake')
 
 class LocalPlugin(LocalPluginBase):
