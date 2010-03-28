@@ -1,0 +1,73 @@
+<%inherit file="/base.mako" />
+
+<%def name="title()">Chat</%def>
+
+${h.h1('I hate reading!')}
+
+<p>Okay, okay!  Chat uses <a href="http://en.wikipedia.org/wiki/IRC">IRC</a>.  Quick link is <a href="irc://irc.veekun.com/veekun">irc://irc.veekun.com/veekun</a>.  Server is <code>irc.veekun.com</code>, channel is <code>#veekun</code>; ports are 6667 for non-SSL and 6697 for SSL.</p>
+
+
+${h.h1('"Rules"')}
+
+<p>If #veekun can be said to have any rules, they are only that you respect basic IRC culture and <a href="http://tools.ietf.org/html/rfc1855">netiquette</a>.  Communicate effectively, don't be a jerk, remember that these are other real people on the other end.  Basically, <em>your presence should not make the place worse</em>.</p>
+
+<p>There is no content rating; we don't try to make anything safe for 10-year-olds.  You have been warned.</p>
+
+
+${h.h1('I have no idea what this is')}
+
+<p>Here's a whirlwind overview:</p>
+
+<p><a href="http://en.wikipedia.org/wiki/IRC">IRC</a> is a decades-old online chat...  thing.  Where IM is based around user accounts, IRC is based around <em>channels</em>—groups of users.</p>
+
+<p>IRC was built by hackers, so commands are generally typed in.  Commands traditionally begin with a slash (<code>/</code>).  Anything that doesn't begin with a slash is just text, and is sent to the channel or user you're talking to.</p>
+
+<p>Channel names begin with a hash (<code>#</code>).  Channels come into existence when someone joins them, and vanish when the last person parts.  It's all very anarchic.</p>
+
+<p>You can register channels or nicknames (your handle) via the Services bots, NickServ and ChanServ.  Try <code>/ns help</code> and <code>/ns help register</code> to get started.</p>
+
+<p>IRC has sort of its own culture.  In particular, since channels are more permanent fixtures, many people will stay connected even when they're not actively typing, so they can see what they missed and jump right into the conversation when they return.  So please, don't come in, complain nobody's talking, and leave after two minutes.  We might be busy; we might be asleep; we might just not have noticed you yet.  Stick around for a little while, and if there isn't any conversation, try to start one!</p>
+
+<p>If you want to know more, there are plenty of IRC resources floating around online, or you can just come ask:</p>
+
+${h.h2('Connecting')}
+
+<p>You will need an IRC client.  You have a few options here.  The easiest is to just use <a href="http://xchat.org/">X-Chat</a>, which runs on the UNIX family and Windows.</p>
+
+<dl>
+    <dt>Linux</dt>
+    <dd>It's in the Ubuntu repository as <code>xchat</code> or <code>xchat-gnome</code>.  Other distributions presumably have similar.</dd>
+    <dt>Mac OS X</dt>
+    <dd>Try <a href="http://sourceforge.net/projects/xchataqua/files/">X-Chat Aqua</a>.</dd>
+    <dt>Windows</dt>
+    <dd>You'll want to use <a href="http://www.silverex.org/download/">this installer</a>.  The official release of X-Chat for Windows is shareware, even though X-Chat is open source.  Yes, this is stupid.</dd>
+</dl>
+
+<p>The X-Chat site has a <a href="http://xchat.org/docs/start/">quick-start guide</a>, but it doesn't mention adding a new network.  Do the following:</p>
+
+<ol>
+    <li>Hit "Add".</li>
+    <li>Enter "veekun" (or whatever) as the network name.</li>
+    <li>Hit "Edit".</li>
+    <li>Click the <code>newserver/6667</code>, and change it to <code>irc.veekun.com/6667</code>.
+        <br>OR, if you want a secure connection: use <code>irc.veekun.com/6697</code>, then check <em>both</em> "Use SSL" and "Accept invalid SSL certificate".</li>
+    <li>Check "Auto connect"—this will automatically connect you to the veekun server whenever you run X-Chat.</li>
+    <li>Enter <code>#veekun</code> next to "Channels to join"—this will join the channel for you automatically whenever you connect.</li>
+    <li>Make sure the character set is UTF-8!  Otherwise, special characters (like 日本語 or é) will show up as garbage.</li>
+    <li>Hit "Close".</li>
+    <li>Give yourself a nickname.  "User name" is pretty useless, and "Real name" shows when people examine you with <code>/whois</code>.</li>
+    <li>Check "Skip network list on startup"—this will get the list out of the way next time you run X-Chat.  You can still get back to it from the menu bar.</li>
+    <li>Hit "Connect"!</li>
+</ol>
+
+<p><a href="http://www.smogon.com/">Smogon</a> has some <a href="http://www.smogon.com/irc/xchat_tutorial">helpful screenshots</a>, too.</p>
+
+<p>This should get you started.  You might get a "connection complete" dialog, but this is kinda useless if you're already going somewhere specific; you might want to uncheck "Always show this dialog" so it won't pester you again.</p>
+
+${h.h2('Other clients')}
+
+<p>For the curious: I use the console client <a href="http://irssi.org/">irssi</a>, because it's awesome.</p>
+
+<p>You <em>can</em> use <a href="http://pidgin.im/">Pidgin</a> on any platform, but I recommend you don't.  IRC and IM are fundamentally different, both in technology and culture, and cramming the two into one program tends to result in either oversimplified IRC or overcomplicated IM.</p>
+
+<p>Likewise, you <em>can</em> use the <a href="https://addons.mozilla.org/en-US/firefox/addon/16">ChatZilla</a> IRC add-on for <a href="http://www.mozilla.com/en-US/firefox/">Firefox</a>, but I recommend you don't do that either for similar reasons.  Plus, you can't close Firefox without killing IRC.  You <em>can</em> get ChatZilla <a href="http://chatzilla.rdmsoft.com/xulrunner/">on its own</a>.</p>
