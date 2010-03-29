@@ -28,13 +28,13 @@ ${h.h1(u'Embedding the Pokédex')}
 <form id="veekun-pokedex-lookup" method="GET" action="http://veekun.com/dex/lookup"
       style="overflow: hidden; margin: 0.5em 0; padding: 0; padding-left: 20px; min-height: 40px;">
 <p style="font-size: 1.33em; float: left; margin: 0; padding: 0; padding-right: 20px; white-space: nowrap;
-          background: url(${h.static_uri('local', 'images/layout/pokedex-teeny.png')}) right center no-repeat;">
+          background: url(${h.static_uri('local', 'images/layout/pokedex-teeny.png', qualified=True)}) right center no-repeat;">
     <label>
-        <img src="${h.static_uri('local', 'images/embed-logo.png')}"
+        <img src="${h.static_uri('local', 'images/embed-logo.png', qualified=True)}"
              style="vertical-align: middle;" />
         <a href="http://veekun.com/">veekun</a> Pok&eacute;dex: <br/>
         <a href="http://veekun.com/dex" style="float: left; margin-left: -20px;">
-            <img src="${h.static_uri('spline', 'icons/question-white.png')}" alt="Help" title="Help!"
+            <img src="${h.static_uri('spline', 'icons/question-white.png', qualified=True)}" alt="Help" title="Help!"
                  style="border: none; vertical-align: middle;">
         </a>
         <input type="text" name="lookup" class="dex-lookup js-dex-suggest"
@@ -47,7 +47,7 @@ ${h.h1(u'Embedding the Pokédex')}
 
 <pre><%lib:escape_html>\
 ${veekun_lookup_html()}\
-<script type="text/javascript" src="${h.static_uri('local', 'script/embed-veekun-lookup.js')}"></script>\
+<script type="text/javascript" src="${h.static_uri('local', 'script/embed-veekun-lookup.js', qualified=True)}"></script>\
 </%lib:escape_html></pre>
 
 <p>Which will create something like this:</p>
