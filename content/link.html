@@ -1,0 +1,68 @@
+<%inherit file="/base.mako" />
+<%namespace name="lib" file="/lib.mako" />
+
+<%def name="title()">Linking</%def>
+
+${h.h1('Regular links')}
+
+<p>I guess you can just, um, link to me.</p>
+
+<p>I do have a link button in that strange 88×31 size you can use, if you're into that: <img src="${h.static_uri('local', 'images/button.png')}" alt="veekun"></p>
+
+<p>And some example HTML if you're into cut-and-paste:</p>
+
+<pre><%lib:escape_html>
+<a href="http://veekun.com/"><img src="${h.static_uri('local', 'images/button.png')}" alt="veekun" title="veekun is totally awesome" style="border: 0;"></a>
+</%lib:escape_html></pre>
+
+<p>I don't mind if you hotlink the button, unless you're insanely more popular than I am and start killing my bandwidth.  But that's unlikely.</p>
+
+
+${h.h1(u'Embedding the Pokédex')}
+
+<p>Now we're talkin'.</p>
+
+<p>If you'd like people to be able to look stuff up in the veekun Pokédex straight from your site, paste all this somewhere:</p>
+
+<%def name="veekun_lookup_html()">
+<form id="veekun-pokedex-lookup" method="GET" action="http://veekun.com/dex/lookup"
+      style="overflow: hidden; margin: 0.5em 0; padding: 0; padding-left: 20px; min-height: 40px;">
+<p style="font-size: 1.33em; float: left; margin: 0; padding: 0; padding-right: 20px; white-space: nowrap;
+          background: url(${h.static_uri('local', 'images/layout/pokedex-teeny.png')}) right center no-repeat;">
+    <label>
+        <img src="${h.static_uri('local', 'images/embed-logo.png')}"
+             style="vertical-align: middle;" />
+        <a href="http://veekun.com/">veekun</a> Pok&eacute;dex: <br/>
+        <a href="http://veekun.com/dex" style="float: left; margin-left: -20px;">
+            <img src="${h.static_uri('spline', 'icons/question-white.png')}" alt="Help" title="Help!"
+                 style="border: none; vertical-align: middle;">
+        </a>
+        <input type="text" name="lookup" class="dex-lookup js-dex-suggest"
+               style="width: 12em; vertical-align: middle; "/>
+    </label>
+    <input type="submit" value="Look up" style="vertical-align: middle; cursor: pointer;" />
+</p>
+</form>
+</%def>
+
+<pre><%lib:escape_html>\
+${veekun_lookup_html()}\
+<script type="text/javascript" src="${h.static_uri('local', 'script/embed-veekun-lookup.js')}"></script>\
+</%lib:escape_html></pre>
+
+<p>Which will create something like this:</p>
+
+${veekun_lookup_html()}
+
+<p>Of course, feel free to style it to match your site; this is just an example that ought to work well anywhere.  The only important bits are the <code>js-dex-suggest</code> class and the <code>&lt;script&gt;</code> tag, for making the drop-down suggestions work.</p>
+
+<p>I am aware that this doesn't really resemble the link button at all.  Consider it a work in progress.</p>
+
+
+${h.h1('Affiliation')}
+
+<p>People ask about this occasionally, so it deserves mention.</p>
+
+<p>I don't do affiliation.  If I think a site is genuinely useful and interesting to my users, I'll just link to it somewhere appropriate; no need to pester its owner about it.  Likewise, I do my best to make veekun genuinely useful and interesting.  If people link to me because of this, cool.  If not, so be it.</p>
+
+<p>Slapping a dozen little buttons in a sidebar somewhere doesn't provide any useful service.  It doesn't tell users what the sites are, why they might be interesting, or even whether they're any good.  It's just haphazard advertising done so other people will link to me, and I'd rather earn inbound links than barter for them.  Sorry.</p>
