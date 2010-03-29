@@ -22,7 +22,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 
 #header { position: relative; height: 8em; color: white; background: #6998df url(${h.static_uri('local', 'images/layout/header-background.png')}) center bottom repeat-x; }
 #header #logo { position: absolute; top: -80px; left: -40px; /* arbitrary */ }
-#header #title { position: absolute; top: -0.87em /* very approximately puts baseline on the top border */; right: 2em; right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
+#header #title { overflow: hidden; position: absolute; top: -0.87em; height: 0.87em; /* very approximately puts baseline on the top border */ right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
 #header #page-name { font-size: 2em; margin: 1em; margin-left: 200px /* beside the logo */; }
 
 #header #pokedex-lookup { position: absolute; right: 1em; bottom: 1em; padding-top: 160px; min-width: 194px; /* make sure pokedex image fits */ padding-right: 1em; padding-bottom: 1em; background: url(${h.static_uri('local', 'images/layout/pokedex.png')}) right bottom no-repeat; }
@@ -30,16 +30,17 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header #pokedex-lookup label { font-size: 1.5em; }
 #header #pokedex-lookup input[type="text"] { width: 15em; }
 
-#menu { position: absolute; margin-top: -2em; margin-left: 4em; left: 140px; /* avoid eevee logo */ }
-#menu > ul > li { display: inline-block; margin-top: -1px; padding: 1px 1px 0 1px /* for the border on hover */; }
-#menu > ul > li > a { background: rgba(100%, 100%, 100%, 0.5); }
+#menu { position: absolute; margin-top: -2.33em; margin-left: 4em; left: 140px; /* avoid eevee logo */ }
+#menu > ul > li { float: left; padding: 0.33em; }
+#menu > ul > li > a { background: #bfd2f0; -moz-border-radius-topright: 0.5em; -moz-border-radius-topleft: 0.5em; -webkit-border-top-right-radius: 0.5em; -webkit-border-top-left-radius: 0.5em; }
 #menu li a { display: block; padding: 0.5em; }
 /* Positioning of submenu */
 #menu li { position: relative; }
-#menu > ul > li > ul { position: absolute; width: 16em; left: -1px; border: 1px solid #3173ce; border-top: none; background: #f4f4f4; }
+#menu > ul > li > ul { z-index: 100; position: absolute; width: 16em; margin-top: -1px; border: 1px solid #3173ce; background: #bfd2f0; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; }
 /* Show submenus on hover */
 #menu > ul > li > ul { display: none; }
-#menu > ul > li:hover { padding: 0; border: 1px solid #3173ce; border-bottom: none; }
+#menu > ul > li:hover { border-color: #3173ce; border-bottom-color: transparent; }
+#menu > ul > li:hover > a { background: #3173ce; color: white; }
 #menu > ul > li:hover > ul { display: block; }
 /* XXX This used to be for submenu headers, but there aren't enough links for that yet */
 #menu > ul > li > ul > li > a:link,
@@ -125,7 +126,7 @@ table td.vertical-line { width: 0 !important; padding: 0 !important; border-righ
 
 
 /* Lists */
-ul.classic-list { margin: 0.5em 0; margin-left: 1.5em; list-style-type: disc; }
+ul.classic-list { margin: 0.5em 0; margin-left: 3em; list-style-type: disc; }
 ul.classic-list li { line-height: 1.5; }
 
 ul.inline { overflow: hidden /* new float context */; }
@@ -136,11 +137,11 @@ ul.inline-commas > li { display: inline; }
 ul.inline-commas > li:after { content: ','; }
 ul.inline-commas > li:last-child:after { content: none; }
 
-ol { margin: 0.5em 0; margin-left: 1.5em; list-style: lower-roman; }
+ol { margin: 0.5em 0; margin-left: 3em; list-style: lower-roman; }
 ol li { line-height: 1.5; }
 
 /* Definition lists via floats */
-dl { overflow: hidden /* new float context */; }
+dl { overflow: hidden /* new float context */; margin-bottom: 0.75em; }
 dt { float: left; clear: left; width: 11.5em; margin-right: 0.5em; text-align: right; color: #2457a0; }
 dt:after { content: ':'; }
 dd { padding-left: 12em /* float width, so hover highlight includes dt but lines wrap correctly */; }
