@@ -1,0 +1,53 @@
+<%inherit file="/base.mako" />
+<%namespace name="lib" file="/lib.mako" />
+
+<%def name="title()">Credits</%def>
+
+<p>I couldn't possibly have built this thing on my own.  My heart goes out to all of the below, who have donated their time, patience, and sweat to make veekun worth using:</p>
+
+${h.h1('Data')}
+
+<ul class="classic-list">
+    <li><a href="http://turnipmints.mooo.com/~andrew/">magical</a>, who knows more about the games' guts than I do, and who is never afraid to argue with me when I do something dumb.</li>
+    <li><a href="http://upokecenter.com/">The Ultimate Pokémon Center</a>, one of the few places that still has detailed information on mechanics for the old games.</li>
+    <li><a href="http://mudkip.eeveeshq.com/">Vixie</a>, for mountains of metagame details I never thought I'd want to know and still don't.</li>
+    <li><a href="http://projectpokemon.org/">Project Pokémon</a>, for the ridiculous lengths they go to in the name of game research.</li>
+    <li><a href="http://bulbapedia.bulbagarden.net/wiki/User:Zhen_Lin">Zhen Lin</a>, <a href="http://pokeguide.filb.de/">loadingNOW</a>, and <a href="http://www.pipian.com/">Pipian</a>, who (willing or not) got me started on extracting game data myself when Gen IV arrived.</li>
+    <li><a href="http://www.smogon.com/">Smogon</a>, for its legion of OCD nerds who provide a constant stream of fascinating trivia like "<a href="${url(controller='dex', action='moves', name='gravity')}">Gravity</a> disables <a href="${url(controller='dex', action='moves', name='splash')}">Splash</a>".</li>
+    <li>Smogon's Supreme Leader <a href="http://www.smogon.com/forums/member.php?u=1">chaos</a>, who cheerfully donated friendly dumps of historical move data I needed on several occasions.</li>
+    <li><a href="http://www.math.miami.edu/~jam/azure/">Azure Heights Pokémon Laboratory</a>, the move descriptions of which set my first bar of quality for level of detail.</li>
+    <li><a href="http://www.pokemasters.net/">PokéMasters</a>, for its long-since-forgotten Pokédex which provided some of the seed data for veekun.</li>
+    <li><a href="http://www.primagames.com/">Prima Games</a>, whose original Pokémon Red/Blue guide got me started in the first place, and whose horrendously erroneous data I'm still correcting to this day.</li>
+    <li>Everyone I'm forgetting!  Surely, there are many more.</li>
+</ul>
+
+
+${h.h1('Polish')}
+
+<ul class="classic-list">
+    <li>My partner in crime for life <a href="http://purplekecleon.deviantart.com/">PurpleKecleon</a> (メロメロ), who all-too-eagerly tells me when something I've made is ugly, and who generously contributed the header image and error page illustrations.</li>
+    <li><a href="http://forums.dragonflycave.com/member.php?u=38">Xikaze</a>, whose ridiculous sprites decorate some otherwise boring pages.</li>
+    <li><a href="http://dragonflycave.com/">The Cave of Dragonflies</a> and its <a href="irc://irc.veekun.com/tcod">kool kids krew</a>, for acting as eternal guinea-pigs-slash-beta-testers.</li>
+    <li><a href="http://zhorken.livejournal.com/">Zhorken</a>, for the only other major code contributions so far.</li>
+</ul>
+
+
+${h.h1('Technology')}
+
+<ul class="classic-list">
+    <li><a href="http://www.ubuntu.com/">Ubuntu</a>, both my desktop's and the server's operating system.</li>
+    <li><a href="http://httpd.apache.org/">Apache</a>, the reliable lumbering beast of a Web server.</li>
+    <li><a href="http://www.python.org/">Python</a>, the best programming language in the world.</li>
+    <li><a href="http://pylonshq.com/">Pylons</a>, the Python Web framework this is all based on.</li>
+    <li><a href="http://bitbucket.org/mchaput/whoosh/">Whoosh</a>, an impressive Python text indexing library.</li>
+    <li><a href="http://www.postgresql.org/">PostgreSQL</a>, a fabulous free database engine.</li>
+    <li><a href="http://git-scm.com/">Git</a>, the finest version control system I can name.</li>
+    <li><a href="http://www.gimp.org/">The GIMP</a>, <a href="http://www.imagemagick.org/">ImageMagick</a>, <a href="http://www.lcdf.org/gifsicle/">Gifsicle</a>, and <a href="http://optipng.sourceforge.net/">OptiPNG</a>, all great imaging tools.</li>
+</ul>
+
+
+${h.h1('And, of course')}
+
+<ul class="classic-list">
+    <li><a href="http://www.gamefreak.co.jp/">Game Freak</a>, for creating these stupid games, and <a href="http://www.nintendo.com/">Nintendo</a>, for publishing them.  (Please stop.)</li>
+</ul>
