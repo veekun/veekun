@@ -97,7 +97,8 @@ var { font-style: italic; font-family: monospace; }
 form {}
 input[type='text'].error { background-color: #f2c6d8; }
 dd.error { padding-left: 13em; background: url(${h.static_uri('spline', 'icons/exclamation-small-red.png')}) 12em center no-repeat; color: #a02424; }
-p.error { margin-top: -0.75em; padding-left: 16px; background: url(${h.static_uri('spline', 'icons/exclamation-small-red.png')}) left center no-repeat; color: #a02424; }
+p.error { padding-left: 16px; background: url(${h.static_uri('spline', 'icons/exclamation-small-red.png')}) left center no-repeat; color: #a02424; }
+p + p.error { margin-top: -0.75em; }
 
 /* Tables */
 table th, table td { padding: 0.25em; }
