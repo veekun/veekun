@@ -21,14 +21,16 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #flash, #body, #footer { margin-top: 0; border-top: none; }
 
 #header { position: relative; height: 8em; color: white; background: #6998df url(${h.static_uri('local', 'images/layout/header-background.png')}) center bottom repeat-x; }
-#header #logo { position: absolute; top: -80px; left: -40px; /* arbitrary */ }
+#header #logo { position: absolute; top: -85px; left: -45px; /* arbitrary */ }
 #header #title { overflow: hidden; position: absolute; top: -0.87em; height: 0.87em; /* very approximately puts baseline on the top border */ right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
-#header #page-name { font-size: 2em; margin: 1em; margin-left: 200px /* beside the logo */; }
+#header #page-name { font-size: 2em; position: absolute; bottom: 1.33em; left: 155px /* beside the logo */; }
 
 #header #pokedex-lookup { position: absolute; right: 1em; bottom: 1em; padding-top: 160px; min-width: 194px; /* make sure pokedex image fits */ padding-right: 1em; padding-bottom: 1em; background: url(${h.static_uri('local', 'images/layout/pokedex.png')}) right bottom no-repeat; }
 #header #pokedex-lookup p { margin: 0; line-height: 1; white-space: nowrap; }
 #header #pokedex-lookup label { font-size: 1.5em; }
-#header #pokedex-lookup input[type="text"] { width: 15em; }
+#header #pokedex-lookup input[type="text"] { width: 12em; }
+
+#header #user { position: absolute; top: 0; left: 0; right: 0; margin: 0.5em 0; text-align: center; }
 
 #menu { position: absolute; margin-top: -2.33em; margin-left: 4em; left: 140px; /* avoid eevee logo */ }
 #menu > ul > li { float: left; padding: 0.33em; }
@@ -95,6 +97,8 @@ var { font-style: italic; font-family: monospace; }
 
 /* Forms */
 form {}
+input, button, select { vertical-align: middle; }
+input[type='button'], input[type='submit'], input[type='reset'], button { cursor: pointer; }
 input[type='text'].error { background-color: #f2c6d8; }
 dd.error { padding-left: 13em; background: url(${h.static_uri('spline', 'icons/exclamation-small-red.png')}) 12em center no-repeat; color: #a02424; }
 p.error { padding-left: 16px; background: url(${h.static_uri('spline', 'icons/exclamation-small-red.png')}) left center no-repeat; color: #a02424; }
