@@ -23,9 +23,8 @@
 <ul class="classic-list">
     <li><a href="http://old.veekun.com/">News</a></li>
     <li><a href="http://old.veekun.com/forum">Forum</a></li>
-    <li>Lists of things (Pokémon, types, and natures are done)</li>
+    <li>Lists of things (Pokémon, items, types, and natures are done)</li>
     <li><a href="http://old.veekun.com/dex/abilities">Abilities</a></li>
-    <li><a href="http://old.veekun.com/dex/items">Items</a></li>
     <li><a href="http://old.veekun.com/dex/pokemon/compare">Pokémon comparerer</a></li>
     <li><a href="http://old.veekun.com/dex/moves/search">Move search</a></li>
     <li><a href="http://old.veekun.com/dex/resources">Sprite downloads</a></li>
