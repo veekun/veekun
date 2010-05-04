@@ -128,6 +128,7 @@ table tr.color2:hover { background: #f0e7db; }
 
 table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4c7e6; }
 table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4c7e6; }
+table td.number-cell { text-align: right; }
 
 
 /* Lists */
