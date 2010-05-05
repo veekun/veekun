@@ -10,11 +10,13 @@ class LocalPlugin(LocalPluginBase):
     def links(self):
         return [
             PluginLink(u'veekun', url('/'), children=[
-                PluginLink(u'About',            url('/about')),
-                PluginLink(u'Chat',             url('/chat')),
-                PluginLink(u'Credits',          url('/props')),
-                PluginLink(u'Link or embed veekun', url('/link')),
-                PluginLink(u'Projects',         url('/projects')),
-                PluginLink(u'Pokédex history',  url('/dex/history')),
+                PluginLink(u'', None, children=[
+                    PluginLink(u'About',            url('/about')),
+                    PluginLink(u'Chat',             url('/chat')),
+                    PluginLink(u'Credits',          url('/props')),
+                    PluginLink(u'Link or embed veekun', url('/link')),
+                    PluginLink(u'Projects',         url('/projects')),
+                    PluginLink(u'Pokédex history',  url('/dex/history')),
+                ]),
             ]),
         ]

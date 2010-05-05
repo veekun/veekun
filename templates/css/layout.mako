@@ -44,11 +44,19 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #menu > ul > li:hover { border-color: #3173ce; border-bottom-color: transparent; }
 #menu > ul > li:hover > a { background: #3173ce; color: white; }
 #menu > ul > li:hover > ul { display: block; }
-/* XXX This used to be for submenu headers, but there aren't enough links for that yet */
-#menu > ul > li > ul > li > a:link,
-#menu > ul > li > ul > li > a:visited { color: black; }
-#menu > ul > li > ul > li a { padding: 0.33em; padding-left: 1em; font-weight: normal; }
-#menu > ul > li > ul > li a:hover { background: #e6eefa; }
+/* General link stylin' */
+#menu > ul > li > ul > li a:link { color: black; }
+#menu > ul > li > ul > li a:visited { color: #404040; }
+#menu > ul > li > ul > li a:hover { color: black; }
+#menu > ul > li > ul > li a { padding: 0.33em; }
+#menu > ul > li > ul > li a:link:hover,
+#menu > ul > li > ul > li a:visited:hover { background: #e6eefa; }
+/* Submenu headers */
+#menu > ul > li > ul > li > a { font-weight: bold; }
+/* Sub-submenu items, or regular things */
+#menu > ul > li > ul > li > ul > li > a { padding-left: 1.33em; font-weight: normal; }
+/* Below even that */
+#menu > ul > li > ul > li > ul > li li > a { font-size: 0.9em; line-height: 1.11em; padding-left: 2.59em /* 2.33 / 0.8 */; font-weight: normal; font-style: italic; }
 
 #flash { padding: 0.5em; }
 #flash li { padding: 0.5em; border: 1px solid #d8bc8d; background: #e5d2b2; }
