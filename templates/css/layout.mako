@@ -34,11 +34,11 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 
 #menu { position: absolute; margin-top: -2.33em; margin-left: 4em; left: 140px; /* avoid eevee logo */ }
 #menu > ul > li { float: left; padding: 0.33em; }
-#menu > ul > li > a { background: #bfd2f0; -moz-border-radius-topright: 0.5em; -moz-border-radius-topleft: 0.5em; -webkit-border-top-right-radius: 0.5em; -webkit-border-top-left-radius: 0.5em; }
+#menu > ul > li > a { background: #cfdcf0; -moz-border-radius-topright: 0.5em; -moz-border-radius-topleft: 0.5em; -webkit-border-top-right-radius: 0.5em; -webkit-border-top-left-radius: 0.5em; }
 #menu li a { display: block; padding: 0.5em; }
 /* Positioning of submenu */
 #menu li { position: relative; }
-#menu > ul > li > ul { z-index: 100; position: absolute; width: 16em; margin-top: -1px; border: 1px solid #3173ce; background: #bfd2f0; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; }
+#menu > ul > li > ul { z-index: 100; position: absolute; width: 16em; margin-top: -1px; border: 1px solid #3173ce; background: #cfdcf0; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; }
 /* Show submenus on hover */
 #menu > ul > li > ul { display: none; }
 #menu > ul > li:hover { border-color: #3173ce; border-bottom-color: transparent; }
@@ -50,7 +50,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #menu > ul > li > ul > li a:hover { color: black; }
 #menu > ul > li > ul > li a { padding: 0.33em; }
 #menu > ul > li > ul > li a:link:hover,
-#menu > ul > li > ul > li a:visited:hover { background: #e6eefa; }
+#menu > ul > li > ul > li a:visited:hover { background: #e6eefa; background: #b1c6e7; }
 /* Submenu headers */
 #menu > ul > li > ul > li > a { font-weight: bold; }
 /* Sub-submenu items, or regular things */
