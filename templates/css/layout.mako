@@ -85,6 +85,7 @@ h1:first-child, h2:first-child { margin-top: 0; }
 
 .faded { opacity: 0.25; }
 .disabled { color: #c0c0c0; text-decoration: line-through; }
+.vertical-text { -moz-transform: rotate(-90deg); }
 
 /* Links durp */
 a:link { font-weight: bold; text-decoration: none; color: #3173ce; }
@@ -114,7 +115,7 @@ p + p.error { margin-top: -0.75em; }
 
 /* Tables */
 table th, table td { padding: 0.25em; }
-table th { font-weight: normal; color: #2457a0; }
+table th { font-weight: normal; color: #2457a0; vertical-align: middle; }
 table tr.subheader-row th { border-bottom: 1px solid #b4c7e6; background: #b4c7e6; color: black; }
 table tr.header-row th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
 table tr + tr.header-row th { border-top: 2px solid #668dcc; }
