@@ -30,7 +30,9 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header #pokedex-lookup label { font-size: 1.5em; }
 #header #pokedex-lookup input[type="text"] { width: 12em; }
 
-#header #user { position: absolute; top: 0; left: 0; right: 0; margin: 0.5em 0; text-align: center; }
+#header #user { position: absolute; top: 0; left: 170px; margin: 0.5em 0; }
+#header #user a { color: #32445e; }
+#header #user a:hover { color: #5e3d32; }
 
 #menu { position: absolute; margin-top: -2.33em; margin-left: 4em; left: 140px; /* avoid eevee logo */ }
 #menu > ul > li { float: left; padding: 0.33em; }
