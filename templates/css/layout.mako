@@ -116,6 +116,11 @@ p.error { padding-left: 16px; background: url(${h.static_uri('spline', 'icons/ex
 p + p.error { margin-top: -0.75em; }
 
 /* Tables */
+table { border-color: #b4c7e6; }
+
+table tbody + tbody { border-top: 1px solid; border-color: inherit; }
+table colgroup + colgroup { border-left: 1px solid; border-color: inherit; }
+
 table th, table td { padding: 0.25em; }
 table th { font-weight: normal; color: #2457a0; vertical-align: middle; }
 table tr.subheader-row th { border-bottom: 1px solid #b4c7e6; background: #b4c7e6; color: black; }
