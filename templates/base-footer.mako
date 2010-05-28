@@ -42,3 +42,23 @@
     ${c.timer.sql_queries} quer${ 'y' if c.timer.sql_queries == 1 else 'ies' }:
         ${format_timedelta(c.timer.sql_time)}s
 </div>
+
+<p>
+    ©1999–2010 eevee/alex munroe (<a href="${url('/about')}">contact</a>, <a href="${url('/chat')}">chat</a>)
+    • pokémon ©1995–2010 <a href="http://www.pokemon.com/">pokémon</a>,
+        <a href="http://www.nintendo.com/">nintendo</a>,
+        <a href="http://www.gamefreak.co.jp/">game freak</a>,
+        <a href="http://www.creatures.co.jp/html/en/">creatures</a>
+</p>
+<p>
+    many thanks to <a href="http://purplekecleon.deviantart.com/">purplekecleon</a>,
+        <a href="http://turnipmints.mooo.com/~andrew/">magical</a>,
+        and <a href="http://github.com/Zhorken">zhorken</a>
+    • icons from <a href="http://p.yusukekamiyamane.com/">fugue set</a>
+    • country flags from <a href="http://www.famfamfam.com/lab/icons/flags/">famfamfam</a>
+</p>
+<p>
+    powered by <a href="http://bugs.veekun.com/projects/spline">spline</a>
+    • <a href="http://bugs.veekun.com/projects/veekun/wiki/Documentation">get the source code</a>
+    • <a href="http://bugs.veekun.com/">bug tracker</a>
+</p>

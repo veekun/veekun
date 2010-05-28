@@ -67,8 +67,8 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #flash li + li { border-top: none; }
 #flash li img { margin: -0.17em 0 -0.17em -0.17em;  /* let icon sit in the padding but set it apart from the text */ }
 
-#footer { padding: 0.33em; background: #e8e8e8; color: #606060; }
-#footer p { margin: 0.33em; }
+#footer { padding: 0.33em; background: #ececec; color: #606060; }
+#footer p { font-size: 0.8em; margin: 0.25em 0.5em; }
 #footer #footer-timer { float: right; width: 20em; margin: 0.33em; line-height: 16px; text-align: right; }
 #footer #footer-timer #footer-timer-pokemon { float: right; margin-left: 0.33em; }
 
