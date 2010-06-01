@@ -170,5 +170,18 @@ dd { padding-left: 12em /* float width, so hover highlight includes dt but lines
 dd:after { content: 'float clear'; display: block; clear: both; height: 0; visibility: hidden; }
 dt, dd { line-height: 1.5; }
 
-ul.classic { padding-left: 2em; }
-ul.classic > li { line-height: 1.5; list-style-type: disc; }
+
+/* Markdown default formatting -- Pokédex effects, forum posts, etc. */
+/* TODO: Merge this and the pokedex support into spline core, when forum needs it. */
+.markdown a { font-weight: normal; }
+
+.markdown table { margin-bottom: 0.75em; line-height: 1.33em; }
+
+.markdown table thead tr th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
+
+.markdown table tbody tr:nth-child(2n) { background: #f0f0f0; }
+.markdown table tbody tr:nth-child(2n):hover { background: #e9dbc9; }
+.markdown table tbody tr:nth-child(2n+1):hover { background: #f0e7db; }
+
+.markdown ul { margin: 0.5em 0; margin-left: 3em; list-style-type: disc; }
+.markdown ul li { line-height: 1.5; }
