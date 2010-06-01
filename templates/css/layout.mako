@@ -130,17 +130,20 @@ table tr + tr.header-row th { border-top: 2px solid #668dcc; }
 table.stretch { width: 100%; }
 table.compact td { padding: 0.17em; }
 
-table.striped-rows tr:nth-child(2n) { background: #f0f0f0; }
-table.striped-rows tr:nth-child(2n):hover { background: #e9dbc9; }
-table.striped-rows tr:nth-child(2n+1):hover { background: #f0e7db; }
-table.striped-rows tr.header-row:hover, table.striped-rows tr.subheader-row:hover { outline: none; }
+table tr.color1,
+table.striped-rows tr:nth-child(2n+1),
+table.striped-row-groups tbody:nth-child(2n+1) { background: white; }
+table tr.color2,
+table.striped-rows tr:nth-child(2n),
 table.striped-row-groups tbody:nth-child(2n) { background: #f0f0f0; }
-table.striped-row-groups tbody:nth-child(2n):hover { background: #e9dbc9; }
-table.striped-row-groups tbody:nth-child(2n+1):hover { background: #f0e7db; }
-table tr.color1 { ; }
-table tr.color2 { background: #f0f0f0; }
-table tr.color1:hover { background: #f8f3ee; }
-table tr.color2:hover { background: #f0e7db; }
+table tr.color1:hover,
+table.striped-rows tr:nth-child(2n+1):hover,
+table.striped-rows tr:nth-child(2n+1) td.js-hover,
+table.striped-row-groups tbody:nth-child(2n+1):hover { background: #f3ebe1; }
+table tr.color2:hover,
+table.striped-rows tr:nth-child(2n):hover,
+table.striped-rows tr:nth-child(2n) td.js-hover,
+table.striped-row-groups tbody:nth-child(2n):hover { background: #e8dac8; }
 
 table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4c7e6; }
 table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4c7e6; }
@@ -153,6 +156,9 @@ ul.classic-list li { line-height: 1.5; }
 
 ul.inline { overflow: hidden /* new float context */; }
 ul.inline li { float: left; }
+
+ul.inline-block { }
+ul.inline-block li { display: inline-block; }
 
 ul.inline-commas { display: inline; }
 ul.inline-commas > li { display: inline; }
