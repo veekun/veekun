@@ -14,7 +14,7 @@
 
 <p>In case you missed the bright pink box that's been at the top of the site for months: I've been <a href="${url('/projects')}">rewriting veekun</a>, and this is what I have so far.  It's not done, obviously, but what's here is far superior to the corresponding features on old veekun.</p>
 
-<p>You are seeing this because this site has <strong>Heart Gold and Soul Silver data</strong>, including wild Pokémon encounters, and the old site does not.  So, now that HG/SS are released, I've switched them around.  This is now the "real" veekun.</p>
+<p>You are seeing this because this site has <strong>HeartGold and SoulSilver data</strong>, including wild Pokémon encounters, and the old site does not.  So, now that HG/SS are released, I've switched them around.  This is now the "real" veekun.</p>
 
 <p>If you need the <a href="http://old.veekun.com/">old site, it is still around</a>.  But the tools won't work for HG/SS stuff, because old veekun doesn't know about HG/SS!</p>
 
