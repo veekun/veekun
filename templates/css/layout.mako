@@ -23,16 +23,22 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header { position: relative; height: 8em; color: white; background: #6998df url(${h.static_uri('local', 'images/layout/header-background.png')}) center bottom repeat-x; }
 #header #logo { position: absolute; top: -85px; left: -45px; /* arbitrary */ }
 #header #title { overflow: hidden; position: absolute; top: -0.87em; height: 0.87em; /* very approximately puts baseline on the top border */ right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
-#header #page-name { font-size: 2em; position: absolute; bottom: 1.33em; left: 155px /* beside the logo */; }
+#header a { color: #32445e; }
+#header a:hover { color: #5e3d32; }
+
+#header #page-name { font-size: 2em; position: absolute; bottom: 1.33em; left: 160px /* beside the logo */; }
+#header #page-name ul#breadcrumbs { font-size: 0.5em; }
+#header #page-name ul#breadcrumbs li { display: inline-block; }
+#header #page-name ul#breadcrumbs li:after { content: ' » '; }
+#header #page-name ul#breadcrumbs li:last-child:after { content: ''; }
+#header #page-name ul#breadcrumbs li:last-child { font-size: 2em; display: block; margin-top: 0.25em; }
 
 #header #pokedex-lookup { position: absolute; right: 1em; bottom: 1em; padding-top: 160px; min-width: 194px; /* make sure pokedex image fits */ padding-right: 1em; padding-bottom: 1em; background: url(${h.static_uri('local', 'images/layout/pokedex.png')}) right bottom no-repeat; }
 #header #pokedex-lookup p { margin: 0; line-height: 1; white-space: nowrap; }
 #header #pokedex-lookup label { font-size: 1.5em; }
 #header #pokedex-lookup input[type="text"] { width: 12em; }
 
-#header #user { position: absolute; top: 0; left: 170px; margin: 0.5em 0; }
-#header #user a { color: #32445e; }
-#header #user a:hover { color: #5e3d32; }
+#header #user { position: absolute; top: -8em; right: 0; left: 0; text-align: center; }
 
 #menu { position: absolute; margin-top: -2.33em; margin-left: 4em; left: 140px; /* avoid eevee logo */ }
 #menu > ul > li { float: left; padding: 0.33em; }
