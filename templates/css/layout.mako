@@ -130,7 +130,7 @@ table colgroup + colgroup { border-left: 1px solid; border-color: inherit; }
 table th, table td { padding: 0.25em; }
 table th { font-weight: normal; color: #2457a0; vertical-align: middle; }
 table tr.subheader-row th { border-bottom: 1px solid #b4c7e6; background: #b4c7e6; color: black; }
-table tr.header-row th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
+table tr.header-row th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4c7e6; background: #e6eefa url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
 table tr + tr.header-row th { border-top: 2px solid #668dcc; }
 
 table.stretch { width: 100%; }
