@@ -19,62 +19,17 @@
 
 
 ${h.h1('veekun')}
+<p>Hey, that's where you are now!</p>
+
 <p>veekun is one of the few projects that uses my new <a href="http://bugs.veekun.com/projects">bug tracker</a>.  Feel free to peruse or <a href="http://bugs.veekun.com/projects/veekun-incoming/issues/new">file bugs</a>.</p>
 
-<p>veekun is actually split across several projects.  To actually get the site running as-is, you'll need all of them.  If you just want to use the Pokédex data, see below.</p>
+<p>Likewise, its documentation is on the bug tracker's wiki.  There are a few places to go, depending on what you're looking to do:</p>
 
-<dl>
-    <dt><a href="http://git.veekun.com/?p=pokedex.git;a=summary"><var>pokedex</var></a></dt>
-    <dd>Contains all the Pokédex data and sprites, as well as the logic for some things like the name lookup.  The data is stored as CSV dumps, and the schema is in Python, but a tool is included to load the data into a database; see below.</dt>
-    <dt><a href="http://git.veekun.com/?p=spline.git;a=summary"><var>spline</var></a></dt>
-    <dd>Core for the Web site.  Doesn't do much on its own, but ties together some plugins.  The actual Pokédex part of the site is its own plugin; the idea is that, someday, the forums will be a separate plugin that other people can use without having to also drag the Pokédex along.</dd>
-    <dt><a href="http://git.veekun.com/?p=spline-pokedex.git;a=summary"><var>spline-pokedex</var></a></dt>
-    <dd>
-        Requires <var>spline</var>, <var>pokedex</var>. <br>
-        Pokédex plugin for the site.  Performs actual lookups, spits out pages, etc.
-    </dd>
-    <dt><a href="http://git.veekun.com/?p=veekun.git;a=summary"><var>veekun</var></a></dt>
-    <dd>
-        Requires <var>spline</var>. <br>
-        Unlike the others, this isn't a Python module; it's just a collection of spline customizations.  The static pages (like this one), layout/images, and space for temporary files are in here.
-    </dd>
-</dl>
-
-<h2>Pokédex data</h2>
-<p>This is what most people are after.  If you only want the Pokédex data, you only need the <var>pokedex</var> project; everything else powers the site.  Do the following:</p>
-
-<ol>
-    <li>Check out the <var>pokedex</var> project, as described above.</li>
-    <li>
-        From within the project directory:
-        <pre>python setup.py develop</pre>
-        This will install dependencies and set up the <code>pokedex</code> script to point to the checkout directory.  It will probably require <code>sudo</code>, as it needs to touch Python's global configuration.  If you aren't comfortable with that, create a quick <a href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> first.
-    </li>
-    <li>
-        <pre>pokedex load -De driver://user:pass@host/database</pre>
-        This will create the tables in the database of your choice, <strong>dropping them first if they exist</strong>.  Drivers known to work are PostgreSQL (via <a href="http://initd.org/psycopg/">psycopg</a>), SQLite, and MySQL (via <a href="http://mysql-python.sourceforge.net/">mysql-python</a>), but others have a good chance of working.  See the <a href="http://www.sqlalchemy.org/docs/dbengine.html#create-engine-url-arguments">SQLAlchemy documentation</a> for details on the URL-ish database syntax.
-    </li>
-    <li>Go nuts.  If you want to dump the data back to CSVs, you can use the similar <code>pokedex dump</code> command; the only difference is that it doesn't take <code>-D</code>.</li>
-</ol>
-
-<h2>Running the site</h2>
-<p>Not much more complicated.</p>
-
-<ol>
-    <li>Check out all the projects listed above.</li>
-    <li>Do <code>setup.py develop</code> for each project, as above.  (You may need to do this again after updating the code, if new library dependencies are added.)</li>
-    <li>Load the Pokédex data, as above.</li>
-    <li>Edit <code>development.ini</code> and change <code>pokedex_db_url</code> to point to your database.  The URL can be the same as the one you used to load the data.  (There's also a <code>sqlalchemy.url</code>, but it's currently unused.)</li>
-    <li>
-        From the <var>veekun</var> directory:
-        <pre>paster serve --reload development.ini</pre>
-        This will start up a little development Web server and give you a link to the now-running site.
-    </li>
-</ol>
-
-<p>You can also run <code>paster</code> from the <var>spline</var> directory, which will skip all veekun-specific customizations.  I rarely try this, so some of the CSS may be incomplete.</p>
-
-<p>If, for some perverse reason, you want to run this code in a production environment, you should check the <a href="http://pylonshq.com/docs/en/0.9.7/">Pylons documentation</a> for the best way to plug veekun into your web server.</p>
+<ul class="classic-list">
+    <li><a href="http://bugs.veekun.com/projects/veekun/wiki/Documentation">veekun documentation</a>, for running the entire site; only useful if you want to help us work on it or totally rip me off</li>
+    <li><a href="http://bugs.veekun.com/projects/pokedex/wiki/GettingData">How to get the Pokédex data</a>, if you want to do something veekun can't or are building your own Pokémon application</li>
+    <li><a href="http://bugs.veekun.com/projects/pokedex/wiki/CLI">Pokédex command-line documentation</a>, which is admittedly not very useful</li>
+</ul>
 
 
 ${h.h1('Small Web apps')}
