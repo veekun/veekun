@@ -1,8 +1,17 @@
 <%inherit file="base.mako"/>
 
-<%def name="title()">Home, sans News</%def>
+<%def name="title()">West of House</%def>
+<%def name="title_in_page()">Home</%def>
 
-<h1>veekun makeover</h1>
+<h1>there is a small mailbox here</h1>
+
+<p>Greetings, weary traveler.  I'm <a href="${url('/about')}">Eevee</a> and this is some kind of website.  Whirlwind tour:</p>
+
+<ul class="classic-list">
+    <li>The main attraction is a <a href="${url('/dex')}">Pokédex</a>, if you hadn't noticed.  It's pretty great.</li>
+    <li>I write some <a href="${url('/projects')}">other code</a>, too.  Everything I write is open-source.  There's a <a href="http://bugs.veekun.com/">bug tracker</a> and a <a href="http://git.veekun.com/">code browser</a>.  Feel free to <a href="http://bugs.veekun.com/projects/veekun-incoming/issues/new">tell me about bugs or feature suggestions</a>.</li>
+    <li>I have an <a href="${url('/chat')}">IRC channel</a>, largely populated by nerds saying nerdy things.  You should stop by!</p>
+</ul>
 
 <%! import random %>
 <img style="float: right;"
@@ -10,38 +19,14 @@
      alt="UNDER CONSTRUCTION LOL"
      title="I solve practical problems">
 
-<p>Hey!  Yeah, you.  This is what used to be known as <strong>beta veekun</strong>.</p>
-
-<p>In case you missed the bright pink box that's been at the top of the site for months: I've been <a href="${url('/projects')}">rewriting veekun</a>, and this is what I have so far.  It's not done, obviously, but what's here is far superior to the corresponding features on old veekun.</p>
-
-<p>You are seeing this because this site has <strong>HeartGold and SoulSilver data</strong>, including wild Pokémon encounters, and the old site does not.  So, now that HG/SS are released, I've switched them around.  This is now the "real" veekun.</p>
-
-<p>If you need the <a href="http://old.veekun.com/">old site, it is still around</a>.  But the tools won't work for HG/SS stuff, because old veekun doesn't know about HG/SS!</p>
-
-<p>I'm working on finishing this as quickly as I can.  In the meantime, here are the <strong>things you need to use the old site for</strong>, in totally arbitrary order:</p>
+<p>If you remember the <a href="http://old.veekun.com/">old busted brown veekun</a>, you may notice a few things are missing.  The old site will be around until these are done:</p>
 
 <ul class="classic-list">
-    <li><a href="http://old.veekun.com/">News</a></li>
-    <li><a href="http://old.veekun.com/forum">Forum</a></li>
-    <li>Lists of things (Pokémon, abilities, items, types, and natures are done)</li>
-    <li><a href="http://old.veekun.com/dex/moves/search">Move search</a></li>
+    <li><a href="http://old.veekun.com/dex/moves/search">Move search</a> and <a href="http://old.veekun.com/dex/moves">move list</a></li>
     <li><a href="http://old.veekun.com/dex/resources">Sprite downloads</a></li>
     <li><a href="http://old.veekun.com/dex/calculators/iv">Stat calculator</a></li>
     <li><a href="http://old.veekun.com/dex/calculators/breeding_chains">Breeding chain calculator</a></li>
-    <li>Helpful mechanics articles—haha, just kidding, veekun never had those.</li>
 </ul>
 
-<p>Once these features are all complete, <strong>old veekun will cease to exist</strong>.</p>
-
-<p><cite>—Eevee</cite></p>
-
-
-<h1>Links of interest</h1>
-
-<p style="font-size: 3em;"><a href="http://old.veekun.com/">Return to old veekun</a></p>
-
-<p>veekun is open source.  You can <a href="${url('/projects')}">read how to get the code and run it</a>.  If that's the sort of thing you're into.  You can also just get the Pokédex data+images.</p>
-
-<p>There's a new <a href="http://bugs.veekun.com/projects">bug tracker</a>.  Feel free to <a href="http://bugs.veekun.com/projects/veekun-incoming/issues/new">file a bug</a> if you find problems.</p>
-
-<p>And, as always, <a href="irc://irc.veekun.com/veekun">drop by IRC</a> and say hi!  Or yell at me for ruining everything.</p>
+<h1>Updates</h1>
+<%include file="/front_page/updates.mako" />
