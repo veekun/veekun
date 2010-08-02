@@ -97,6 +97,7 @@ h1:first-child, h2:first-child { margin-top: 0; }
 .faded { opacity: 0.25; }
 .disabled { color: #c0c0c0; text-decoration: line-through; }
 .vertical-text { -moz-transform: rotate(-90deg); }
+.annotation { border-bottom: 1px dotted black; }
 
 /* Links durp */
 a:link { font-weight: bold; text-decoration: none; color: #3173ce; }
