@@ -147,13 +147,10 @@ table tr.color2,
 table.striped-rows tr:nth-child(2n),
 table.striped-row-groups tbody:nth-child(2n) { background: #f0f0f0; }
 table tr.color1:hover,
-table.striped-rows tr:nth-child(2n+1):hover,
-table.striped-rows tr:nth-child(2n+1) td.js-hover,
-table.striped-row-groups tbody:nth-child(2n+1):hover { background: #f3ebe1; }
 table tr.color2:hover,
-table.striped-rows tr:nth-child(2n):hover,
-table.striped-rows tr:nth-child(2n) td.js-hover,
-table.striped-row-groups tbody:nth-child(2n):hover { background: #e8dac8; }
+table.striped-rows tr:hover,
+table.striped-rows tr td.js-hover,
+table.striped-row-groups tbody:hover { background: #eae1d5; }
 
 table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4c7e6; }
 table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4c7e6; }
