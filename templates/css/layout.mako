@@ -128,7 +128,8 @@ p + p.error { margin-top: -0.75em; }
 /* Tables */
 table { border-color: #b4c7e6; }
 
-table tbody + tbody { border-top: 1px solid; border-color: inherit; }
+table tbody + tbody,
+table tbody + tfoot { border-top: 1px solid; border-color: inherit; }
 table colgroup + colgroup { border-left: 1px solid; border-color: inherit; }
 
 table th, table td { padding: 0.25em; }
