@@ -22,7 +22,6 @@
 <p>If you remember the <a href="http://old.veekun.com/">old busted brown veekun</a>, you may notice a few things are missing.  The old site will be around until these are done:</p>
 
 <ul class="classic-list">
-    <li><a href="http://old.veekun.com/dex/calculators/iv">Stat calculator</a></li>
     <li><a href="http://old.veekun.com/dex/calculators/breeding_chains">Breeding chain calculator</a></li>
 </ul>
 
