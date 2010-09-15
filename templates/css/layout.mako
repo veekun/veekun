@@ -177,6 +177,16 @@ ul.inline-commas > li:last-child:after { content: none; }
 ol { margin: 0.5em 0; margin-left: 3em; list-style: lower-roman; }
 ol li { line-height: 1.5; }
 
+ol.pager { overflow: hidden; margin: 0.5em; list-style: none; text-align: right; }
+ol.pager li { float: left; }
+ol.pager li a { display: block; }
+ol.pager li a,
+ol.pager li.dotdotdot,
+ol.pager li.youarehere { padding: 0 0.5em; line-height: 1.5; font-weight: normal; border: 1px solid #e8e8e8; background: #f8f8f8; }
+ol.pager li.dotdotdot { color: gray; border-color: transparent; background: none; }
+ol.pager li.youarehere { font-weight: bold; background: #e8e8e8; }
+ol.pager li a:hover { border: 1px solid #bfd3f1; background: #e6eefa; }
+
 /* Definition lists via floats */
 dl { overflow: hidden /* new float context */; margin-bottom: 0.75em; }
 dt { float: left; clear: left; width: 11.5em; margin-right: 0.5em; text-align: right; color: #2457a0; }
