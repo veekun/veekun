@@ -62,3 +62,27 @@
     • <a href="http://bugs.veekun.com/projects/veekun/wiki/Documentation">get the source code</a>
     • <a href="http://bugs.veekun.com/">bug tracker</a>
 </p>
+
+% if config.get('spline.sql_debugging', False):
+<table id="footer-query-log">
+<%! import datetime %>\
+% for query, data in c.timer.sql_query_log.iteritems():
+<tbody>
+    <tr>
+        <td>×${len(data)}</td>
+        <td>${format_timedelta(sum( (_['time'] for _ in data), datetime.timedelta() ))}s</td>
+        <th>${query}</th>
+    </tr>
+    % for instance in data:
+    <tr>
+        <td></td> <td></td>
+        <td>
+            ${format_timedelta(instance['time'])}s: ${instance['caller']}<br>
+            ${instance['parameters']}
+        </td>
+    </tr>
+    % endfor
+</tbody>
+% endfor
+</table>
+% endif

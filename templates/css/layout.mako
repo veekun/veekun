@@ -80,6 +80,8 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #footer p { font-size: 0.8em; margin: 0.25em 0.5em; }
 #footer #footer-timer { float: right; width: 20em; margin: 0.33em; line-height: 16px; text-align: right; }
 #footer #footer-timer #footer-timer-pokemon { float: right; margin-left: 0.33em; }
+#footer table#footer-query-log { margin: 0.33em -0.33em -0.33em; line-height: 1.2; background: #e8f0e8; }
+#footer table#footer-query-log th { font-family: monospace; text-align: left; color: #004000; }
 
 #body { padding: 1em; }
 
