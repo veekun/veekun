@@ -23,10 +23,11 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header { position: relative; height: 8em; color: white; background: #6998df url(${h.static_uri('local', 'images/layout/header-background.png')}) center bottom repeat-x; }
 #header #logo { position: absolute; top: -85px; left: -45px; /* arbitrary */ }
 #header #title { overflow: hidden; position: absolute; top: -0.87em; height: 0.87em; /* very approximately puts baseline on the top border */ right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
+#header #title a { color: black; }
 #header a { color: #32445e; }
 #header a:hover { color: #5e3d32; }
 
-#header #page-name { font-size: 2em; position: absolute; bottom: 1.33em; left: 160px /* beside the logo */; }
+#header #page-name { z-index: 1; font-size: 2em; position: absolute; bottom: 1.33em; left: 160px /* beside the logo */; }
 #header #page-name ul#breadcrumbs { font-size: 0.5em; }
 #header #page-name ul#breadcrumbs li { display: inline-block; }
 #header #page-name ul#breadcrumbs li:after { content: ' » '; }
