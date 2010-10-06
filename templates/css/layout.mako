@@ -175,7 +175,7 @@ ul.inline-block li { display: inline-block; }
 ul.inline-commas { display: inline; }
 ul.inline-commas > li { display: inline; }
 ul.inline-commas > li:after { content: ','; }
-ul.inline-commas > li:last-child:after { content: none; }
+ul.inline-commas > li:last-child:after { content: ''; content: none; }  /* '' is a hack for Webkit and Opera, which don't grok none */
 
 ol { margin: 0.5em 0; margin-left: 3em; list-style: lower-roman; }
 ol li { line-height: 1.5; }
