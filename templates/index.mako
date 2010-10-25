@@ -25,5 +25,8 @@
     <li><a href="http://old.veekun.com/dex/calculators/breeding_chains">Breeding chain calculator</a></li>
 </ul>
 
+## Only include this if the frontpage plugin is loaded!
+% if 'frontpage' in config['spline.plugins']:
 <h1>Updates</h1>
 <%include file="/front_page/updates.mako" />
+% endif
