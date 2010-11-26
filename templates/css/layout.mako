@@ -90,7 +90,7 @@ h1 { margin-top: 1em; margin-bottom: 0.5em; padding-left: 36px; border: 1px soli
 h2 { margin-top: 1em; margin-bottom: 0.5em; font-size: 1.5em; font-weight: bold; color: #202020; border-bottom: 1px solid #808080; }
 h2:before, h2:after { content: '_'; visibility: hidden; /* extend underline */ }
 h3 { margin-top: 0.5em; margin-bottom: 0.25em; font-size: 1.2em; font-weight: bold; color: #202020; border-bottom: 1px dotted #808080; }
-h1, h2 { overflow: hidden /* clean up cruft and ensure bg/border don't encroach on floats */; }
+h1, h2, h3 { overflow: hidden /* clean up cruft and ensure bg/border don't encroach on floats */; }
 h1:first-child, h2:first-child { margin-top: 0; }
 
 #error-illustration { text-align: center; }
