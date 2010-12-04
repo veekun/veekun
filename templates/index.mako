@@ -13,18 +13,6 @@
     <li>I have an <a href="${url('/chat')}">IRC channel</a>, largely populated by nerds saying nerdy things.  You should stop by!</p>
 </ul>
 
-<%! import random %>
-<img style="float: right;"
-     src="${h.static_uri('local', 'images/engiveer{0}.png'.format('-manly' if random.random() < 0.1 else ''))}"
-     alt="UNDER CONSTRUCTION LOL"
-     title="I solve practical problems">
-
-<p>If you remember the <a href="http://old.veekun.com/">old busted brown veekun</a>, you may notice a few things are missing.  The old site will be around until these are done:</p>
-
-<ul class="classic-list">
-    <li><a href="http://old.veekun.com/dex/calculators/breeding_chains">Breeding chain calculator</a></li>
-</ul>
-
 ## Only include this if the frontpage plugin is loaded!
 % if 'frontpage' in config['spline.plugins']:
 <h1>Updates</h1>
