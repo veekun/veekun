@@ -15,6 +15,12 @@
 
 ## Only include this if the frontpage plugin is loaded!
 % if 'frontpage' in config['spline.plugins']:
-<h1>Updates</h1>
+<div class="dex-column-container">
+<div class="dex-column-2x">
 <%include file="/front_page/updates.mako" />
+</div>
+<div class="dex-column">
+<%include file="/front_page/extras.mako" />
+</div>
+</div>
 % endif
