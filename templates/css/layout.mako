@@ -5,7 +5,7 @@
 body { font-family: DejaVu Sans, Verdana, sans-serif; font-size: 12px; }
 
 /* General feel */
-body { color: black; background: #8bb88a url(${h.static_uri('local', 'images/layout/background-treekun.png')}) repeat; }
+body { color: black; background: #808080 url(${h.static_uri('local', 'images/layout/background-treekun.png')}) repeat; }
 
 /* Core layout */
 
@@ -20,7 +20,7 @@ body { color: black; background: #8bb88a url(${h.static_uri('local', 'images/lay
 #header, #ie-warning, #flash, #body { margin-bottom: 0; border-bottom: none; }
 #ie-warning, #flash, #body, #footer { margin-top: 0; border-top: none; }
 
-#header { position: relative; height: 8em; color: white; background: #a0a0a0 url(${h.static_uri('local', 'images/layout/header-background-treekun.png')}) center bottom repeat-x; }
+#header { position: relative; height: 8em; color: white; background: #35cd32 url(${h.static_uri('local', 'images/layout/header-background-treekun.png')}) center bottom repeat-x; }
 #header #logo { position: absolute; top: -88px; left: -28px; /* arbitrary */ }
 #header #title { overflow: hidden; position: absolute; top: -0.87em; height: 0.87em; /* very approximately puts baseline on the top border */ right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
 #header #title a { color: black; }
@@ -47,11 +47,11 @@ body { color: black; background: #8bb88a url(${h.static_uri('local', 'images/lay
 #menu li a { display: block; padding: 0.5em; }
 /* Positioning of submenu */
 #menu li { position: relative; }
-#menu > ul > li > ul { z-index: 100; position: absolute; width: 16em; margin-top: -1px; border: 1px solid #35cd32; background: #cff0cf; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; }
+#menu > ul > li > ul { z-index: 100; position: absolute; width: 16em; margin-top: -1px; border: 1px solid #cd3232; background: #f0cfcf; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; }
 /* Show submenus on hover */
 #menu > ul > li > ul { display: none; }
-#menu > ul > li:hover { border-color: #35cd32; border-bottom-color: transparent; }
-#menu > ul > li:hover > a { background: #35cd32; color: white; }
+#menu > ul > li:hover { border-color: #cd3232; border-bottom-color: transparent; }
+#menu > ul > li:hover > a { background: #cd3232; color: white; }
 #menu > ul > li:hover > ul { display: block; }
 /* General link stylin' */
 #menu > ul > li > ul > li a:link { color: black; }
@@ -59,7 +59,7 @@ body { color: black; background: #8bb88a url(${h.static_uri('local', 'images/lay
 #menu > ul > li > ul > li a:hover { color: black; }
 #menu > ul > li > ul > li a { padding: 0.33em; }
 #menu > ul > li > ul > li a:link:hover,
-#menu > ul > li > ul > li a:visited:hover { background: #b4e6b3; }
+#menu > ul > li > ul > li a:visited:hover { background: #e6b3b3; }
 /* Submenu headers */
 #menu > ul > li > ul > li > a { font-weight: bold; }
 /* Sub-submenu items, or regular things */
