@@ -5,7 +5,7 @@
 body { font-family: DejaVu Sans, Verdana, sans-serif; font-size: 12px; }
 
 /* General feel */
-body { color: black; background: #c5baab url(${h.static_uri('local', 'images/layout/background.png')}) repeat; }
+body { color: black; background: #8bb88a url(${h.static_uri('local', 'images/layout/background-treekun.png')}) repeat; }
 
 /* Core layout */
 
@@ -20,11 +20,11 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #header, #ie-warning, #flash, #body { margin-bottom: 0; border-bottom: none; }
 #ie-warning, #flash, #body, #footer { margin-top: 0; border-top: none; }
 
-#header { position: relative; height: 8em; color: white; background: #6998df url(${h.static_uri('local', 'images/layout/header-background.png')}) center bottom repeat-x; }
-#header #logo { position: absolute; top: -85px; left: -45px; /* arbitrary */ }
+#header { position: relative; height: 8em; color: white; background: #aa7747 url(${h.static_uri('local', 'images/layout/header-background-treekun.png')}) center bottom repeat-x; }
+#header #logo { position: absolute; top: -88px; left: -28px; /* arbitrary */ }
 #header #title { overflow: hidden; position: absolute; top: -0.87em; height: 0.87em; /* very approximately puts baseline on the top border */ right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
 #header #title a { color: black; }
-#header a { color: #32445e; }
+#header a { color: #325d32; }
 #header a:hover { color: #5e3d32; }
 
 #header #page-name { z-index: 1; font-size: 2em; position: absolute; bottom: 1.33em; left: 160px /* beside the logo */; }
@@ -43,15 +43,15 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 
 #menu { position: absolute; margin-top: -2.33em; margin-left: 4em; left: 140px; /* avoid eevee logo */ }
 #menu > ul > li { float: left; padding: 0.33em; }
-#menu > ul > li > a { background: #cfdcf0; -moz-border-radius-topright: 0.5em; -moz-border-radius-topleft: 0.5em; -webkit-border-top-right-radius: 0.5em; -webkit-border-top-left-radius: 0.5em; }
+#menu > ul > li > a { background: #cff0cf; -moz-border-radius-topright: 0.5em; -moz-border-radius-topleft: 0.5em; -webkit-border-top-right-radius: 0.5em; -webkit-border-top-left-radius: 0.5em; }
 #menu li a { display: block; padding: 0.5em; }
 /* Positioning of submenu */
 #menu li { position: relative; }
-#menu > ul > li > ul { z-index: 100; position: absolute; width: 16em; margin-top: -1px; border: 1px solid #3173ce; background: #cfdcf0; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; }
+#menu > ul > li > ul { z-index: 100; position: absolute; width: 16em; margin-top: -1px; border: 1px solid #35cd32; background: #cff0cf; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; }
 /* Show submenus on hover */
 #menu > ul > li > ul { display: none; }
-#menu > ul > li:hover { border-color: #3173ce; border-bottom-color: transparent; }
-#menu > ul > li:hover > a { background: #3173ce; color: white; }
+#menu > ul > li:hover { border-color: #35cd32; border-bottom-color: transparent; }
+#menu > ul > li:hover > a { background: #35cd32; color: white; }
 #menu > ul > li:hover > ul { display: block; }
 /* General link stylin' */
 #menu > ul > li > ul > li a:link { color: black; }
@@ -59,7 +59,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #menu > ul > li > ul > li a:hover { color: black; }
 #menu > ul > li > ul > li a { padding: 0.33em; }
 #menu > ul > li > ul > li a:link:hover,
-#menu > ul > li > ul > li a:visited:hover { background: #e6eefa; background: #b1c6e7; }
+#menu > ul > li > ul > li a:visited:hover { background: #b4e6b3; }
 /* Submenu headers */
 #menu > ul > li > ul > li > a { font-weight: bold; }
 /* Sub-submenu items, or regular things */
@@ -86,7 +86,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 
 #body { padding: 1em; }
 
-h1 { margin-top: 1em; margin-bottom: 0.5em; padding-left: 36px; border: 1px solid #b58a4b; border-left: none; font-size: 1.6em; line-height: 1.5em; font-weight: bold; color: black; background: #cbab81 url(${h.static_uri('local', 'images/layout/h1-background.png')}) left center no-repeat; -webkit-border-top-right-radius: 1em; -webkit-border-bottom-right-radius: 1em; -moz-border-radius-topright: 1em; -moz-border-radius-bottomright: 1em; }
+h1 { margin-top: 1em; margin-bottom: 0.5em; padding-left: 36px; border: 1px solid #b44b4b; border-left: none; font-size: 1.6em; line-height: 1.5em; font-weight: bold; color: black; background: #d37878 url(${h.static_uri('local', 'images/layout/h1-background-treekun.png')}) left center no-repeat; -webkit-border-top-right-radius: 1em; -webkit-border-bottom-right-radius: 1em; -moz-border-radius-topright: 1em; -moz-border-radius-bottomright: 1em; }
 h2 { margin-top: 1em; margin-bottom: 0.5em; font-size: 1.5em; font-weight: bold; color: #202020; border-bottom: 1px solid #808080; }
 h2:before, h2:after { content: '_'; visibility: hidden; /* extend underline */ }
 h3 { margin-top: 0.5em; margin-bottom: 0.25em; font-size: 1.2em; font-weight: bold; color: #202020; border-bottom: 1px dotted #808080; }
@@ -103,9 +103,9 @@ h1:first-child, h2:first-child { margin-top: 0; }
 .annotation { border-bottom: 1px dotted black; }
 
 /* Links durp */
-a:link { font-weight: bold; text-decoration: none; color: #3173ce; }
-a:visited { font-weight: bold; text-decoration: none; color: #435b7d; }
-a:hover { color: #ce3131; }
+a:link { font-weight: bold; text-decoration: none; color: #35cd32; }
+a:visited { font-weight: bold; text-decoration: none; color: #437b42; }
+a:hover { color: #cd3232; }
 a.subtle { color: black; }
 a.subtle:hover { text-decoration: underline; }
 
@@ -130,17 +130,17 @@ p.error { padding-left: 16px; background: url(${h.static_uri('spline', 'icons/ex
 p + p.error { margin-top: -0.75em; }
 
 /* Tables */
-table { border-color: #b4c7e6; }
+table { border-color: #b4e6b3; }
 
 table tbody + tbody,
 table tbody + tfoot { border-top: 1px solid; border-color: inherit; }
 table colgroup + colgroup { border-left: 1px solid; border-color: inherit; }
 
 table th, table td { padding: 0.25em; }
-table th { font-weight: normal; color: #2457a0; vertical-align: middle; }
-table tr.subheader-row th { border-bottom: 1px solid #b4c7e6; background: #b4c7e6; color: black; }
-table tr.header-row th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4c7e6; background: #e6eefa url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
-table tr + tr.header-row th { border-top: 2px solid #668dcc; }
+table th { font-weight: normal; color: #a02424; vertical-align: middle; }
+table tr.subheader-row th { border-bottom: 1px solid #b4e6b3; background: #b4e6b3; color: black; }
+table tr.header-row th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4e6b3; background: #e6fae5 url(${h.static_uri('local', 'images/layout/th-background-treekun.png')}) bottom left repeat-x; color: black; }
+table tr + tr.header-row th { border-top: 2px solid #cc6666; }
 
 table.stretch { width: 100%; }
 table.compact td { padding: 0.17em; }
@@ -157,8 +157,8 @@ table.striped-rows tr:hover,
 table.striped-rows tr td.js-hover,
 table.striped-row-groups tbody:hover { background: #eae1d5; }
 
-table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4c7e6; }
-table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4c7e6; }
+table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4e6b3; }
+table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4e6b3; }
 table td.number-cell { text-align: right; }
 
 
@@ -192,7 +192,7 @@ ol.pager li a:hover { border: 1px solid #bfd3f1; background: #e6eefa; }
 
 /* Definition lists via floats */
 dl { overflow: hidden /* new float context */; margin-bottom: 0.75em; }
-dt { float: left; clear: left; width: 11.5em; margin-right: 0.5em; text-align: right; color: #2457a0; }
+dt { float: left; clear: left; width: 11.5em; margin-right: 0.5em; text-align: right; color: #a02424; }
 dt:after { content: ':'; }
 dd { padding-left: 12em /* float width, so hover highlight includes dt but lines wrap correctly */; }
 dd:after { content: 'float clear'; display: block; clear: both; height: 0; visibility: hidden; }
@@ -205,7 +205,7 @@ dt, dd { line-height: 1.5; }
 
 .markdown table { margin-bottom: 0.75em; line-height: 1.33em; }
 
-.markdown table thead tr th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4c7e6; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background.png')}) bottom left repeat-x; color: black; }
+.markdown table thead tr th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4e6b3; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background-treekun.png')}) bottom left repeat-x; color: black; }
 
 .markdown table tbody tr:nth-child(2n) { background: #f0f0f0; }
 .markdown table tbody tr:nth-child(2n):hover { background: #e9dbc9; }
