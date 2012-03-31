@@ -155,7 +155,7 @@ table tr.color1:hover,
 table tr.color2:hover,
 table.striped-rows tr:hover,
 table.striped-rows tr td.js-hover,
-table.striped-row-groups tbody:hover { background: #eae1d5; }
+table.striped-row-groups tbody:hover { background: #ead5d5; }
 
 table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-bottom: 1px solid #b4e6b3; }
 table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4e6b3; }
@@ -208,8 +208,7 @@ dt, dd { line-height: 1.5; }
 .markdown table thead tr th { padding: 0.33em; vertical-align: bottom; border-bottom: 1px solid #b4e6b3; background: #c6d8f2 url(${h.static_uri('local', 'images/layout/th-background-treekun.png')}) bottom left repeat-x; color: black; }
 
 .markdown table tbody tr:nth-child(2n) { background: #f0f0f0; }
-.markdown table tbody tr:nth-child(2n):hover { background: #e9dbc9; }
-.markdown table tbody tr:nth-child(2n+1):hover { background: #f0e7db; }
+.markdown table tbody tr:hover { background: #ead5d5; }
 
 .markdown ul { margin: 0.5em 0; margin-left: 3em; list-style-type: disc; }
 .markdown ul li { line-height: 1.5; }
