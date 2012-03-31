@@ -20,7 +20,7 @@ body { color: black; background: #8bb88a url(${h.static_uri('local', 'images/lay
 #header, #ie-warning, #flash, #body { margin-bottom: 0; border-bottom: none; }
 #ie-warning, #flash, #body, #footer { margin-top: 0; border-top: none; }
 
-#header { position: relative; height: 8em; color: white; background: #aa7747 url(${h.static_uri('local', 'images/layout/header-background-treekun.png')}) center bottom repeat-x; }
+#header { position: relative; height: 8em; color: white; background: #a0a0a0 url(${h.static_uri('local', 'images/layout/header-background-treekun.png')}) center bottom repeat-x; }
 #header #logo { position: absolute; top: -88px; left: -28px; /* arbitrary */ }
 #header #title { overflow: hidden; position: absolute; top: -0.87em; height: 0.87em; /* very approximately puts baseline on the top border */ right: 0; left: 0; text-align: center; font-size: 4em; line-height: 1em; color: black; font-weight: bold; text-transform: lowercase; }
 #header #title a { color: black; }
