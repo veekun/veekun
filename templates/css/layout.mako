@@ -16,7 +16,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
  * +----------+
  */
 #header, #ie-warning, #flash, #body, #footer { margin: 4em; border: 2px solid black; background: white; }
-#header { margin-top: 8em; -moz-border-radius-topright: 4em; -webkit-border-top-right-radius: 4em; }
+#header { margin-top: 8em; border-top-right-radius: 4em; }
 #header, #ie-warning, #flash, #body { margin-bottom: 0; border-bottom: none; }
 #ie-warning, #flash, #body, #footer { margin-top: 0; border-top: none; }
 
@@ -43,11 +43,11 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 
 #menu { position: absolute; margin-top: -2.33em; margin-left: 4em; left: 140px; /* avoid eevee logo */ }
 #menu > ul > li { float: left; padding: 0.33em; }
-#menu > ul > li > a { background: #cfdcf0; -moz-border-radius-topright: 0.5em; -moz-border-radius-topleft: 0.5em; -webkit-border-top-right-radius: 0.5em; -webkit-border-top-left-radius: 0.5em; }
+#menu > ul > li > a { background: #cfdcf0; border-top-right-radius: 0.5em; border-top-left-radius: 0.5em; }
 #menu li a { display: block; padding: 0.5em; }
 /* Positioning of submenu */
 #menu li { position: relative; }
-#menu > ul > li > ul { z-index: 100; position: absolute; width: 16em; margin-top: -1px; border: 1px solid #3173ce; background: #cfdcf0; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; }
+#menu > ul > li > ul { z-index: 100; position: absolute; width: 16em; margin-top: -1px; border: 1px solid #3173ce; background: #cfdcf0; box-shadow: rgba(0, 0, 0, 0.5) 0.25em 0.25em 0.5em; }
 /* Show submenus on hover */
 #menu > ul > li > ul { display: none; }
 #menu > ul > li:hover { border-color: #3173ce; border-bottom-color: transparent; }
@@ -72,8 +72,8 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 
 #flash { padding: 0.5em; }
 #flash li { padding: 0.5em; padding-left: 2.5em; line-height: 1.33; border: 1px solid #d8bc8d; background: #e5d2b2; }
-#flash li:first-child { -moz-border-radius-topright: 0.33em; -moz-border-radius-topleft: 0.33em; -webkit-border-top-right-radius: 0.33em; -webkit-border-top-left-radius: 0.33em; }
-#flash li:last-child { -moz-border-radius-bottomright: 0.33em; -moz-border-radius-bottomleft: 0.33em; -webkit-border-bottom-right-radius: 0.33em; -webkit-border-bottom-left-radius: 0.33em; }
+#flash li:first-child { border-top-right-radius: 0.33em; border-top-left-radius: 0.33em; }
+#flash li:last-child { border-bottom-right-radius: 0.33em; border-bottom-left-radius: 0.33em; }
 #flash li + li { border-top: none; }
 #flash li img { display: block; float: left; margin-left: -2em;  /* let icon sit in the padding */ }
 
@@ -86,7 +86,7 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 
 #body { padding: 1em; }
 
-h1 { margin-top: 1em; margin-bottom: 0.5em; padding-left: 36px; border: 1px solid #b58a4b; border-left: none; font-size: 1.6em; line-height: 1.5em; font-weight: bold; color: black; background: #cbab81 url(${h.static_uri('local', 'images/layout/h1-background.png')}) left center no-repeat; -webkit-border-top-right-radius: 1em; -webkit-border-bottom-right-radius: 1em; -moz-border-radius-topright: 1em; -moz-border-radius-bottomright: 1em; }
+h1 { margin-top: 1em; margin-bottom: 0.5em; padding-left: 36px; border: 1px solid #b58a4b; border-left: none; font-size: 1.6em; line-height: 1.5em; font-weight: bold; color: black; background: #cbab81 url(${h.static_uri('local', 'images/layout/h1-background.png')}) left center no-repeat; border-top-right-radius: 1em; border-bottom-right-radius: 1em; }
 h2 { margin-top: 1em; margin-bottom: 0.5em; font-size: 1.5em; font-weight: bold; color: #202020; border-bottom: 1px solid #808080; }
 h2:before, h2:after { content: '_'; visibility: hidden; /* extend underline */ }
 h3 { margin-top: 0.5em; margin-bottom: 0.25em; font-size: 1.2em; font-weight: bold; color: #202020; border-bottom: 1px dotted #808080; }
@@ -99,7 +99,7 @@ h1:first-child, h2:first-child { margin-top: 0; }
 
 .faded { opacity: 0.25; }
 .disabled { color: #c0c0c0; text-decoration: line-through; }
-.vertical-text { -moz-transform: rotate(-90deg); }
+.vertical-text { -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
 .annotation { border-bottom: 1px dotted black; }
 
 /* Links durp */
