@@ -1,4 +1,5 @@
-<%def name="format_timedelta(delta)">${ "{0:.02f}".format( delta.seconds + delta.microseconds / 1000000.0 ) }</%def>
+<%def name="format_timedelta(delta, prec=1)">${ "{0:.{1}f}".format(1e3*delta.seconds + 1e-3*delta.microseconds, prec) }ms</%def>
+<%def name="plural(n, singular, plural)">${n} ${singular if n == 1 else plural}</%def>
 
 <div id="footer-timer">
 <%
@@ -38,9 +39,9 @@
         pokemon_id = 79
 %>
     <div id="footer-timer-pokemon">${h.pokedex.pokedex_img("pokemon/icons/{0}.png".format(pokemon_id))}</div>
-    ${format_timedelta(c.timer.total_time)}s <br>
-    ${c.timer.sql_queries} quer${ 'y' if c.timer.sql_queries == 1 else 'ies' }:
-        ${format_timedelta(c.timer.sql_time)}s
+    ${format_timedelta(c.timer.total_time, 0)} <br>
+    ${plural(c.timer.sql_queries, 'query', 'queries')}:
+        ${format_timedelta(c.timer.sql_time, 0)}
 </div>
 
 <p>
@@ -70,15 +71,24 @@
 <tbody>
     <tr>
         <td>×${len(data)}</td>
-        <td>${format_timedelta(sum( (_['time'] for _ in data), datetime.timedelta() ))}s</td>
-        <th>${query}</th>
+        <td>${format_timedelta(sum( (x['time'] for x in data), datetime.timedelta() ))}<br>
+            ${plural(sum(x['rowcount'] for x in data), 'row', 'rows')}</td>
+        <th>
+        % for line in query.splitlines():
+            ${line}<br>
+        % endfor
+        </th>
     </tr>
     % for instance in data:
     <tr>
         <td></td> <td></td>
         <td>
-            ${format_timedelta(instance['time'])}s: ${instance['caller']}<br>
-            ${instance['parameters']}
+            ${instance['caller']}:<br>
+            % if instance['parameters']:
+                ${instance['parameters']}<br>
+            % endif
+            ${format_timedelta(instance['time'])},
+            ${plural(instance['rowcount'], 'row', 'rows')}
         </td>
     </tr>
     % endfor
