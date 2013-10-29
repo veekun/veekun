@@ -59,9 +59,8 @@
     • country flags from <a href="http://www.famfamfam.com/lab/icons/flags/">famfamfam</a>
 </p>
 <p>
-    powered by <a href="http://bugs.veekun.com/projects/spline">spline</a>
-    • <a href="http://bugs.veekun.com/projects/veekun/wiki/Documentation">get the source code</a>
-    • <a href="http://bugs.veekun.com/">bug tracker</a>
+    powered by <a href="https://github.com/veekun/spline">spline</a>
+    • <a href="https://github.com/veeken/veekun/wiki/Documentation">get the source code</a>
 </p>
 
 % if config.get('spline.sql_debugging', False):
