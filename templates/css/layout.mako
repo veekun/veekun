@@ -102,6 +102,8 @@ h1:first-child, h2:first-child { margin-top: 0; }
 .vertical-text { -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
 .annotation { border-bottom: 1px dotted black; }
 
+strong.obnoxious { font-size: 2em; }
+
 /* Links durp */
 a:link { font-weight: bold; text-decoration: none; color: #3173ce; }
 a:visited { font-weight: bold; text-decoration: none; color: #435b7d; }
