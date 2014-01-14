@@ -60,7 +60,7 @@
 </p>
 <p>
     powered by <a href="https://github.com/veekun/spline">spline</a>
-    • <a href="https://github.com/veeken/veekun/wiki/Documentation">get the source code</a>
+    • <a href="https://github.com/veekun/veekun/wiki/Documentation">get the source code</a>
 </p>
 
 % if config.get('spline.sql_debugging', False):
