@@ -38,7 +38,12 @@
         # Slowpoke.  :(
         pokemon_id = 79
 %>
-    <div id="footer-timer-pokemon">${h.pokedex.pokedex_img("pokemon/icons/{0}.png".format(pokemon_id))}</div>
+    <div id="footer-timer-pokemon">
+        ${h.pokedex.pokedex_img("pokemon/icons/{0}.png".format(pokemon_id))}
+        % if c.timer.from_cache:
+            ${h.pokedex.pokedex_img("pokemon/icons/{0}.png".format(132))}
+        % endif
+    </div>
     ${format_timedelta(c.timer.total_time, 0)} <br>
     ${plural(c.timer.sql_queries, 'query', 'queries')}:
         ${format_timedelta(c.timer.sql_time, 0)}
