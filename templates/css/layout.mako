@@ -163,6 +163,7 @@ table tr.horizontal-line { height: 0 !important; padding: 0 !important; border-b
 table td.vertical-line { width: 0 !important; padding: 0 !important; border-right: 1px solid #b4c7e6; }
 table td.number-cell { text-align: right; }
 
+table + p { margin-top: 0.75em; }
 
 /* Lists */
 ul.classic-list { margin: 0.5em 0; margin-left: 3em; list-style-type: disc; }
