@@ -1,8 +1,6 @@
 /*** LAYOUT ***/
 
-/* Base font.  This is a load of crap.  Why can't everyone have a default
- * browser font they actually want to see?  Fuck fuck fuckity fuck IE. */
-body { font-family: DejaVu Sans, Verdana, sans-serif; font-size: 12px; }
+body { font-family: "Source Sans Pro", "Helvetica Neue", DejaVu Sans, Verdana, sans-serif; font-size: 14px; }
 
 /* General feel */
 body { color: black; background: #c5baab url(${h.static_uri('local', 'images/layout/background.png')}) repeat; }
