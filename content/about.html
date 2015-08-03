@@ -2,40 +2,10 @@
 
 <%def name="title()">About</%def>
 
-${h.h1('veekun')}
+<p>Hey, this is a Pokédex.  If you don't know what that means, you're probably in the wrong place!</p>
 
-<p>Hello!  This is veekun, my personal site and a focal point for <a href="${url('/projects')}">software I write</a>.</p>
+<p>veekun's main claim to fame is that it's full of tools for <a href="${url(controller='dex', action='pokemon', name='eevee')}">displaying</a> and <a href="/dex/pokemon/compare">examining</a> data.  We've been working on it for <a href="${url('/dex/history')}">some time now</a>, though development waxes and wanes.  We're a pretty small team and we're all juggling a lot of other stuff, alas.</p>
 
-<p>The biggest and oldest component is the <a href="${url('/dex')}">Pokédex</a>, which I've been working on for <a href="${url('/dex/history')}">some time now</a>.  It's mostly focused on <a href="${url(controller='dex', action='pokemon', name='eevee')}">displaying</a> and <a href="/dex/pokemon/compare">examining</a> data, because I'm a nerd and that's the sort of thing I find interesting, but I'm gradually adding more textual descriptions of more practical use.</p>
+<p>The name "veekun", doesn't mean anything in particular.  I always write it in lowercase, but almost everyone else capitalizes it.</p>
 
-<p>A lot of people consider this to be a Pokémon fansite, since it only hosted the Pokédex for quite some time, but that was never my intent.  veekun is meant to host any and all Web gizmos I write; the Pokédex just happens to be the most involved.</p>
-
-<p>I believe very strongly in sharing code.  In that spirit, the whole site is <a href="http://veekun.com/projects#veekun">open source</a>, all the data and sprites are freely available, and I try to be open about what I'm working on.  I love to hear what I'm doing wrong or right; there's a sporadically-used <a href="http://bugs.veekun.com/projects/veekun-incoming/issues/new">bug tracker to complain in</a>, or you can come <a href="${url('/chat')}">bug me on IRC</a>.</p>
-
-<p>The site is currently written in <a href="http://www.python.org/">Python</a>, uses <a href="http://www.postgresql.org/">PostgreSQL</a> as a data store, and runs on an <a href="http://www.ubuntu.com/">Ubuntu</a> box.</p>
-
-<p>The name doesn't mean anything in particular.  I always write it in lowercase, but almost everyone else capitalizes it.  Yes, I know "veekun" is bogus Japanese.</p>
-
-<p>And, of course, I <a href="${url('/props')}">couldn't have done this alone</a>.</p>
-
-
-${h.h1('Eevee')}
-
-<p>Contrary to popular belief, I go by "Eevee" and have never used "veekun" as a handle.</p>
-
-<p>I'm just some guy who loves <a href="http://www.catb.org/jargon/html/H/hack.html">hacking</a>; been at it for over a decade now.  <a href="http://www.useit.com/">Usability</a> and <a href="http://blog.mozilla.com/faaborg/">user interface design</a> are fascinating, too, but those are more social arts and I'm still quite the amateur.</p>
-
-<p>I'm extremely picky about software, whether it's my own or someone else's, and tend to rave about bad products a bit too much.  After having been bitten by it too many times, I can't stand <a href="http://php.net/">sloppy languages</a> or <a href="http://www.mysql.com/">sloppy databases</a>.  I think <a href="http://www.opensource.org/">open source</a> is fantastic and important.</p>
-
-<p>I live in western Washington and work from home doing Web development in <a href="http://www.perl.org/">Perl</a>.</p>
-
-
-${h.h1('Contact')}
-
-<p>This is last on the page to make sure you're really dedicated!</p>
-
-<p>I'm on <a href="http://www.jabber.org/">Jabber</a> 24/7 as <code>lexyeevee@gmail.com</code>.  (That's also <a href="http://www.google.com/talk/">Google Talk</a>, yes, and can communicate with LiveJournal chat and whatever else.)  I don't use AIM, MSN, or Yahoo!.</p>
-
-<p>You can email me at that gmail address, or at <code>pokedex at this domain</code>.</p>
-
-<p>And, of course, I'm <a href="${url('/chat')}">on IRC</a> pretty much all the time.</p>
+<p>I (the primary developer) am Eevee, and you can find out all about me on my <a href="http://eev.ee/">personal site</a>.  But I <a href="${url('/props')}">couldn't have done this alone</a>.</p>

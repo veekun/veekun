@@ -3,14 +3,16 @@
 <%def name="title()">West of House</%def>
 <%def name="title_in_page()">Home</%def>
 
-<h1>there is a small mailbox here</h1>
+<h1>there is a small pokédex here</h1>
 
-<p>Greetings, weary traveler.  I'm <a href="${url('/about')}">Eevee</a> and this is some kind of website.  Whirlwind tour:</p>
+<p>Hey, I am <a href="http://eev.ee/">Eevee</a> and this is veekun and it's a Pokédex.  You probably want to type into that box in the top right, or maybe just start <a href="${url('/dex')}">browsing</a>.</p>
+
+<p>Other stuff of interest:</p>
 
 <ul class="classic-list">
-    <li>The main attraction is a <a href="${url('/dex')}">Pokédex</a>, if you hadn't noticed.  It's pretty great.</li>
-    <li>I write some <a href="${url('/projects')}">other code</a>, too.  Everything I write is open-source.  There's a <a href="http://bugs.veekun.com/">bug tracker</a> and a <a href="http://git.veekun.com/">code browser</a>.  Feel free to <a href="http://bugs.veekun.com/projects/veekun-incoming/issues/new">tell me about bugs or feature suggestions</a>.</li>
-    <li>I have an <a href="${url('/chat')}">IRC channel</a>, largely populated by nerds saying nerdy things.  You should stop by!</li>
+    <li>Enjoy my <a href="http://eev.ee/">personal site</a>, and those of the <a href="${url('/props')}">myriad other contributors</a>.</li>
+    <li><a href="https://www.patreon.com/eevee">Toss some ₽ my way</a>, to support veekun development.</li>
+    <li>Stop by the <a href="irc://veekun.com/veekun">IRC channel</a> (<a href="${url('/chat')}">instructions</a>) to chat with some cool nerds and complain when the site is broken.</li>
 </ul>
 
 ## Only include this if the frontpage plugin is loaded!
