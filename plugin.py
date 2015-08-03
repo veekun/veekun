@@ -22,7 +22,6 @@ class LocalPlugin(LocalPluginBase):
                     PluginLink(u'Chat',             url('/chat')),
                     PluginLink(u'Credits',          url('/props')),
                     PluginLink(u'Link or embed veekun', url('/link')),
-                    PluginLink(u'Projects',         url('/projects')),
                     PluginLink(u'Pokédex history',  url('/dex/history')),
                 ]),
             ]),
