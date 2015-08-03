@@ -50,22 +50,19 @@
 </div>
 
 <p>
-    ©1999–2010 eevee/alex munroe (<a href="${url('/about')}">contact</a>, <a href="${url('/chat')}">chat</a>)
-    • pokémon ©1995–2010 <a href="http://www.pokemon.com/">pokémon</a>,
+    ©1999 <a href="http://eev.ee/">eevee/alex munroe</a>
+    • pokémon ©1995 <a href="http://www.pokemon.com/">pokémon</a>,
         <a href="http://www.nintendo.com/">nintendo</a>,
         <a href="http://www.gamefreak.co.jp/">game freak</a>,
         <a href="http://www.creatures.co.jp/html/en/">creatures</a>
 </p>
 <p>
-    many thanks to <a href="http://purplekecleon.deviantart.com/">purplekecleon</a>,
-        <a href="http://turnipmints.mooo.com/~andrew/">magical</a>,
-        and <a href="http://github.com/Zhorken">zhorken</a>
+    many thanks to <a href="${url('/props')}">these amazing contributors</a>
     • icons from <a href="http://p.yusukekamiyamane.com/">fugue set</a>
     • country flags from <a href="http://www.famfamfam.com/lab/icons/flags/">famfamfam</a>
 </p>
 <p>
-    powered by <a href="https://github.com/veekun/spline">spline</a>
-    • <a href="https://github.com/veekun/veekun/wiki/Documentation">get the source code</a>
+    <a href="https://github.com/veekun/">source code</a> • <a href="https://github.com/veekun/pokedex">data</a> • <a href="https://www.patreon.com/eevee">support ₽₽₽</a>
 </p>
 
 % if config.get('spline.sql_debugging', False):
