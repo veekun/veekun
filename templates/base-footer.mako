@@ -50,7 +50,7 @@
 </div>
 
 <p>
-    ©1999 <a href="http://eev.ee/">eevee/alex munroe</a>
+    ©1999 <a href="https://eev.ee/">eevee/lexy munroe</a>
     • pokémon ©1995 <a href="http://www.pokemon.com/">pokémon</a>,
         <a href="http://www.nintendo.com/">nintendo</a>,
         <a href="http://www.gamefreak.co.jp/">game freak</a>,

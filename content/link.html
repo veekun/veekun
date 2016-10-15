@@ -12,7 +12,7 @@ ${h.h1('Regular links')}
 <p>And some example HTML if you're into cut-and-paste:</p>
 
 <pre><%lib:escape_html>
-<a href="http://veekun.com/"><img src="${h.static_uri('local', 'images/button.png')}" alt="veekun" title="veekun is totally awesome" style="border: 0;"></a>
+<a href="https://veekun.com/"><img src="${h.static_uri('local', 'images/button.png')}" alt="veekun" title="veekun is totally awesome" style="border: 0;"></a>
 </%lib:escape_html></pre>
 
 <p>I don't mind if you hotlink the button, unless you're insanely more popular than I am and start killing my bandwidth.  But that's unlikely.</p>
@@ -25,15 +25,15 @@ ${h.h1(u'Embedding the Pokédex')}
 <p>If you'd like people to be able to look stuff up in the veekun Pokédex straight from your site, paste all this somewhere:</p>
 
 <%def name="veekun_lookup_html()">
-<form id="veekun-pokedex-lookup" method="GET" action="http://veekun.com/dex/lookup"
+<form id="veekun-pokedex-lookup" method="GET" action="https://veekun.com/dex/lookup"
       style="overflow: hidden; margin: 0.5em 0; padding: 0; padding-left: 20px; min-height: 40px;">
 <p style="font-size: 1.33em; float: left; margin: 0; padding: 0; padding-right: 20px; white-space: nowrap;
           background: url(${h.static_uri('local', 'images/layout/pokedex-teeny.png', qualified=True)}) right center no-repeat;">
     <label>
         <img src="${h.static_uri('local', 'images/embed-logo.png', qualified=True)}"
              style="vertical-align: middle;" />
-        <a href="http://veekun.com/">veekun</a> Pok&eacute;dex: <br/>
-        <a href="http://veekun.com/dex" style="float: left; margin-left: -20px;">
+        <a href="https://veekun.com/">veekun</a> Pok&eacute;dex: <br/>
+        <a href="https://veekun.com/dex" style="float: left; margin-left: -20px;">
             <img src="${h.static_uri('spline', 'icons/question-white.png', qualified=True)}" alt="Help" title="Help!"
                  style="border: none; vertical-align: middle;">
         </a>
