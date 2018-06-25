@@ -13,10 +13,10 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
  * |  FOOTER  |  -- bottom, left, right
  * +----------+
  */
-#header, #ie-warning, #flash, #body, #footer { margin: 4em; border: 2px solid black; background: white; }
+#header, #flash, #body, #footer { margin: 4em; border: 2px solid black; background: white; }
 #header { margin-top: 8em; border-top-right-radius: 4em; }
-#header, #ie-warning, #flash, #body { margin-bottom: 0; border-bottom: none; }
-#ie-warning, #flash, #body, #footer { margin-top: 0; border-top: none; }
+#header, #flash, #body { margin-bottom: 0; border-bottom: none; }
+#flash, #body, #footer { margin-top: 0; border-top: none; }
 
 #header { position: relative; height: 8em; color: white; background: #6998df url(${h.static_uri('local', 'images/layout/header-background.png')}) center bottom repeat-x; }
 #header #logo { position: absolute; top: -85px; left: -45px; /* arbitrary */ }
@@ -64,9 +64,6 @@ body { color: black; background: #c5baab url(${h.static_uri('local', 'images/lay
 #menu > ul > li > ul > li > ul > li > a { padding-left: 1.33em; font-weight: normal; }
 /* Below even that */
 #menu > ul > li > ul > li > ul > li li > a { font-size: 0.9em; line-height: 1.11em; padding-left: 2.59em /* 2.33 / 0.8 */; font-weight: normal; font-style: italic; }
-
-#ie-warning { padding: 0.25em 0.25em 0.25em 2em; background: #f4af70 url(${h.static_uri('spline', "icons/disk.png")}) 0.5em 0.5em no-repeat; }
-#ie-warning p { margin: 0; padding: 0.25em; }
 
 #flash { padding: 0.5em; }
 #flash li { padding: 0.5em; padding-left: 2.5em; line-height: 1.33; border: 1px solid #d8bc8d; background: #e5d2b2; }
