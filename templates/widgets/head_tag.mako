@@ -11,3 +11,16 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+% if request.headers.get("DNF", "0") != "1":
+<style>
+  @font-face {
+      font-family: "Hellvetica";
+      src: url(${h.static_uri('local', 'fonts/Hellvetica.ttf')}) format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+  body {
+      font-family: "Hellvetica", "Source Sans Pro", "Helvetica Neue", DejaVu Sans, Verdana, sans-serif !important;
+  }
+</style>
+% endif
