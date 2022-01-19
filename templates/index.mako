@@ -12,7 +12,7 @@
 <ul class="classic-list">
     <li>Enjoy my <a href="https://eev.ee/">personal site</a>, and those of the <a href="${url('/props')}">myriad other contributors</a>.</li>
     <li><a href="https://www.patreon.com/eevee">Toss some ₽ my way</a>, to support veekun development.</li>
-    <li>Stop by the <a href="irc://veekun.com/veekun">IRC channel</a> (<a href="${url('/chat')}">instructions</a>) to chat with some cool nerds and complain when the site is broken.</li>
+    <li>Stop by the <a href="https://discord.gg/fpsw7FJ">Discord server</a> to chat with some cool nerds and complain when the site is broken.</li>
 </ul>
 
 ## Only include this if the frontpage plugin is loaded!
